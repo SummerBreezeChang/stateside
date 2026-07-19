@@ -1,6 +1,8 @@
-# OpenAI Build Week 2026
+# Stateside
 
-This repository is the working space for an OpenAI Build Week project built with Codex and GPT-5.6.
+**Stateside** is the working title for an OpenAI Build Week 2026 project built with Codex and GPT-5.6.
+
+The product direction is still being explored. The name is a codename until the brainstorm identifies the audience, problem, and final concept.
 
 ## Current phase
 
@@ -35,4 +37,3 @@ The official free-credit request deadline was **Friday, July 17 at 12:00 PM PT**
 3. Commit a working baseline early so the hackathon-period contribution is clear.
 4. Keep `DECISIONS.md` and `CODEX_LOG.md` current while building.
 5. Reserve the final hours for deployment, README setup instructions, a sub-three-minute demo, and Devpost submission.
-

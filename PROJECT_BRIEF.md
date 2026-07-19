@@ -2,7 +2,7 @@
 
 ## Identity
 
-- **Working title:** TBD
+- **Working title:** Stateside
 - **Track:** TBD
 - **One-line pitch:** TBD
 - **Target user:** TBD
@@ -58,4 +58,3 @@ Name the capability the product depends on and how the implementation uses it. A
 - The demo shows real product behavior, not mocked output.
 - GPT-5.6 and Codex usage are clearly explained.
 - The repository and test access remain available through judging.
-
