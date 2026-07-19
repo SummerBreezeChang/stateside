@@ -6,7 +6,7 @@ Stateside helps international students evaluate whether a potential first U.S. h
 
 ## Current phase
 
-**MVP definition complete; implementation next.** The selected direction, golden path, safeguards, scope, and demo plan are in [PROJECT_BRIEF.md](./PROJECT_BRIEF.md).
+**Problem discovery and validation.** The current product direction remains a hypothesis. Review the first-person evidence in [RESEARCH_INTERNATIONAL_STUDENT_HOUSING.md](./RESEARCH_INTERNATIONAL_STUDENT_HOUSING.md), then use interviews to decide which problem is important enough to build around. The prior working hypothesis remains in [PROJECT_BRIEF.md](./PROJECT_BRIEF.md).
 
 ## Challenge snapshot
 
@@ -22,6 +22,7 @@ Stateside helps international students evaluate whether a potential first U.S. h
 - `BRAINSTORM.md` — original guided idea-generation session
 - `IDEA_SCORECARD.md` — judging-aligned comparison framework
 - `PROJECT_BRIEF.md` — selected product direction and MVP specification
+- `RESEARCH_INTERNATIONAL_STUDENT_HOUSING.md` — first-person evidence, problem clusters, and interview questions
 - `SUBMISSION_CHECKLIST.md` — build and submission readiness
 - `DECISIONS.md` — product and engineering decisions worth mentioning to judges
 - `CODEX_LOG.md` — evidence of how Codex accelerated the project
@@ -32,8 +33,8 @@ The official free-credit request deadline was **Friday, July 17 at 12:00 PM PT**
 
 ## Next steps
 
-1. Confirm the implementation stack and GPT-5.6 API access.
-2. Scaffold the smallest end-to-end Berkeley demo that proves the core promise.
-3. Build the renter profile, preloaded sample, structured analysis, and five result sections.
-4. Keep `DECISIONS.md` and `CODEX_LOG.md` current while building.
-5. Reserve time for deployment, clean-start verification, README setup instructions, the sub-three-minute demo, and Devpost submission.
+1. Interview five to eight current or recent international students using the research guide.
+2. Identify the decision they struggled with most and the evidence they lacked.
+3. Choose the smallest experience that would materially change that decision.
+4. Confirm the implementation stack and GPT-5.6 API access only after choosing the core problem.
+5. Keep `DECISIONS.md` and `CODEX_LOG.md` current while working.
