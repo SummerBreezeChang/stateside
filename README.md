@@ -2,11 +2,11 @@
 
 **Stateside** is the working title for an OpenAI Build Week 2026 project built with Codex and GPT-5.6.
 
-The product direction is still being explored. The name is a codename until the brainstorm identifies the audience, problem, and final concept.
+Stateside helps international students evaluate whether a potential first U.S. home fits their daily life, understand rental readiness, distinguish verified facts from unknowns, and prepare next steps before committing.
 
 ## Current phase
 
-**Brainstorming.** Start with [BRAINSTORM.md](./BRAINSTORM.md), compare the strongest ideas with [IDEA_SCORECARD.md](./IDEA_SCORECARD.md), and record the selected direction in [PROJECT_BRIEF.md](./PROJECT_BRIEF.md).
+**MVP definition complete; implementation next.** The selected direction, golden path, safeguards, scope, and demo plan are in [PROJECT_BRIEF.md](./PROJECT_BRIEF.md).
 
 ## Challenge snapshot
 
@@ -19,9 +19,9 @@ The product direction is still being explored. The name is a codename until the 
 
 ## Working files
 
-- `BRAINSTORM.md` — guided idea-generation session
-- `IDEA_SCORECARD.md` — judging-aligned comparison table
-- `PROJECT_BRIEF.md` — one-page definition of the selected idea
+- `BRAINSTORM.md` — original guided idea-generation session
+- `IDEA_SCORECARD.md` — judging-aligned comparison framework
+- `PROJECT_BRIEF.md` — selected product direction and MVP specification
 - `SUBMISSION_CHECKLIST.md` — build and submission readiness
 - `DECISIONS.md` — product and engineering decisions worth mentioning to judges
 - `CODEX_LOG.md` — evidence of how Codex accelerated the project
@@ -30,10 +30,10 @@ The product direction is still being explored. The name is a codename until the 
 
 The official free-credit request deadline was **Friday, July 17 at 12:00 PM PT**, which has passed. Existing OpenAI access can still be used. Monitor usage because costs beyond any granted credits are the entrant's responsibility.
 
-## After selecting an idea
+## Next steps
 
-1. Replace the placeholder project brief with the chosen concept.
-2. Scaffold the smallest end-to-end demo that proves the core promise.
-3. Commit a working baseline early so the hackathon-period contribution is clear.
+1. Confirm the implementation stack and GPT-5.6 API access.
+2. Scaffold the smallest end-to-end Berkeley demo that proves the core promise.
+3. Build the renter profile, preloaded sample, structured analysis, and five result sections.
 4. Keep `DECISIONS.md` and `CODEX_LOG.md` current while building.
-5. Reserve the final hours for deployment, README setup instructions, a sub-three-minute demo, and Devpost submission.
+5. Reserve time for deployment, clean-start verification, README setup instructions, the sub-three-minute demo, and Devpost submission.
