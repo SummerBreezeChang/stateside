@@ -62,3 +62,8 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 - Converted landing-page process and benefit cards into accessible navigation controls.
 - Added a qualification guidance screen and routed “Can I apply?” to it.
 - Removed redundant section CTAs and added subtle hover zoom for supporting imagery.
+# 2026-07-21 — Mobile recording polish
+
+- Kept the Stateside wordmark on the left and the primary comparison action on the right at phone widths.
+- Moved the no-account reassurance below the hero action on mobile while preserving the established desktop order.
+- Kept the approved single hero image and excluded the unused carousel concepts to protect the recording-ready scope.
