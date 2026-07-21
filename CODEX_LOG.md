@@ -34,3 +34,7 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 
 - Reordered the comparison experience so students see the three rooms before cost, qualification, and lease analysis.
 - Updated comparison navigation and photo framing to match the new reading order.
+# 2026-07-21 — Bay Area school directory
+
+- Researched official housing resources for seven Bay Area schools.
+- Added an accessible school selector, campus-specific official starting points, and honest full-demo versus directory-preview states.

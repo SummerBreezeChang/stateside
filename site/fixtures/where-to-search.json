@@ -3,6 +3,64 @@
     "updated": "2026-07-21",
     "honesty": "Stateside is not affiliated with any site listed. No paid placement."
   },
+  "school_directory": [
+    {
+      "id": "uc-berkeley",
+      "name": "UC Berkeley",
+      "city": "Berkeley",
+      "resource_name": "UC Berkeley Off-Campus Housing",
+      "resource_url": "https://och.berkeley.edu/",
+      "status": "Full demo"
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "city": "Stanford / Palo Alto",
+      "resource_name": "Stanford Community Housing",
+      "resource_url": "https://rde.stanford.edu/studenthousing/community-housing",
+      "status": "Directory preview"
+    },
+    {
+      "id": "sf-state",
+      "name": "San Francisco State",
+      "city": "San Francisco",
+      "resource_name": "SFSU Renting Resources",
+      "resource_url": "https://basicneeds.sfsu.edu/renting-resources",
+      "status": "Directory preview"
+    },
+    {
+      "id": "sjsu",
+      "name": "San José State",
+      "city": "San José",
+      "resource_name": "SJSU Off-Campus Housing",
+      "resource_url": "https://offcampushousing.sjsu.edu/",
+      "status": "Directory preview"
+    },
+    {
+      "id": "usf",
+      "name": "University of San Francisco",
+      "city": "San Francisco",
+      "resource_name": "USF Off-Campus Living",
+      "resource_url": "https://myusf.usfca.edu/off-campus-housing",
+      "status": "Directory preview"
+    },
+    {
+      "id": "golden-gate",
+      "name": "Golden Gate University",
+      "city": "San Francisco",
+      "resource_name": "GGU Off-Campus Housing",
+      "resource_url": "https://ggu.edu/off-campus-housing/",
+      "status": "Directory preview"
+    },
+    {
+      "id": "santa-clara",
+      "name": "Santa Clara University",
+      "city": "Santa Clara",
+      "resource_name": "SCU Off-Campus Housing",
+      "resource_url": "https://www.scu.edu/ocl/off-campus-housing/",
+      "status": "Directory preview"
+    }
+  ],
   "campuses": [
     {
       "id": "uc-berkeley",

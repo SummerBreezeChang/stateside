@@ -36,3 +36,8 @@ Record meaningful product, engineering, and design choices. These notes will bec
 - The comparison page now shows all three listing-photo galleries immediately after its heading.
 - Decision guidance and the full evidence table follow the visual overview.
 - Photo-source dates and the live-tour warning remain visible so imagery is treated as evidence, not proof.
+# 2026-07-21 — Show Bay Area campus expansion honestly
+
+- Added a seven-school selector covering UC Berkeley, Stanford, San Francisco State, San José State, University of San Francisco, Golden Gate University, and Santa Clara University.
+- UC Berkeley remains the complete researched demo; the other schools are labeled directory previews and link first to official university resources.
+- School and marketplace links are framed as research starting points, not endorsements.
