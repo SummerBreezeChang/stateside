@@ -17,7 +17,7 @@ test("server-renders a clear no-account landing page", async () => {
   const html = await response.text();
   assert.match(html, /Compare rentals before you apply or pay/);
   assert.match(html, /Bring rent, application requirements/);
-  assert.match(html, /Start comparing/);
+  assert.equal(html.match(/Start comparing/g)?.length, 4);
   assert.doesNotMatch(html, /See the three steps|Start the Berkeley demo/);
   assert.match(html, /No account, payment, or personal documents required/);
   assert.match(html, /How it works/);
@@ -26,7 +26,9 @@ test("server-renders a clear no-account landing page", async () => {
   assert.match(html, /Review and verify/);
   assert.match(html, /Can I apply/);
   assert.match(html, /What will it cost/);
-  assert.match(html, /Berkeley demo/);
+  assert.doesNotMatch(html, /Berkeley demo/);
+  assert.match(html, /Where to search/);
+  assert.doesNotMatch(html, /href="#how-it-works"|href="#what-you-get"/);
   assert.doesNotMatch(html, /AI housing decision companion/i);
 });
 
