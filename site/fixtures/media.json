@@ -3,8 +3,7 @@
   "alwaysAppend": "Photos show what the landlord chose to show. None of this replaces a live tour.",
   "places": [
     {
-      "id": "shattuck",
-      "sourceId": "haste-15",
+      "id": "haste-15",
       "nickname": "Haste St #15",
       "photoCount": 12,
       "walk": { "minutes": 10, "distance": "0.50 mi", "evidence": "inferred" },
@@ -29,8 +28,7 @@
       "sharedWith": "Haste St #27"
     },
     {
-      "id": "fulton",
-      "sourceId": "haste-27",
+      "id": "haste-27",
       "nickname": "Haste St #27",
       "photoCount": 12,
       "walk": { "minutes": 10, "distance": "0.50 mi", "evidence": "inferred" },
@@ -55,8 +53,7 @@
       "sharedWith": "Haste St #15"
     },
     {
-      "id": "albany",
-      "sourceId": "oxford-2150",
+      "id": "oxford-2150",
       "nickname": "Oxford St studio",
       "photoCount": 4,
       "walk": { "minutes": 8, "distance": "0.44 mi", "evidence": "inferred" },

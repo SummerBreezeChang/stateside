@@ -8,7 +8,7 @@ export type PlaceAnalysis = {
   nickname: string;
   headline: Claim;
   qualification: { summary: Claim; route: string; missingEvidence: string[] };
-  financials: { monthlyRent: MoneyFact; recurring: CostItem[]; fees: CostItem[]; deposit: MoneyFact };
+  financials: { monthlyRent: MoneyFact; recurring: CostItem[]; fees: CostItem[]; deposit: MoneyFact; publishedMoveIn: MoneyFact };
   lease: { start: string | null; end: string | null; summary: Claim };
   restPrivacy: Claim;
   campusEvening: Claim;
@@ -42,12 +42,9 @@ export function computeMonthlyTotal(place: PlaceAnalysis) {
 }
 
 export function computeMoveInCash(place: PlaceAnalysis) {
-  const creditedHoldingFees = place.financials.fees.filter((item) => /holding/i.test(item.label) && /credited toward/i.test(item.note));
-  const includedFees = place.financials.fees.filter((item) => !creditedHoldingFees.includes(item));
-  const parts = [place.financials.monthlyRent, place.financials.deposit, ...includedFees];
-  const known = parts.reduce((sum, item) => sum + (item.amount ?? 0), 0);
-  const evidence = evidenceForCosts(parts);
-  return { amount: known, evidence, label: evidence === "unknown" ? `${formatMoney(known)} + unknown charges` : formatMoney(known) };
+  const moveIn = place.financials.publishedMoveIn;
+  if (moveIn.amount === null) return { amount: null, evidence: "unknown" as Evidence, label: "Uncomputable" };
+  return { amount: moveIn.amount, evidence: moveIn.evidence, label: moveIn.evidence === "unknown" ? `${formatMoney(moveIn.amount)} — unverified` : formatMoney(moveIn.amount) };
 }
 
 function utcDate(value: string) {

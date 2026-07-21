@@ -1,219 +1,423 @@
 {
   "places": [
     {
-      "id": "shattuck",
-      "nickname": "Shattuck studio",
+      "id": "haste-15",
+      "nickname": "Haste St #15",
       "headline": {
-        "value": "Private furnished studio with a direct bus listed, but the screening route for an applicant without U.S. credit or an SSN is unresolved.",
+        "value": "The published good-credit requirement is a critical mismatch with the student's lack of U.S. credit, and reused photos make the exact unit unclear.",
         "evidence": "inferred",
-        "whyItMatters": "The unit fits the stated privacy and transportation priorities, but eligibility should be confirmed before paying an application fee."
+        "whyItMatters": "No alternative qualification route is published, and the student cannot tell which shared photos depict unit #15."
       },
       "qualification": {
         "summary": {
-          "value": "International students may apply, but approval requirements for this student's circumstances have not been confirmed.",
+          "value": "A good credit rating and a credit check for every resident over 18 are required; no route is published for this student's circumstances.",
           "evidence": "confirmed",
-          "whyItMatters": "Being welcome to apply does not mean that parent funding will satisfy screening requirements."
+          "whyItMatters": "The student has no U.S. credit, SSN, or U.S. guarantor, so qualification cannot be assumed."
         },
-        "route": "Standard screening; confirmation is still needed on SSN requirements and whether parent bank statements plus a sponsor letter can replace U.S. credit.",
+        "route": "Unknown. The listing does not state whether bank statements, a sponsor letter, or another international-student route is accepted.",
         "missingEvidence": [
-          "Whether an SSN is required",
-          "Whether parent bank statements and a sponsor letter are accepted instead of U.S. credit",
-          "Whether a U.S. guarantor is required",
-          "Any additional deposit or prepaid-rent requirement for applicants without U.S. credit"
+          "Whether an SSN is required for the credit check",
+          "Whether applicants without U.S. credit can qualify",
+          "Whether a U.S. guarantor is mandatory",
+          "Whether parent bank statements and a sponsor letter are accepted"
         ]
       },
       "financials": {
         "monthlyRent": {
-          "amount": 1850,
+          "amount": 1900,
           "evidence": "confirmed",
-          "note": "Stated monthly rent."
+          "note": "Published monthly rent."
         },
         "recurring": [
           {
-            "label": "Water and trash",
-            "amount": 60,
-            "frequency": "monthly",
-            "evidence": "confirmed",
-            "note": "Stated monthly charge."
-          },
-          {
-            "label": "Electricity",
-            "amount": 70,
-            "frequency": "monthly",
-            "evidence": "confirmed",
-            "note": "Listing estimate; actual billing method and usage may differ."
+            "label": "Utilities",
+            "amount": null,
+            "frequency": "unknown",
+            "evidence": "unknown",
+            "note": "Recurring utility amounts and responsibility are not published."
           }
         ],
         "fees": [
           {
-            "label": "Application fee",
+            "label": "Nonrefundable application fee",
             "amount": 45,
             "frequency": "one_time",
             "evidence": "confirmed",
-            "note": "Confirm screening eligibility before paying because documentation requirements remain unresolved."
+            "note": "Stated application fee."
           }
         ],
         "deposit": {
-          "amount": 1850,
+          "amount": 1900,
           "evidence": "confirmed",
-          "note": "Stated security deposit; payment timing and refund conditions were not supplied."
+          "note": "Published refundable security deposit for unit #15."
+        },
+        "publishedMoveIn": {
+          "amount": 3800,
+          "evidence": "confirmed",
+          "note": "Published move-in amount consisting of first month's rent and the stated deposit."
         }
       },
       "lease": {
-        "start": "2026-08-15",
-        "end": "2027-08-14",
+        "start": null,
+        "end": null,
         "summary": {
-          "value": "The fixed lease starts after the student's stated arrival and ends after the stated program end.",
-          "evidence": "inferred",
-          "whyItMatters": "The student should check whether the post-program period fits their housing plans and budget."
+          "value": "The listing states a 12-month lease, but exact start and end dates are unpublished.",
+          "evidence": "confirmed",
+          "whyItMatters": "The student cannot yet verify alignment with arrival and program dates."
         }
       },
       "restPrivacy": {
-        "value": "The listing describes a private studio, but gives no information about noise, building sound transfer, or quiet hours.",
-        "evidence": "confirmed",
-        "whyItMatters": "A private unit supports personal space, but the essential rest priority cannot be assessed without noise information."
+        "value": "The listing calls the unit a studio and mentions hardwood floors, but noise, window exposure, building access, exact layout, and unit-specific photo accuracy are unresolved.",
+        "evidence": "unknown",
+        "whyItMatters": "Rest and privacy are essential priorities, and three photos are identical to photos used for Haste St #27."
       },
       "campusEvening": {
-        "value": "The listing claims a direct AC Transit bus to campus taking approximately 18 minutes; evening frequency and the trip home are unknown.",
-        "evidence": "confirmed",
-        "whyItMatters": "A daytime listing estimate does not establish that transportation will remain simple after evening classes."
+        "value": "The collected record provides no verified walking, transit, lighting, or evening-return information.",
+        "evidence": "unknown",
+        "whyItMatters": "The student has no car and considers a simple campus trip essential; an evening route should be checked directly without treating the area as safe or unsafe."
       },
       "biggestQuestion": {
-        "value": "Will the landlord accept parent bank statements and a sponsor letter without U.S. credit, an SSN, or a U.S. guarantor?",
+        "value": "Will the landlord accept this applicant without U.S. credit, an SSN, or a U.S. guarantor, and can the landlord provide unit-specific photos for #15?",
         "evidence": "unknown",
-        "whyItMatters": "This determines whether applying is practical before any nonrefundable fee is paid."
+        "whyItMatters": "The published screening rule may block qualification, while byte-identical photos across units #15 and #27 prevent confirmation of which unit is shown."
       },
       "sections": {
         "restPrivacy": [
           {
-            "value": "Furnished private studio.",
+            "value": "The property is advertised as a studio.",
             "evidence": "confirmed",
-            "whyItMatters": "This supports the student's privacy priority and reduces immediate furniture needs."
+            "whyItMatters": "A studio may support personal space, but the listing does not document the exact layout or all facilities."
           },
           {
-            "value": "Noise conditions and quiet-hour rules are not described.",
+            "value": "Three photos are byte-identical across Haste St #15 and Haste St #27.",
+            "evidence": "confirmed",
+            "whyItMatters": "The student cannot tell which reused photos show the exact unit."
+          },
+          {
+            "value": "Noise, wall separation, window exposure, and building entry controls are not described.",
             "evidence": "unknown",
-            "whyItMatters": "The student's rest priority is essential, so privacy alone is not enough to judge sleep conditions."
+            "whyItMatters": "These missing details directly affect rest and privacy."
           }
         ],
         "dailyLife": [
           {
-            "value": "The listing reports a direct AC Transit bus to campus in approximately 18 minutes.",
+            "value": "Hardwood floors are listed.",
             "evidence": "confirmed",
-            "whyItMatters": "A direct trip may suit a student without a car, but the estimate should be verified for the required travel times."
+            "whyItMatters": "This is a documented unit feature, though the listing does not establish its condition."
           },
           {
-            "value": "Evening service and the return trip are not described.",
+            "value": "Utilities and laundry arrangements are not published.",
             "evidence": "unknown",
-            "whyItMatters": "Missing evening information could affect access after late classes or study sessions."
+            "whyItMatters": "Missing utility responsibility affects monthly budgeting, and missing laundry information affects routine convenience."
+          },
+          {
+            "value": "No verified campus-trip or evening-return details are supplied.",
+            "evidence": "unknown",
+            "whyItMatters": "A simple trip is essential for a student without a car."
           }
         ],
         "totalCommitment": [
           {
-            "value": "Rent is $1,850 per month, water and trash are $60 per month, and electricity is estimated at $70 per month.",
+            "value": "Monthly rent is $1,900, the refundable deposit is $1,900, and the published move-in amount is $3,800.",
             "evidence": "confirmed",
-            "whyItMatters": "The recurring charges should be compared with the student's available funding."
+            "whyItMatters": "These are the stated housing amounts before any unpublished utility costs."
           },
           {
-            "value": "The lease ends after the stated program end.",
-            "evidence": "inferred",
-            "whyItMatters": "The student may remain responsible under the lease after the academic program finishes."
+            "value": "A $45 nonrefundable application fee is stated.",
+            "evidence": "confirmed",
+            "whyItMatters": "This money would not be refunded if the application is unsuccessful."
+          },
+          {
+            "value": "A 12-month lease is stated, but exact dates are missing.",
+            "evidence": "confirmed",
+            "whyItMatters": "Program alignment cannot be checked until the proposed dates are provided."
           }
         ],
         "rentalReadiness": [
           {
-            "value": "International students are welcome to apply under standard screening.",
+            "value": "The listing requires good credit and a credit check for each resident over 18.",
             "evidence": "confirmed",
-            "whyItMatters": "This permits an application but does not clarify whether the student's documents meet screening standards."
+            "whyItMatters": "This is a critical mismatch because the student has no U.S. credit."
           },
           {
-            "value": "SSN and alternative credit-document requirements are unresolved.",
-            "evidence": "confirmed",
-            "whyItMatters": "Applying before confirmation risks paying a fee for a route the student may not satisfy."
+            "value": "No alternative route is published for an applicant without U.S. credit, an SSN, or a U.S. guarantor.",
+            "evidence": "unknown",
+            "whyItMatters": "Parent funding documents cannot be assumed to satisfy screening."
           }
         ],
         "trustVerification": [
           {
-            "value": "A recorded video is available, but a live video tour has not been confirmed.",
+            "value": "Three photos are byte-identical to photos used for Haste St #27.",
             "evidence": "confirmed",
-            "whyItMatters": "A recording cannot answer real-time questions or establish the unit's current condition as effectively as a live tour."
+            "whyItMatters": "Unit condition and features should be verified with unit-specific evidence before applying or paying."
           },
           {
-            "value": "Payment instructions, lease review access, and deposit refund terms were not supplied.",
+            "value": "No supplied message confirms how an international student without U.S. credit would be screened.",
             "evidence": "unknown",
-            "whyItMatters": "These details should be verified before sending money or signing."
+            "whyItMatters": "Written clarification is needed before risking the nonrefundable application fee."
           }
         ]
       },
       "actionLane": "Verify before applying",
       "nextActions": [
-        "Ask for written confirmation of the screening route before paying the application fee.",
-        "Request the full lease and all required move-in charges.",
-        "Request a live video tour or arrange an in-person tour after arrival if timing permits and the unit remains available consistent with the landlord's process and no payment is required before verification of material terms and identity controls acceptable to the student; the supplied messages only confirm a recording is available, not a live tour. Alternatively, ask the landlord to walk through the exact available unit live, show access points and fixtures, and answer questions in real time before the student relies on the listing media or sends any funds, while recognizing that no tour format alone guarantees legitimacy or condition. Also compare the lease dates with the student's program timeline and ask whether any lawful transfer, sublet, or early-termination option exists if housing is no longer needed after the program ends; no such option is stated, and the fixed end date remains the only confirmed term unless the written lease says otherwise. Preserve copies of the listing, messages, proposed lease, fee disclosures, payment instructions, and any screening criteria so contradictions or later changes can be identified before commitment. Do not assume that the phrase international students are welcome resolves approval, SSN, credit, guarantor, income, or document requirements, because the landlord explicitly says standard screening applies and has not confirmed whether the student's parent-funded route is accepted. Confirm whether the quoted electricity figure is only an estimate, how electricity is billed, whose name must be on the account, whether any account-opening deposit may apply, and whether the student needs an SSN to establish service; none of those operational details are supplied. Ask whether the furnished inventory will be attached to the lease or move-in condition report, what exact furniture is included, whether mattress or linen items are included, and how damage disputes are handled at move-out, because furnished does not identify the supplied items or their condition. Ask for objective information about building quiet hours, construction notices, shared walls, street-facing windows, and complaint procedures without asking the landlord to characterize the property or neighborhood as safe; the supplied materials support only the private-studio fact, not the student's essential rest requirement. Verify the stated bus trip using the student's actual class times, including return options after evening classes, because the listing provides only an approximate direct-bus estimate and no service schedule or evening details. Confirm when the deposit and first rent would be due, the accepted payment method, the named recipient, whether payment is made through a documented property-management channel, and what happens to each payment if the lease is not executed; these terms are missing and matter before any transfer. Ask whether renter's insurance, internet, laundry, parking-related charges despite having no car, building move-in fees, key fees, utility setup fees, or other recurring and one-time charges apply, because only rent, water and trash, estimated electricity, the application fee, and the deposit are stated. Review the complete lease for renewal language, automatic conversion, notice deadlines, guest rules, occupancy limits, entry procedures, repair reporting, maintenance responsibilities, utility allocation, late fees, payment methods, move-out cleaning standards, and deposit deductions; the listing summary does not establish these terms. If the landlord will not provide the written screening requirements or lease for review before requesting substantial payment, leave the place in the verification lane and do not treat urgency or international-student welcome language as proof that the route works. Ask whether application approval is conditional on viewing the unit, signing by a deadline, or providing original documents, and whether remote signing is supported given the student's August 12 arrival and the August 15 lease start; the short interval is visible from the dates but no operational process is supplied. Confirm exact possession timing and key handoff on August 15, including whether early access is possible or whether separate lodging is needed between arrival and lease commencement, without assuming flexibility that was not stated. Ask the landlord to identify which screening company is used, what applicant data it requires, whether an alternative identifier can be used without an SSN, and what criteria are applied to applicants without U.S. credit; this is an information request, not a conclusion about legal rights or likely approval. Verify that parent bank statements may be in the parent's name, ask what date range and balance evidence are expected, whether translated or certified documents are needed, and whether the sponsor letter needs a particular format or signature; none of these details have been confirmed. Ask whether any increased deposit, prepaid rent, or co-signer requirement would be imposed under the alternative route and request every such condition in writing before applying; no additional requirement is stated, but it remains unknown. Confirm that the advertised unit, rent, included furniture, fees, utility charges, and lease dates appear identically in the proposed lease before signing, and keep the contradiction-check focused on supplied documents rather than assumptions. Because the program ends before the fixed lease end, ask for the landlord's written policy on assignment or subletting and any approval or fee requirements, while recognizing that availability and permission are unknown and should not be treated as a guaranteed exit. Request a sample move-in condition checklist and ask whether timestamped photographs can be attached, especially for furnished items, so pre-existing damage can be documented. Clarify internet availability and cost because connectivity is not mentioned, and avoid treating the absence of a listed charge as inclusion. Ask whether water and trash at $60 per month is fixed, per person, subject to reconciliation, or capable of changing during the lease, because only the quoted amount and frequency are confirmed. Ask whether the application fee is refundable under any circumstances and when screening begins; do not infer refundability from silence. Confirm that the security deposit is separate from rent and obtain the written conditions governing its handling and deductions; only its amount is supplied. Request a current live demonstration of water, appliances, locks, windows, heating or cooling equipment, smoke and carbon-monoxide alarms, and any included furnishings during the tour, without interpreting that demonstration as a safety guarantee. Ask who is responsible for repairs and how after-hours maintenance requests are submitted, because no maintenance process is described. Confirm package and mail access, laundry arrangements, bicycle storage if relevant, and building access procedures as daily-life facts rather than neighborhood assurances. Ask whether the approximately 18-minute bus estimate includes walking and waiting or only time on the vehicle, because the listing does not define the estimate. Independently compare the stated route with UC Berkeley destinations relevant to the graduate program rather than assuming campus is a single stop, while avoiding any invented route details. Ask whether the lease contains any clause requiring continued liability after move-out, fees for replacement tenants, or restrictions on assignment; these could affect the post-program commitment and are not provided. Verify whether the unit shown in any recording is the exact unit offered, the recording date, and whether any material condition has changed; the existence of a recording alone does not answer those questions. Do not send identity documents through an unverified channel; first ask what secure application platform or document-transfer process is used and what information is necessary. Redact unnecessary account numbers from bank evidence where accepted by the landlord's documented process, while asking what unredacted fields are required; the supplied text does not state document-security procedures. Ask for a written itemization of all funds due at application, approval, signing, and move-in so the student can distinguish the application fee, deposit, rent, utilities, and any unstated charges without relying on a calculated total. Compare the final written terms against the preserved listing immediately before signing, and return unresolved changes to the landlord for written clarification. If eligibility remains unconfirmed, do not pay the application fee merely to discover whether the documentation route is accepted; that is the central unresolved issue supported by the messages."
+        "Ask in writing whether an applicant with no U.S. credit, SSN, or U.S. guarantor can qualify.",
+        "Describe the available parent bank statements and sponsor letter, and ask whether they are accepted; do not assume acceptance.",
+        "Request current, unit-specific photos or a live video tour clearly identifying unit #15 because three photos are identical to unit #27's photos. Cross-check permanent features during the tour before applying or paying, because reused photos do not establish which unit is shown or its condition today, and do not send money until the landlord confirms the unit and terms in writing and independently verifies who is authorized to receive payment and how payment should be made safely without using irreversible payment methods or relying only on links or instructions sent by message or email. Also ask for a written itemization of every amount due before move-in and every recurring charge, including utilities, so the published total is not mistaken for the full ongoing commitment, and request the proposed lease start and end dates to compare them with the student's August 12, 2026 arrival and May 20, 2027 program end before signing anything or paying the nonrefundable application fee."
       ],
       "documents": [
-        "Full proposed lease and all addenda",
-        "Written screening criteria for applicants without U.S. credit or an SSN",
-        "Written confirmation of accepted sponsor documents",
-        "Complete move-in charge and recurring-cost disclosure",
-        "Furnished-unit inventory and condition report",
-        "Tour details identifying whether the exact available unit will be shown"
+        "Parent bank statements",
+        "Sponsor letter",
+        "Passport or other identification if requested through a verified process",
+        "UC Berkeley admission or enrollment documentation if requested",
+        "Draft lease with exact dates before signing"
       ],
       "landlordQuestions": [
-        "Can you confirm in writing whether I may qualify without an SSN, U.S. credit, or a U.S. guarantor using my parent's bank statements and sponsor letter?",
-        "What exact documents, formats, and date ranges are required for the parent-funded route?",
-        "Are any additional deposits, prepaid rent, or other conditions required for applicants using that route?",
-        "May I review the full lease and all addenda before paying the application fee?",
-        "Can you provide a live video tour of the exact available studio?",
-        "What furniture is included, and will an inventory and condition report be attached to the lease?",
-        "How is electricity billed, and is the $70 amount only an estimate?",
-        "Is the $60 water and trash charge fixed for the full lease?",
-        "What are the building's quiet hours and procedures for noise complaints?",
-        "What are the bus options for returning from campus after evening classes?",
-        "Are assignment, subletting, or early-termination options stated in the lease?",
-        "When are the deposit and first rent due, and what are the refund conditions if a lease is not executed?",
-        "Are internet, laundry, renter's insurance, key, move-in, or utility setup charges required?",
-        "How and when would keys be provided on August 15?",
-        "Is the application fee refundable under any circumstances?",
-        "Which screening service is used, and can it process an applicant without an SSN?",
-        "Does the proposed lease contain the same rent, utility charges, deposit, fees, and dates as the listing?",
-        "What secure method should I use to submit bank statements and identity documents?",
-        "Does the approximately 18-minute estimate include walking and waiting?",
-        "What repair-reporting and after-hours maintenance process applies?"
+        "Can an applicant with no U.S. credit, SSN, or U.S. guarantor qualify?",
+        "Do you accept parent bank statements and a sponsor letter, and what exact documents are required?",
+        "Can you provide current photos or a live video tour that clearly identifies unit #15?",
+        "Which utilities are included, and what recurring charges would the tenant pay?",
+        "What exact lease start and end dates are available?",
+        "Is the $45 application fee charged before qualification documents are reviewed?"
       ],
       "draftEmail": {
-        "subject": "Screening and lease questions for the Shattuck studio",
-        "body": "Hello,\n\nI am interested in the furnished Shattuck studio for the lease beginning August 15, 2026. I am an international UC Berkeley graduate student without U.S. credit, an SSN, or a U.S. guarantor. My housing is parent-funded, and I can provide parent bank statements and a sponsor letter.\n\nBefore I apply or pay a fee, could you please confirm in writing whether those documents are accepted for screening and whether any additional deposit, prepaid rent, or other condition would apply? Please also send the full lease, all addenda, and an itemized list of funds due at application, signing, and move-in.\n\nCould you provide a live video tour of the exact available unit and an inventory of the included furniture? I would also appreciate details about quiet hours, electricity billing, evening bus options, and any assignment, subletting, or early-termination terms because the lease ends after my program.\n\nThank you."
+        "subject": "Questions about Haste St #15 screening and unit verification",
+        "body": "Hello, I am a UC Berkeley graduate student interested in Haste St #15. I do not have U.S. credit, an SSN, or a U.S. guarantor. My housing is parent-funded, and I can provide bank statements and a sponsor letter. Please confirm in writing whether I can qualify and which documents you accept. I also noticed that three listing photos are identical to photos used for unit #27. Could you provide current, unit-specific photos or a live video tour clearly identifying #15? Please also confirm utility responsibility, all recurring charges, and the exact lease start and end dates before I apply or pay the nonrefundable fee. Thank you."
       }
     },
     {
-      "id": "fulton",
-      "nickname": "Fulton private room",
+      "id": "haste-27",
+      "nickname": "Haste St #27",
       "headline": {
-        "value": "The documented sponsor route fits the student's stated circumstances, but the utility contradiction, joint financial responsibility, and unknown roommate expectations require review before applying.",
+        "value": "Pause before any payment: the deposit and move-in block identifies studio #7 rather than unit #27, the good-credit rule is a critical qualification mismatch, and reused photos do not establish which unit is shown.",
         "evidence": "inferred",
-        "whyItMatters": "The student appears to have a stated qualification route, but could face costs caused by co-tenants and daily-life conditions that are not clear."
+        "whyItMatters": "The $1,850 deposit and $3,700 move-in total cannot be confirmed for #27, qualification cannot be assumed, and three photos are identical to those used for #15."
       },
       "qualification": {
         "summary": {
-          "value": "A parent sponsor letter and recent bank statement are accepted instead of U.S. income, and no U.S. guarantor is required on this route.",
+          "value": "A good credit rating and a credit check for every resident over 18 are required; no alternative route is published for this student.",
           "evidence": "confirmed",
-          "whyItMatters": "This directly matches the student's parent-funded situation, though other screening requirements remain unstated."
+          "whyItMatters": "The student has no U.S. credit, SSN, or U.S. guarantor, creating a critical qualification mismatch."
         },
-        "route": "Apply using a parent sponsor letter and recent bank statement instead of U.S. income; no U.S. guarantor is required on that route.",
+        "route": "Unknown. No route is stated for applicants without U.S. credit, an SSN, or a U.S. guarantor.",
         "missingEvidence": [
-          "Whether an SSN is required",
-          "Whether lack of U.S. credit is accepted under the same route",
-          "Exact bank-statement recency, format, and balance requirements",
-          "Any additional screening documents or conditions",
-          "Whether approval requires a co-signer or other condition not described as a U.S. guarantor"
+          "Whether an SSN is required for the credit check",
+          "Whether applicants without U.S. credit can qualify",
+          "Whether a U.S. guarantor is mandatory",
+          "Whether parent bank statements and a sponsor letter are accepted"
         ]
       },
       "financials": {
         "monthlyRent": {
-          "amount": 1350,
+          "amount": 1850,
           "evidence": "confirmed",
-          "note": "Stated monthly rent for the private bedroom."
+          "note": "Published monthly rent for unit #27."
+        },
+        "recurring": [
+          {
+            "label": "Water",
+            "amount": null,
+            "frequency": "monthly",
+            "evidence": "confirmed",
+            "note": "Listed as included; no separate charge is published."
+          },
+          {
+            "label": "Garbage",
+            "amount": null,
+            "frequency": "monthly",
+            "evidence": "confirmed",
+            "note": "Listed as included; no separate charge is published."
+          },
+          {
+            "label": "Other utilities",
+            "amount": null,
+            "frequency": "unknown",
+            "evidence": "unknown",
+            "note": "Responsibility and amounts for other utilities are not published."
+          }
+        ],
+        "fees": [
+          {
+            "label": "Nonrefundable application fee",
+            "amount": 45,
+            "frequency": "one_time",
+            "evidence": "confirmed",
+            "note": "Stated application fee."
+          }
+        ],
+        "deposit": {
+          "amount": 1850,
+          "evidence": "unknown",
+          "note": "The amount appears in a move-in block that names studio #7, so it is not confirmed for unit #27."
+        },
+        "publishedMoveIn": {
+          "amount": 3700,
+          "evidence": "unknown",
+          "note": "The published block states $3,700 but identifies studio #7 rather than unit #27."
+        }
+      },
+      "lease": {
+        "start": null,
+        "end": null,
+        "summary": {
+          "value": "The listing states a one-year lease, but exact start and end dates are unpublished.",
+          "evidence": "confirmed",
+          "whyItMatters": "The student cannot verify whether the dates align with arrival and the academic program."
+        }
+      },
+      "restPrivacy": {
+        "value": "The listing calls the unit a studio, but the wrong-unit move-in reference and shared photos leave unit-specific details unresolved.",
+        "evidence": "unknown",
+        "whyItMatters": "The student needs reliable evidence about the exact unit before evaluating essential rest and privacy needs."
+      },
+      "campusEvening": {
+        "value": "No verified walking, transit, lighting, or evening-return information is supplied.",
+        "evidence": "unknown",
+        "whyItMatters": "The student has no car and requires a simple campus trip; the route should be checked directly without declaring the area safe or unsafe."
+      },
+      "biggestQuestion": {
+        "value": "Do the deposit, $3,700 move-in amount, photos, and rental terms actually belong to unit #27 rather than studio #7 or unit #15, and is there any qualification route without U.S. credit?",
+        "evidence": "unknown",
+        "whyItMatters": "The wrong-unit block requires pausing before payment, shared photos prevent visual confirmation, and the published credit requirement conflicts with the student's profile."
+      },
+      "sections": {
+        "restPrivacy": [
+          {
+            "value": "The property is advertised as a studio.",
+            "evidence": "confirmed",
+            "whyItMatters": "This identifies the advertised unit type but does not document the exact layout or all facilities."
+          },
+          {
+            "value": "Three photos are byte-identical across Haste St #27 and Haste St #15.",
+            "evidence": "confirmed",
+            "whyItMatters": "The student cannot tell which reused photos show the exact unit."
+          },
+          {
+            "value": "Noise, window exposure, building access, and unit-specific condition are not documented.",
+            "evidence": "unknown",
+            "whyItMatters": "These details affect essential rest and privacy priorities."
+          }
+        ],
+        "dailyLife": [
+          {
+            "value": "Water and garbage are listed as included.",
+            "evidence": "confirmed",
+            "whyItMatters": "These services are not presented as separate tenant charges, but responsibility for other utilities remains unclear."
+          },
+          {
+            "value": "Laundry arrangements are not published.",
+            "evidence": "unknown",
+            "whyItMatters": "Laundry access affects routine convenience."
+          },
+          {
+            "value": "No verified campus-trip or evening-return details are supplied.",
+            "evidence": "unknown",
+            "whyItMatters": "A simple trip is essential for a student without a car."
+          }
+        ],
+        "totalCommitment": [
+          {
+            "value": "Monthly rent is published as $1,850 for unit #27.",
+            "evidence": "confirmed",
+            "whyItMatters": "This is the stated recurring rent before any unpublished charges."
+          },
+          {
+            "value": "The move-in block states a $1,850 refundable deposit and $3,700 total but identifies studio #7.",
+            "evidence": "confirmed",
+            "whyItMatters": "Those amounts cannot be treated as unit #27's terms, so payment should pause."
+          },
+          {
+            "value": "A $45 nonrefundable application fee and a one-year lease are stated, but exact lease dates are missing.",
+            "evidence": "confirmed",
+            "whyItMatters": "The fee could be lost after application, and program alignment cannot be checked without dates."
+          }
+        ],
+        "rentalReadiness": [
+          {
+            "value": "A good credit rating and a credit check for each resident over 18 are required.",
+            "evidence": "confirmed",
+            "whyItMatters": "This is a critical mismatch for a student with no U.S. credit."
+          },
+          {
+            "value": "No qualification alternative is published for applicants without U.S. credit, an SSN, or a U.S. guarantor.",
+            "evidence": "unknown",
+            "whyItMatters": "The student's parent funding documents cannot be assumed to satisfy screening."
+          }
+        ],
+        "trustVerification": [
+          {
+            "value": "The move-in block for the unit #27 advertisement names studio #7.",
+            "evidence": "confirmed",
+            "whyItMatters": "The stated deposit and move-in total may belong to a different unit; pause before paying."
+          },
+          {
+            "value": "Three photos are byte-identical to photos used for Haste St #15.",
+            "evidence": "confirmed",
+            "whyItMatters": "The listing does not establish which exact unit the reused photos depict."
+          },
+          {
+            "value": "No supplied message confirms an international-student qualification route.",
+            "evidence": "unknown",
+            "whyItMatters": "Written clarification is needed before paying even the nonrefundable application fee."
+          }
+        ]
+      },
+      "actionLane": "Pause — do not pay yet",
+      "nextActions": [
+        "Do not pay the application fee, deposit, rent, or move-in amount until the landlord corrects the studio #7 reference in writing and confirms every amount for unit #27.",
+        "Request a corrected, unit-specific move-in breakdown for #27 that separately identifies rent, deposit, and any actual fees.",
+        "Ask whether an applicant with no U.S. credit, SSN, or U.S. guarantor can qualify and whether parent bank statements and a sponsor letter are accepted; do not assume an alternative route exists. Request current photos or a live video tour clearly identifying unit #27 because three photos are identical to unit #15's photos, then compare permanent features so reused images are not mistaken for proof of #27's current condition; do not send money until the landlord provides the corrected unit number and terms in writing, verifies who is authorized to receive payment, and gives a payment method that can be independently checked without relying only on links or instructions sent by message or email or using irreversible transfers. Obtain exact lease dates and all recurring utility responsibilities in writing before considering an application, because a one-year label and included water and garbage do not establish the complete commitment."
+      ],
+      "documents": [
+        "Parent bank statements",
+        "Sponsor letter",
+        "Passport or other identification if requested through a verified process",
+        "UC Berkeley admission or enrollment documentation if requested",
+        "Corrected written terms naming unit #27",
+        "Draft lease naming unit #27 with exact dates before signing"
+      ],
+      "landlordQuestions": [
+        "Why does the unit #27 move-in block identify studio #7?",
+        "Please confirm in writing the correct deposit and move-in amount specifically for unit #27.",
+        "Can an applicant with no U.S. credit, SSN, or U.S. guarantor qualify?",
+        "Do you accept parent bank statements and a sponsor letter, and what exact documents are required?",
+        "Can you provide current photos or a live video tour clearly identifying unit #27?",
+        "Which utilities beyond water and garbage would the tenant pay?",
+        "What exact lease start and end dates are available?"
+      ],
+      "draftEmail": {
+        "subject": "Correction required before payment for Haste St #27",
+        "body": "Hello, I am interested in Haste St #27, but the published move-in block identifies studio #7. Before I apply or pay anything, please provide corrected written terms specifically naming unit #27 and confirm its deposit, move-in amount, fees, and exact lease dates. I also noticed that three photos are identical to photos used for unit #15, so please provide current, unit-specific photos or a live video tour clearly identifying #27. I do not have U.S. credit, an SSN, or a U.S. guarantor; my housing is parent-funded, with bank statements and a sponsor letter available. Please confirm whether I can qualify and which documents you accept. Thank you."
+      }
+    },
+    {
+      "id": "oxford-2150",
+      "nickname": "Oxford St studio",
+      "headline": {
+        "value": "The lower published rent and included utilities are clear, but the deposit, application fee, move-in total, lease term, dates, and qualification rules are all unpublished.",
+        "evidence": "inferred",
+        "whyItMatters": "The move-in total is uncomputable, the commitment length is unknown, and the student cannot assess qualification or program alignment."
+      },
+      "qualification": {
+        "summary": {
+          "value": "No screening criteria, credit rule, SSN requirement, guarantor route, or international-student documentation route is published.",
+          "evidence": "unknown",
+          "whyItMatters": "Approval cannot be assumed, including on the basis of parent funding documents."
+        },
+        "route": "Unknown. No qualification route is published.",
+        "missingEvidence": [
+          "Screening criteria",
+          "Credit requirement",
+          "SSN requirement",
+          "Guarantor requirement or route",
+          "Whether parent bank statements and a sponsor letter are accepted",
+          "Required income or funding documentation"
+        ]
+      },
+      "financials": {
+        "monthlyRent": {
+          "amount": 1750,
+          "evidence": "confirmed",
+          "note": "Published monthly rent with utilities included."
         },
         "recurring": [
           {
@@ -221,388 +425,150 @@
             "amount": null,
             "frequency": "monthly",
             "evidence": "confirmed",
-            "note": "The listing says utilities are included, but the lease excerpt says electricity is billed separately based on actual household use. This contradiction must be resolved in the full lease."
-          },
-          {
-            "label": "Electricity",
-            "amount": null,
-            "frequency": "monthly",
-            "evidence": "confirmed",
-            "note": "The lease excerpt states separate billing based on actual household use; no amount or allocation formula is supplied."
-          },
-          {
-            "label": "Co-tenant unpaid rent and utility exposure",
-            "amount": null,
-            "frequency": "unknown",
-            "evidence": "confirmed",
-            "note": "The lease excerpt makes each tenant jointly responsible for unpaid rent and utility balances owed by any co-tenant."
+            "note": "Utilities are stated as included, but the listing does not specify which services are covered."
           }
         ],
-        "fees": [
-          {
-            "label": "Application fee",
-            "amount": 35,
-            "frequency": "one_time",
-            "evidence": "confirmed",
-            "note": "Stated application fee."
-          },
-          {
-            "label": "Holding fee",
-            "amount": 250,
-            "frequency": "one_time",
-            "evidence": "confirmed",
-            "note": "Stated as credited toward the deposit; payment timing and refund conditions are not supplied."
-          }
-        ],
+        "fees": [],
         "deposit": {
-          "amount": 1350,
-          "evidence": "confirmed",
-          "note": "Stated deposit. The $250 holding fee is described as a credit toward it, but the handling and refund terms need written confirmation."
+          "amount": null,
+          "evidence": "unknown",
+          "note": "No security deposit is published."
+        },
+        "publishedMoveIn": {
+          "amount": null,
+          "evidence": "unknown",
+          "note": "No move-in total is published; it is uncomputable because the deposit and any application fee are unknown."
         }
       },
       "lease": {
-        "start": "2026-08-15",
-        "end": "2027-05-14",
+        "start": null,
+        "end": null,
         "summary": {
-          "value": "The lease starts after the student's stated arrival and ends before the stated program end.",
-          "evidence": "inferred",
-          "whyItMatters": "The student needs to confirm housing coverage for the remaining program period and should not assume an extension is available."
+          "value": "The listing describes a monthly rental period, but no lease term, start date, or end date is published.",
+          "evidence": "unknown",
+          "whyItMatters": "The length and conditions of the commitment cannot be compared with the student's program dates."
         }
       },
       "restPrivacy": {
-        "value": "The bedroom is private, but the apartment is shared with other tenants whose quiet-hours, guest, and cleaning expectations are unknown.",
-        "evidence": "confirmed",
-        "whyItMatters": "Private sleeping space does not resolve noise, guest, bathroom, kitchen, or cleaning conditions in a shared home."
+        "value": "The property is advertised as a studio with no smoking, but noise, exact layout, window exposure, building access, and unit condition are not documented.",
+        "evidence": "unknown",
+        "whyItMatters": "Rest and privacy are essential and cannot be evaluated from the supplied information."
       },
       "campusEvening": {
-        "value": "The listing reports one direct bus to campus taking about 15 minutes; evening service and the return trip are not described.",
-        "evidence": "confirmed",
-        "whyItMatters": "The route may be simple during the listed conditions, but suitability after evening classes remains unverified."
+        "value": "No verified walking, transit, lighting, or evening-return information is supplied.",
+        "evidence": "unknown",
+        "whyItMatters": "The student has no car and requires a simple campus trip; the route should be checked directly without declaring the area safe or unsafe."
       },
       "biggestQuestion": {
-        "value": "How does joint responsibility work in practice, and can the student be required to cover unpaid rent or utilities owed by a co-tenant?",
-        "evidence": "confirmed",
-        "whyItMatters": "The supplied lease excerpt creates financial exposure beyond the student's own stated rent and usage."
+        "value": "What are the complete commitment and screening terms, including the deposit, application fee, move-in total, lease term, exact dates, and qualification requirements?",
+        "evidence": "unknown",
+        "whyItMatters": "These cross-listing omissions make the move-in total uncomputable and leave both commitment length and eligibility unresolved."
       },
       "sections": {
         "restPrivacy": [
           {
-            "value": "The student would have a furnished private bedroom in a shared three-bedroom apartment.",
+            "value": "The property is advertised as a studio and no smoking is stated.",
             "evidence": "confirmed",
-            "whyItMatters": "The room provides personal space, but kitchens, bathrooms, and other household areas may be shared."
+            "whyItMatters": "These are relevant to personal space and smoke exposure, but they do not establish noise levels or exact layout."
           },
           {
-            "value": "Roommate quiet-hours, guest, and cleaning expectations have not been provided.",
-            "evidence": "confirmed",
-            "whyItMatters": "These rules directly affect the student's essential rest and privacy priorities."
+            "value": "Noise, window exposure, building entry controls, and unit condition are not described.",
+            "evidence": "unknown",
+            "whyItMatters": "These missing details directly affect rest and privacy."
           }
         ],
         "dailyLife": [
           {
-            "value": "The listing reports one direct bus to campus taking about 15 minutes.",
+            "value": "Utilities are included, though the covered services are not itemized.",
             "evidence": "confirmed",
-            "whyItMatters": "A direct listed route may support travel without a car, subject to schedule verification."
+            "whyItMatters": "Included utilities may simplify billing, but the student needs to know exactly what is covered."
           },
           {
-            "value": "Evening transportation details are absent.",
+            "value": "Laundry is available in the building.",
+            "evidence": "confirmed",
+            "whyItMatters": "This supports routine convenience, although cost, hours, and equipment details are unpublished."
+          },
+          {
+            "value": "Street parking is listed.",
+            "evidence": "confirmed",
+            "whyItMatters": "The student has no car, so this does not resolve the essential campus-trip requirement."
+          },
+          {
+            "value": "No campus-trip or evening-return details are verified.",
             "evidence": "unknown",
-            "whyItMatters": "The student cannot yet judge the trip home after late classes or study sessions."
+            "whyItMatters": "The student needs a simple non-car route."
           }
         ],
         "totalCommitment": [
           {
-            "value": "The listing says utilities are included, while the lease excerpt says electricity is billed separately.",
+            "value": "Published monthly rent is $1,750 with utilities included.",
             "evidence": "confirmed",
-            "whyItMatters": "The contradiction changes the recurring cost and must be resolved by the controlling written lease."
+            "whyItMatters": "This is the only stated housing amount."
           },
           {
-            "value": "Each tenant is jointly responsible for unpaid rent and utility balances owed by any co-tenant.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student could face financial demands caused by another tenant's nonpayment."
+            "value": "No deposit, application fee, or move-in total is published.",
+            "evidence": "unknown",
+            "whyItMatters": "The move-in total is uncomputable until these terms are disclosed."
           },
           {
-            "value": "The lease ends before the stated program end.",
-            "evidence": "inferred",
-            "whyItMatters": "Additional housing may be needed unless a written extension or other arrangement is available."
+            "value": "No lease term or exact dates are published.",
+            "evidence": "unknown",
+            "whyItMatters": "The commitment length and program alignment cannot be assessed."
           }
         ],
         "rentalReadiness": [
           {
-            "value": "Parent sponsor documentation is accepted instead of U.S. income, with no U.S. guarantor required on that route.",
-            "evidence": "confirmed",
-            "whyItMatters": "This is the clearest stated qualification match among the supplied options."
+            "value": "No screening criteria or qualification rules are published.",
+            "evidence": "unknown",
+            "whyItMatters": "The student cannot know whether the lack of U.S. credit, SSN, and U.S. guarantor creates a barrier."
           },
           {
-            "value": "SSN and U.S.-credit treatment remain unstated.",
+            "value": "Acceptance of parent bank statements and a sponsor letter is not published.",
             "evidence": "unknown",
-            "whyItMatters": "The student should confirm every screening requirement before paying the application or holding fee."
+            "whyItMatters": "Available funding evidence cannot be assumed to satisfy the landlord."
           }
         ],
         "trustVerification": [
           {
-            "value": "The lease excerpt discloses terms that conflict with the listing and add co-tenant liability.",
+            "value": "The Oxford listing omits the deposit, application fee, move-in total, and lease term.",
             "evidence": "confirmed",
-            "whyItMatters": "The full lease may contain other material obligations not visible in the listing summary."
+            "whyItMatters": "These missing commitment terms must be obtained in writing before applying or paying."
           },
           {
-            "value": "No tour format or unit-verification process is described.",
-            "evidence": "unknown",
-            "whyItMatters": "The room, shared spaces, current condition, and household setup should be verified before commitment."
+            "value": "The listing also omits exact dates and all qualification rules.",
+            "evidence": "confirmed",
+            "whyItMatters": "The student cannot verify program alignment or eligibility."
           }
         ]
       },
       "actionLane": "Verify before applying",
       "nextActions": [
-        "Request the complete lease and all addenda, not only the excerpt.",
-        "Get written clarification on whether electricity is included and which document controls.",
-        "Review the joint-responsibility clause and ask whether an individual-liability lease is available; do not assume it is available because the supplied excerpt states joint responsibility. Ask for examples in plain language of what the landlord would demand from this tenant if a co-tenant failed to pay rent, electricity, or another shared balance, while recognizing that the response explains the landlord's practice and does not replace review of the written clause. Confirm whether joint responsibility covers only tenants on this apartment's lease, whether it includes late fees, repair charges, collection costs, or future utility adjustments, and whether liability continues after a co-tenant moves out; these details are not supplied. Ask for the exact electricity allocation formula, billing frequency, invoice access, account holder, payment deadline, reconciliation process, and dispute procedure because actual household use does not explain how each tenant's share is determined. Require the final lease and fee disclosure to state clearly whether utilities other than electricity are included, whether internet is included, and whether any utility can later be separately charged; the listing's broad inclusion statement conflicts with the electricity clause. Do not pay the $250 holding fee until its refundability, crediting process, deadline, conditions, and treatment after denial or withdrawal are provided in writing, because calling it credited toward the deposit does not establish when it is refundable. Confirm whether the $35 application fee is refundable under any circumstances and whether screening begins before or after the holding fee is requested. Ask whether lack of an SSN and U.S. credit is accepted under the same parent-sponsor route, since the landlord confirmed substitution for U.S. income and no guarantor but did not explicitly answer those separate issues. Obtain the required recency, number of months, language, currency, account-holder details, certification needs, signature format, and submission channel for the parent bank statement and sponsor letter. Request a live video or in-person tour of the exact bedroom and all shared areas, including kitchen, bathrooms, laundry, storage, entrances, locks, heating or cooling equipment, and current furnishings, while recognizing that a tour does not guarantee condition or legitimacy. Ask for a written furniture inventory for the private room and identify any furniture in shared areas available for tenant use, along with condition documentation. Request a conversation or written household summary from current roommates covering quiet hours, overnight guests, shared-bathroom schedules, cooking, food storage, cleaning, noise, work or study schedules, shared purchases, and conflict resolution; no current expectations have been supplied. Avoid treating roommate statements as guaranteed future behavior, and ask whether household rules are written into the lease, a roommate agreement, or neither. Ask how replacement roommates are selected, whether the student has input, and whether joint liability continues through roommate changes, because the lease excerpt creates exposure tied to co-tenants. Confirm the exact bedroom offered and whether the bedroom has a lock, without making assumptions about security or legal requirements. Verify the direct bus claim at the student's expected class times and check the return trip after evening classes because the listing gives only an approximate direct trip. Compare the lease end date with the program end date and ask whether a written extension through the remaining program period is available, at what rent and terms, without assuming renewal or extension. Ask what happens if no extension is available, including the move-out deadline and any holdover language in the lease, but do not treat a future alternative rental as guaranteed. Request a written itemization of all funds due at application, holding, signing, move-in, and monthly thereafter so the student can separate the stated fee, holding payment, deposit, rent, electricity, and any unstated charges without calculating a total. Confirm when the $250 credit is applied against the $1,350 deposit and request a receipt showing that credit if payment is eventually made. Ask who holds the deposit, what move-in condition documentation is used, what deductions may apply, and whether shared-area damage can be charged jointly; only the amount is confirmed. Review the lease for guest restrictions, occupancy limits, quiet hours, cleaning duties, shared-area damage, repair reporting, landlord entry, late fees, payment methods, renter's insurance, assignment, subletting, termination, renewal, and move-out notice. Ask whether any co-tenant balance already exists and request confirmation that the student will not become responsible for obligations arising before the student's lease begins; the supplied excerpt does not address timing. Request the names only as needed for lease administration and payment status confirmation through the landlord's process; do not seek or use protected demographic information to evaluate roommates or housing. Ask whether each roommate signs the same lease, separate agreements, or a master lease, and compare the answer with the joint-responsibility wording. Confirm the number of bathrooms and how they are shared because the listing gives only the bedroom and apartment size. Ask about laundry access, internet, package handling, mail, bicycle storage if relevant, and any household supplies or recurring shared purchases, because utilities included does not establish these daily-life details. Ask whether the electricity account provides statements tenants can inspect and whether a departing tenant receives a final reconciliation. Preserve the listing and landlord message showing utilities included, then compare those records line by line with the proposed lease before signing. If the final lease retains separate electricity billing, rely on that written obligation rather than the broader listing claim and ask the landlord to correct the advertisement or written summary for clarity. If the landlord says electricity is included despite the excerpt, require the final executed lease or addendum to say so explicitly before relying on that statement. Ask whether unpaid balances from one co-tenant can affect renewal, deposit deductions, notices, or collection activity against all tenants; the supplied clause indicates joint responsibility but not all consequences. Confirm how rent is divided and whether the stated $1,350 is this student's fixed bedroom rent or part of a household rent balance for which everyone is jointly responsible; the listing states the monthly room price, but the excerpt raises broader liability. Ask whether the holding fee reserves the exact bedroom, for how long, and what happens if the offered bedroom or lease terms change. Do not submit sensitive bank documents until the landlord identifies a secure application process and the student confirms the recipient and requested fields. Ask whether redacted bank account numbers are accepted and what balance or transaction information must remain visible. Request objective noise information such as written building quiet hours and known scheduled construction, without asking anyone to declare the home or area safe. Ask whether roommates can host guests in shared spaces overnight and whether those rules can change during the lease, because guest expectations are currently unknown. Confirm cleaning responsibilities and whether professional cleaning fees or shared-area deductions apply at move-out. Ask how maintenance requests in a shared apartment are submitted and who may authorize entry into the private bedroom. Request possession and key-handoff details for August 15 and whether the student's August 12 arrival requires temporary accommodation; no early access is stated. Verify whether the route estimate includes walking and waiting and whether the stated bus serves the specific UC Berkeley destination needed by the student, without inventing stops or schedules. Ask for payment instructions only after material terms are verified, and confirm the named recipient and documented management channel before sending funds. Preserve receipts and written confirmations for any application or holding payment. If the roommate expectations remain unavailable, treat the essential rest criterion as unresolved even if the financial and qualification terms are clarified. If the joint-liability exposure is unacceptable to the student and no individual-liability option is offered in writing, set the property aside rather than assuming co-tenants will always pay. If the lease contradiction cannot be corrected or clearly resolved in writing, do not proceed based solely on the lower-cost interpretation. Ask whether there are charges for keys, move-in, furniture, internet, laundry, renter's insurance, payment processing, maintenance, or replacement roommates; none are stated. Confirm that the full lease dates, rent, deposit, application fee, holding-fee credit, utility treatment, and sponsor route match all written representations before signing. Request a copy of any roommate agreement before commitment and determine whether it can impose financial or conduct obligations beyond the lease. Ask whether the sponsor signs any document and whether that document creates payment responsibility, since acceptance of a sponsor letter does not explain the sponsor's contractual role. Keep qualification and lease-risk decisions separate: the stated sponsor route may make an application possible, but it does not reduce the confirmed co-tenant liability or resolve the utility contradiction. Do not infer approval from the accepted documentation route; standard outcome criteria beyond the supplied messages remain unknown."
+        "Request a written itemization of the security deposit, application fee, every amount due before move-in, and any recurring charges not covered by rent.",
+        "Ask for the lease term or full monthly-rental conditions and exact start and end dates; do not treat the phrase monthly rental period as a confirmed lease duration.",
+        "Request the complete screening criteria, including credit, SSN, guarantor, and funding-document requirements. Ask whether parent bank statements and a sponsor letter are accepted without assuming they qualify, and obtain a draft agreement before applying or paying so the unpublished deposit, fees, move-in obligations, termination rules, and dates can be reviewed in writing. Independently verify the exact unit, the person authorized to rent it, and a reliable payment process before sending money, avoiding irreversible payment methods and instructions that can only be confirmed through a message or email link. Also confirm exactly which utilities are included and inspect the non-car campus route and evening return conditions directly, since neither the listing nor landlord messages establish trip simplicity or safety."
       ],
       "documents": [
-        "Full lease and all addenda",
-        "Written utility clarification",
-        "Written joint-liability explanation and any individual-liability alternative",
-        "Holding-fee terms and refund policy",
-        "Parent sponsor document checklist",
-        "Roommate or household rules",
-        "Furnished-room inventory and move-in condition report",
-        "Itemized list of all required payments"
+        "Parent bank statements",
+        "Sponsor letter",
+        "Passport or other identification if requested through a verified process",
+        "UC Berkeley admission or enrollment documentation if requested",
+        "Written fee and move-in itemization",
+        "Draft rental agreement with exact dates and commitment terms"
       ],
       "landlordQuestions": [
-        "Does the parent sponsor route also allow an applicant without an SSN or U.S. credit?",
-        "What exact bank-statement and sponsor-letter documents are required?",
-        "Is electricity included or billed separately, and will the final lease state the answer clearly?",
-        "How is each tenant's electricity share calculated and documented?",
-        "Can you explain the joint-responsibility clause with an example involving a co-tenant's unpaid rent or utilities?",
-        "Is an individual-liability lease available?",
-        "Could I become responsible for a balance created before my lease starts?",
-        "Is the $250 holding fee refundable if I withdraw, am denied, or the lease terms change?",
-        "When and how is the holding fee credited toward the deposit?",
-        "May I review the full lease and all addenda before paying the holding fee?",
-        "Can I have a live tour of the exact bedroom and all shared areas?",
-        "What furniture is included in the bedroom?",
-        "What are the current roommates' quiet-hours, guest, cleaning, cooking, and shared-space expectations?",
-        "Is there a written roommate agreement, and may I review it?",
-        "How are replacement roommates selected, and does joint liability continue after roommate changes?",
-        "Are other utilities, internet, and laundry included?",
-        "Are there any additional recurring or one-time charges?",
-        "Is an extension through the end of my program available in writing?",
-        "What bus options are available for returning from campus after evening classes?",
-        "How are shared-area damage and deposit deductions allocated?",
-        "Does each roommate sign the same lease or a separate agreement?",
-        "Is the stated $1,350 my fixed bedroom rent even if another co-tenant does not pay?",
-        "What secure system is used to submit sponsor and bank documents?",
-        "When and how are keys provided on August 15?",
-        "Does the trip estimate include walking and waiting?"
+        "What security deposit is required?",
+        "Is there an application fee or any other fee paid in addition to rent or deposit?",
+        "What exact amounts would be due before move-in?",
+        "What lease term or monthly-rental conditions apply, including termination or notice terms?",
+        "What exact start and end dates are available?",
+        "What screening criteria apply regarding credit, SSN, and guarantors?",
+        "Do you accept parent bank statements and a sponsor letter for an applicant without U.S. credit?",
+        "Which utilities are included?",
+        "What are the laundry cost and access details?"
       ],
       "draftEmail": {
-        "subject": "Lease, utility, and roommate questions for the Fulton room",
-        "body": "Hello,\n\nI am interested in the furnished private room beginning August 15, 2026. Thank you for confirming that a parent sponsor letter and recent bank statement are accepted instead of U.S. income and that no U.S. guarantor is required on that route.\n\nBefore I apply or pay the application or holding fee, could you confirm whether the same route works without an SSN or U.S. credit and provide the exact document requirements?\n\nPlease also send the full lease and all addenda. The listing says utilities are included, but the lease excerpt says electricity is billed separately. Could you clarify which term will appear in the final lease and how each tenant's electricity share is calculated? Please also explain the joint-responsibility clause, including whether I could be charged for another tenant's unpaid rent or utilities and whether an individual-liability lease is available.\n\nCould you provide the written holding-fee refund terms, a live tour of the exact room and shared spaces, and any roommate agreement or household expectations covering quiet hours, guests, and cleaning? I would also like to know whether a written extension through the end of my program is available.\n\nThank you."
-      }
-    },
-    {
-      "id": "albany",
-      "nickname": "Albany studio",
-      "headline": {
-        "value": "The stated screening policy requires a U.S.-based guarantor for an applicant without established U.S. credit, and no alternative is offered.",
-        "evidence": "confirmed",
-        "whyItMatters": "The student has no U.S. guarantor, so the supplied qualification route does not match the student's circumstances."
-      },
-      "qualification": {
-        "summary": {
-          "value": "Applicants without established U.S. credit must provide a U.S.-based guarantor; no alternative has been stated.",
-          "evidence": "confirmed",
-          "whyItMatters": "The student cannot currently satisfy the only stated route and should not pay application or service fees based on an assumed exception."
-        },
-        "route": "Provide a U.S.-based guarantor if the applicant lacks established U.S. credit; no parent-bank-statement or sponsor-letter alternative is stated.",
-        "missingEvidence": [
-          "Whether any non-guarantor alternative exists",
-          "Whether parent bank statements and a sponsor letter could ever be accepted",
-          "Whether an SSN is required",
-          "Exact guarantor standards and documents"
-        ]
-      },
-      "financials": {
-        "monthlyRent": {
-          "amount": 1550,
-          "evidence": "confirmed",
-          "note": "Stated monthly rent."
-        },
-        "recurring": [
-          {
-            "label": "Water and trash",
-            "amount": null,
-            "frequency": "monthly",
-            "evidence": "confirmed",
-            "note": "Stated as included in rent."
-          },
-          {
-            "label": "Electricity",
-            "amount": 90,
-            "frequency": "monthly",
-            "evidence": "confirmed",
-            "note": "Listing estimate; actual usage and billing method are not supplied."
-          }
-        ],
-        "fees": [
-          {
-            "label": "Application fee",
-            "amount": 50,
-            "frequency": "one_time",
-            "evidence": "confirmed",
-            "note": "Do not pay based on an assumed exception to the stated guarantor requirement."
-          },
-          {
-            "label": "Service fee",
-            "amount": 300,
-            "frequency": "one_time",
-            "evidence": "confirmed",
-            "note": "Purpose, payment timing, and refund conditions are not supplied."
-          },
-          {
-            "label": "Furniture and setup costs",
-            "amount": null,
-            "frequency": "unknown",
-            "evidence": "unknown",
-            "note": "The studio is unfurnished and no setup amounts are provided."
-          }
-        ],
-        "deposit": {
-          "amount": 1550,
-          "evidence": "confirmed",
-          "note": "Stated deposit; payment timing and refund conditions are not supplied."
-        }
-      },
-      "lease": {
-        "start": "2026-08-15",
-        "end": "2027-05-14",
-        "summary": {
-          "value": "The lease starts after the student's stated arrival and ends before the stated program end.",
-          "evidence": "inferred",
-          "whyItMatters": "Even if qualification changed, the student would need to address the remaining program period and the initial unfurnished setup."
-        }
-      },
-      "restPrivacy": {
-        "value": "The listing describes a private studio, but provides no noise or quiet-hours information.",
-        "evidence": "confirmed",
-        "whyItMatters": "The private layout supports personal space, but the student's essential rest priority remains unverified."
-      },
-      "campusEvening": {
-        "value": "The listing estimates 42 minutes to campus with one transfer and does not describe the trip home after evening classes.",
-        "evidence": "confirmed",
-        "whyItMatters": "A transfer and missing evening information may conflict with the student's essential preference for a simple campus trip."
-      },
-      "biggestQuestion": {
-        "value": "Will the landlord offer a written alternative to the U.S.-based guarantor requirement for this student?",
-        "evidence": "unknown",
-        "whyItMatters": "Without an alternative, the student does not meet the stated screening route."
-      },
-      "sections": {
-        "restPrivacy": [
-          {
-            "value": "Private unfurnished studio.",
-            "evidence": "confirmed",
-            "whyItMatters": "The unit offers private space but requires furniture and setup that are not priced."
-          },
-          {
-            "value": "Noise conditions and quiet-hour rules are not described.",
-            "evidence": "unknown",
-            "whyItMatters": "The student cannot assess the essential rest requirement from the supplied information."
-          }
-        ],
-        "dailyLife": [
-          {
-            "value": "The listing estimates 42 minutes to campus with one transfer.",
-            "evidence": "confirmed",
-            "whyItMatters": "The stated trip is not direct and may be less simple than the student's essential transportation priority."
-          },
-          {
-            "value": "The trip home after evening classes is not described.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student cannot judge whether the stated route works for late academic obligations."
-          },
-          {
-            "value": "Furniture and setup requirements are not itemized.",
-            "evidence": "unknown",
-            "whyItMatters": "An unfurnished unit may require purchases and move-in coordination that are not reflected in the listed housing charges."
-          }
-        ],
-        "totalCommitment": [
-          {
-            "value": "The stated charges include $1,550 monthly rent, estimated electricity of $90 per month, a $50 application fee, a $300 service fee, and a $1,550 deposit.",
-            "evidence": "confirmed",
-            "whyItMatters": "Several upfront and recurring obligations are stated, while furniture and setup costs remain unknown."
-          },
-          {
-            "value": "The lease ends before the stated program end.",
-            "evidence": "inferred",
-            "whyItMatters": "The student may need another housing arrangement for the remaining program period."
-          }
-        ],
-        "rentalReadiness": [
-          {
-            "value": "A U.S.-based guarantor is mandatory under the stated no-U.S.-credit route.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student reports having no U.S. guarantor and therefore does not meet the stated condition."
-          },
-          {
-            "value": "No alternative based on parent funding has been stated.",
-            "evidence": "confirmed",
-            "whyItMatters": "Parent bank statements and a sponsor letter should not be assumed acceptable here."
-          }
-        ],
-        "trustVerification": [
-          {
-            "value": "In-person and live video tours are available.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student can request a real-time view of the exact unit, although a tour does not guarantee approval, condition, or legitimacy."
-          },
-          {
-            "value": "The purpose and refundability of the $300 service fee are not described.",
-            "evidence": "unknown",
-            "whyItMatters": "The student should not send this payment without understanding what it covers and when it may be retained."
-          }
-        ]
-      },
-      "actionLane": "Set aside",
-      "nextActions": [
-        "Do not apply or pay the application, service, or deposit amounts unless the landlord first provides a written qualification route the student can actually satisfy.",
-        "If the student wants one final check, ask whether parent bank statements and a sponsor letter are accepted as a written alternative to the U.S.-based guarantor requirement; do not assume an exception from silence or from another property's policy. Require any alternative to identify all documents, screening criteria, added payments, and deadlines before reconsidering the property. If the landlord repeats that a U.S.-based guarantor is mandatory, keep the listing set aside because the student reports having none. Do not pay the $50 application fee merely to request an exception to a condition already stated in the messages. Do not pay the $300 service fee until its purpose, timing, refundability, recipient, and treatment after denial or withdrawal are provided in writing, even if a viable qualification route later appears. If eligibility changes, request the complete lease and all addenda and verify that the rent, included water and trash, estimated electricity, service fee, deposit, and dates match the advertisement. Ask whether an SSN is required independently of the guarantor condition because that requirement is not supplied. Ask whether any added deposit, prepaid rent, guarantor fee, or screening charge applies under a possible alternative route; none is stated and none should be assumed. Verify the exact guarantor standards only if the student later obtains a willing U.S.-based guarantor, including credit, income, residence, documents, and contractual obligations, without treating satisfaction as guaranteed approval. Consider the listed campus trip separately from qualification: the advertisement estimates 42 minutes with one transfer, which does not match a direct-trip preference and should be checked at actual class and return times. Ask for exact evening return information before reconsideration because the landlord explicitly says the trip home after evening classes is not described. Use a live video or in-person tour to inspect the exact available studio, access points, fixtures, appliances, windows, heating or cooling equipment, smoke and carbon-monoxide alarms, water flow, and visible condition, while recognizing that no tour guarantees safety, legitimacy, or future condition. Request objective information about building quiet hours, sound transfer, scheduled construction, and complaint procedures without asking for a safety declaration. Ask which appliances, window coverings, lighting fixtures, and storage features are included, because unfurnished does not define what remains in the unit. Prepare a furniture and setup list only if eligibility becomes viable, but keep all amounts unknown until actual prices or written charges are supplied; the application must not calculate or invent them. Ask about internet, laundry, renter's insurance, utility setup, delivery access, move-in fees, key fees, payment-processing fees, and other charges, because these are not included in the supplied cost details. Confirm how electricity is billed, whether the $90 figure is only an estimate, whose name must be on the account, whether an SSN is needed for service, and whether an account deposit may apply. Ask whether water and trash inclusion is fixed for the lease or subject to limits or later allocation. Compare the May 14 lease end with the May 20 program end and ask whether a written extension is available, but do not rely on an unstated renewal. Ask for possession and key-handoff details for August 15 and determine whether temporary lodging is needed after the student's August 12 arrival, because early access is not stated. Ask for a written itemization of all funds due at application, approval, signing, and move-in without combining them into a calculated total. Request the service-fee clause from the proposed lease or fee agreement and ask exactly what service is provided in exchange. Confirm the application-fee refund policy and whether screening begins before the service fee is requested. Request deposit handling and deduction terms, a move-in condition report, and permission to attach timestamped photographs if the property becomes viable. Review any proposed lease for notice deadlines, renewal, holdover, assignment, subletting, early termination, guest rules, occupancy, entry, maintenance, repairs, late fees, renter's insurance, utility obligations, and move-out standards. Verify the advertised trip using the student's actual UC Berkeley destination and class schedule without inventing a route, stop, or service level. Ask whether the 42-minute estimate includes walking, waiting, and transfer time or only travel on vehicles. Ask about package handling, mail, bicycle storage if relevant, laundry, and grocery or daily-service access only as factual property questions; do not infer neighborhood conditions. Preserve the listing and messages documenting the mandatory guarantor rule, fees, lease dates, transit estimate, and unfurnished condition. Do not let tour availability override the qualification mismatch: viewing access confirms only that tour formats are offered, not that the student can qualify. Do not interpret the relatively lower listed rent as greater affordability without accounting for known fees, estimated electricity, and unknown furniture and setup costs, and do not calculate a total. Do not interpret Albany, the building, or the route as safe or unsafe from the supplied text; no such conclusion is supported. If a written alternative is offered, compare it with the student's available parent bank statements and sponsor letter before moving the property from the set-aside lane. If the alternative involves a person or document the student does not have, keep the property set aside rather than assuming it can be obtained. Ask what secure system is used for identity, bank, and guarantor documents before transmitting sensitive information. Confirm the legal name of the contracting party and payment recipient through supplied lease and management documents before any payment, without treating that check as a legitimacy guarantee. Request receipts and written allocation for every payment if the property is eventually reconsidered. Ask whether the service fee is paid to the landlord, property manager, broker, or another entity and whether it is credited toward anything; no such detail is stated. Ask whether the advertised deposit changes for applicants without established U.S. credit because no variation is described. Ask whether furniture installation, delivery scheduling, elevator reservations, or building move-in rules could affect setup, but keep these facts unknown until answered. If reconsidered, ask for measurements of the main room, doorways, and storage areas to plan furniture rather than assuming standard sizes. Ask whether the lease includes any requirement to restore or remove installed furniture and what move-out cleaning obligations apply. Confirm maintenance contact methods and after-hours repair procedures because none are described. Ask whether the live tour can show the exact unit rather than a model or similar unit and request the tour date and current occupancy status. Do not send a deposit to hold the unit while the guarantor exception is unresolved; the supplied requirement directly conflicts with the student's stated resources. Prioritize alternatives with documented non-U.S.-credit routes and simpler stated campus trips while evaluating their own lease and cost risks separately. Keep this property set aside unless the central qualification mismatch is resolved in a clear written statement that is also reflected in the proposed lease or screening criteria. Even if qualification changes, reassess the essential campus-trip priority and unknown evening return before applying. Do not treat a sponsor letter accepted elsewhere as transferable to this landlord's screening policy. Ask whether denial under the guarantor rule would cause retention of any fee, but do not pay to test the answer. Confirm whether the landlord will answer the alternative-route question without an application and fee; if not, the current supplied evidence still supports leaving the property set aside. Keep all qualification communications in writing so changes can be compared against the eventual application instructions and lease. Verify that no payment deadline precedes receipt and review of the relevant fee terms. If any later message contradicts the mandatory-guarantor statement, preserve both versions and request a single corrected written screening policy before proceeding.",
-        "Confirm whether the 42-minute estimate includes waiting and transfer time if the property becomes viable."
-      ],
-      "documents": [
-        "Written screening policy and any alternative to the U.S.-guarantor requirement",
-        "Full proposed lease and all addenda if qualification becomes viable",
-        "Service-fee agreement and refund policy",
-        "Itemized move-in and recurring-cost disclosure",
-        "Utility billing details",
-        "Exact-unit tour confirmation",
-        "Move-in condition report"
-      ],
-      "landlordQuestions": [
-        "Is there any written alternative to a U.S.-based guarantor for a student without U.S. credit who has parent bank statements and a sponsor letter?",
-        "Can you answer that qualification question before I pay the application or service fee?",
-        "Is an SSN required?",
-        "What does the $300 service fee cover, when is it due, and is it refundable after withdrawal or denial?",
-        "Would any additional deposit, prepaid rent, or other condition apply under an alternative screening route?",
-        "If the guarantor rule remains mandatory, what exact standards and documents must the guarantor meet?",
-        "Is the application fee refundable under any circumstances?",
-        "How is electricity billed, and is $90 only an estimate?",
-        "Are water and trash included for the full lease without a separate allocation?",
-        "Can a live tour show the exact available studio?",
-        "What appliances, window coverings, and fixtures are included in the unfurnished unit?",
-        "What are the building's quiet hours and noise-complaint procedures?",
-        "What is the trip home from campus after evening classes?",
-        "Does the 42-minute estimate include walking, waiting, and transfer time?",
-        "Is a written lease extension through the end of my program available?",
-        "Are internet, laundry, renter's insurance, move-in, key, or utility setup charges required?",
-        "When and how would keys be provided on August 15?",
-        "May I review the full lease and fee agreement before making any payment?",
-        "What secure system is used to submit financial and identity documents?",
-        "Who receives the service fee, and is it credited toward any other charge?"
-      ],
-      "draftEmail": {
-        "subject": "Qualification question before applying for the Albany studio",
-        "body": "Hello,\n\nI am interested in the Albany studio, but I do not have established U.S. credit or a U.S.-based guarantor. My housing is parent-funded, and I can provide parent bank statements and a sponsor letter.\n\nBefore I apply or pay any fee, could you confirm in writing whether there is an alternative to the stated U.S.-based guarantor requirement for my circumstances? If so, please provide the exact document requirements and any additional payment or screening conditions.\n\nPlease also explain what the $300 service fee covers, when it is due, and whether it is refundable after withdrawal or denial. If there is a qualification route I can satisfy, I would then like to review the full lease and all addenda, take a live tour of the exact unit, and confirm electricity billing, evening transportation, included fixtures, and any extension through the end of my program.\n\nThank you."
+        "subject": "Request for complete terms for Oxford St studio",
+        "body": "Hello, I am a UC Berkeley graduate student interested in the Oxford St studio. Before applying or paying, please provide the security deposit, any application or other fees, every amount due before move-in, the lease term or full monthly-rental conditions, and the exact available start and end dates. Please also provide the complete screening criteria. I do not have U.S. credit, an SSN, or a U.S. guarantor; my housing is parent-funded, and I can provide bank statements and a sponsor letter. Please confirm whether those documents are accepted. Finally, please identify which utilities are included and provide the laundry cost and access details. Thank you."
       }
     }
   ]

@@ -1,4 +1,5 @@
 {
+  "collectedAt": "2026-07-21",
   "student": {
     "school": "UC Berkeley",
     "program": "Graduate program",
@@ -21,45 +22,44 @@
     {
       "id": "haste-15",
       "nickname": "Haste St #15",
+      "address": "2322 Haste St. #15, Berkeley, CA 94704",
+      "sourceUrl": null,
       "listingText": "Studio at 2322 Haste St. #15. Published rent is $1,900 per month. The listing states a $45 nonrefundable application fee, a 12-month lease, and a published move-in amount of $3,800 consisting of first month's rent and a $1,900 refundable security deposit. The unit is described with hardwood floors. A good credit rating is needed, and a credit check is performed for every resident over 18.",
       "landlordMessages": "The listing is silent on SSN requirements, guarantors, alternatives for applicants without U.S. credit, and whether international-student financial documents are accepted. Recurring utility amounts and exact lease dates are not published in the collected record."
     },
     {
       "id": "haste-27",
       "nickname": "Haste St #27",
+      "address": "2322 Haste St. #27, Berkeley, CA 94704",
+      "sourceUrl": "https://sfbay.craigslist.org/eby/apa/d/berkeley-sunny-studio-apartment-close/7942601310.html",
       "listingText": "Studio at 2322 Haste St. #27. Published rent is $1,850 per month. The listing states a $45 nonrefundable application fee and a one-year lease. Water and garbage are included. The published move-in block lists first month's rent of $1,850 and a refundable security deposit of $1,850, for $3,700 total, but that same block says 'studio #7, Max. 2 people' even though the advertisement is for unit #27. A good credit rating is needed, and a credit check is performed for every resident over 18.",
       "landlordMessages": "The deposit and move-in figures cannot be treated as confirmed for unit #27 because the published block names a different unit. The listing is silent on SSN requirements, guarantors, alternatives for applicants without U.S. credit, and whether international-student financial documents are accepted."
     },
     {
       "id": "oxford-2150",
       "nickname": "Oxford St studio",
+      "address": "2150 Oxford St., Berkeley, CA 94704",
+      "sourceUrl": "https://sfbay.craigslist.org/eby/apa/d/berkeley-studio-available-now-across-uc/7927929747.html",
       "listingText": "Studio at 2150 Oxford St. Published rent is $1,750 per month with utilities included. The listing describes a monthly rental period, laundry in the building, street parking, and no smoking.",
       "landlordMessages": "No application fee, security deposit, move-in total, lease term, exact lease dates, screening criteria, SSN requirement, guarantor route, credit requirement, or international-student documentation route is published in the collected record."
     }
   ],
-  "crossListingFindings": [
+  "cross_listing_findings": [
     {
       "id": "wrong-unit-reference",
-      "placeIds": [
-        "haste-27"
-      ],
+      "placeIds": ["haste-27"],
       "finding": "Haste St #27's published move-in block references 'studio #7' while the listing is for unit #27.",
       "whyItMatters": "The $1,850 deposit and $3,700 move-in total cannot be confirmed for unit #27; pause before paying."
     },
     {
       "id": "shared-photos",
-      "placeIds": [
-        "haste-15",
-        "haste-27"
-      ],
+      "placeIds": ["haste-15", "haste-27"],
       "finding": "Three photos are byte-identical across Haste St #15 and Haste St #27.",
       "whyItMatters": "The student cannot tell which reused photos show the exact unit."
     },
     {
       "id": "missing-commitment-terms",
-      "placeIds": [
-        "oxford-2150"
-      ],
+      "placeIds": ["oxford-2150"],
       "finding": "Oxford St studio publishes no deposit, application fee, move-in total, or lease term.",
       "whyItMatters": "The move-in total is uncomputable and the length of the commitment is unknown."
     }

@@ -31,8 +31,20 @@ test("server-renders a clear no-account landing page", async () => {
 });
 
 test("fixture preserves the GPT-5.6 analysis contract", async () => {
-  const fixture = JSON.parse(await readFile(new URL("fixtures/analysis.json", root), "utf8"));
-  assert.deepEqual(fixture.places.map((place) => place.id), ["shattuck", "fulton", "albany"]);
+  const [fixture, listings, media, markets] = await Promise.all([
+    readFile(new URL("fixtures/analysis.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("fixtures/listings.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("fixtures/media.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("fixtures/markets.json", root), "utf8").then(JSON.parse),
+  ]);
+  const ids = ["haste-15", "haste-27", "oxford-2150"];
+  assert.deepEqual(fixture.places.map((place) => place.id), ids);
+  assert.deepEqual(listings.places.map((place) => place.id), ids);
+  assert.deepEqual(media.places.map((place) => place.id), ids);
+  assert.deepEqual(markets.markets.find((market) => market.id === "berkeley").listingIds, ids);
+  assert.deepEqual(fixture.places.map((place) => place.nickname), ["Haste St #15", "Haste St #27", "Oxford St studio"]);
+  assert.deepEqual(fixture.places.map((place) => place.financials.monthlyRent.amount), [1900, 1850, 1750]);
+  assert.deepEqual(fixture.places.map((place) => place.financials.publishedMoveIn.amount), [3800, 3700, null]);
   for (const place of fixture.places) {
     assert.ok(["confirmed", "inferred", "unknown"].includes(place.headline.evidence));
     assert.ok(["confirmed", "inferred", "unknown"].includes(place.qualification.summary.evidence));
@@ -41,14 +53,22 @@ test("fixture preserves the GPT-5.6 analysis contract", async () => {
     assert.ok(place.landlordQuestions.length >= 1);
     assert.ok(place.draftEmail.subject && place.draftEmail.body);
   }
-  const fulton = fixture.places[1];
-  assert.match(fulton.financials.recurring[0].note, /listing says utilities are included/i);
-  assert.match(fulton.financials.recurring[0].note, /lease excerpt says electricity is billed separately/i);
+  const [haste15, haste27, oxford] = fixture.places;
+  assert.equal(haste27.actionLane, "Pause — do not pay yet");
+  assert.match(haste27.financials.publishedMoveIn.note, /studio #7 rather than unit #27/i);
+  assert.match(oxford.financials.publishedMoveIn.note, /uncomputable/i);
+  for (const haste of [haste15, haste27]) {
+    assert.match(haste.qualification.summary.value, /good credit/i);
+    assert.match(`${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`, /no U\.S\. credit/i);
+    assert.match(`${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`, /SSN/i);
+    assert.match(`${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`, /U\.S\. guarantor/i);
+  }
+  assert.deepEqual(listings.cross_listing_findings.map((finding) => finding.id), ["wrong-unit-reference", "shared-photos", "missing-commitment-terms"]);
 });
 
 test("comparison source keeps the required fixed row order", async () => {
   const source = await readFile(new URL("app/page.tsx", root), "utf8");
-  const labels = ["Headline status", "Can I qualify?", "Monthly rent", "Utilities & recurring", "Fees", "Move-in cash total", "Lease vs program dates", "Rest & privacy", "Campus + evening return", "Biggest unresolved question"];
+  const labels = ["Headline status", "Can I qualify?", "Monthly rent", "Utilities & recurring", "Fees", "Move-in cash total", "Lease vs program dates", "Rest & privacy", "Campus + evening return", "Cross-listing check", "Visual evidence", "Biggest unresolved question"];
   let previous = -1;
   for (const label of labels) {
     const index = source.indexOf(`label: "${label}"`);
@@ -59,6 +79,8 @@ test("comparison source keeps the required fixed row order", async () => {
   assert.match(source, /computeMonthlyTotal/);
   assert.match(source, /computeMoveInCash/);
   assert.match(source, /computeLeaseFit/);
+  assert.match(source, /listingFixture\.cross_listing_findings/);
+  assert.match(source, /Pause before payment/);
 });
 
 test("required states and disclaimer are present", async () => {
@@ -79,6 +101,8 @@ test("visual hierarchy, favorites, and research context remain evidence-bound", 
   assert.match(source, /Review in this order/);
   assert.match(source, /See how much each listing actually shows/);
   assert.match(source, /Image unavailable/);
+  assert.match(source, /Source: Craigslist post/);
+  assert.match(source, /original URL unavailable/);
   assert.match(source, /stateside:favorites/);
   assert.match(source, /straight-line estimate, not a confirmed route/);
   assert.equal(markets.collectedAt, "2026-07-21");
@@ -109,6 +133,8 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(page, /You are here: Step/);
   assert.match(page, /On this page/);
   assert.match(styles, /animation-timeline: view\(\)/);
+  assert.match(styles, /@keyframes reveal-up/);
+  assert.match(styles, /translateY\(72px\)/);
   assert.match(styles, /prefers-reduced-motion/);
   assert.match(layout, /Unbounded/);
   assert.match(layout, /"900"/);

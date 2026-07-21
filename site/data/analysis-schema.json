@@ -30,12 +30,13 @@
           "financials": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["monthlyRent", "recurring", "fees", "deposit"],
+            "required": ["monthlyRent", "recurring", "fees", "deposit", "publishedMoveIn"],
             "properties": {
               "monthlyRent": { "$ref": "#/$defs/moneyFact" },
               "recurring": { "type": "array", "items": { "$ref": "#/$defs/costItem" } },
               "fees": { "type": "array", "items": { "$ref": "#/$defs/costItem" } },
-              "deposit": { "$ref": "#/$defs/moneyFact" }
+              "deposit": { "$ref": "#/$defs/moneyFact" },
+              "publishedMoveIn": { "$ref": "#/$defs/moneyFact" }
             }
           },
           "lease": {

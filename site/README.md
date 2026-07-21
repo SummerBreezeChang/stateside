@@ -13,6 +13,8 @@ npm run dev
 
 Open the local URL printed by the development server. The sample judge flow does not require an API key because it renders from `fixtures/analysis.json`, a saved structured GPT-5.6 response.
 
+The analysis is pre-generated GPT-5.6 output stored as `fixtures/analysis.json`; `scripts/generate-fixture.mjs` is the reproduction path using the real source records in `fixtures/listings.json`.
+
 To regenerate that fixture, create `.env.local` with `OPENAI_API_KEY`, then run:
 
 ```bash

@@ -33,13 +33,18 @@ button { cursor: pointer; }
 }
 
 @keyframes reveal-left {
-  from { opacity: .15; transform: translateX(-36px); }
+  from { opacity: 0; transform: translateX(-52px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes reveal-right {
-  from { opacity: .15; transform: translateX(36px); }
+  from { opacity: 0; transform: translateX(52px); }
   to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(72px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .hero-arrive { animation: hero-arrive .7s cubic-bezier(.22, 1, .36, 1) both; }
@@ -49,10 +54,29 @@ button { cursor: pointer; }
     animation-duration: 1ms;
     animation-fill-mode: both;
     animation-timeline: view();
-    animation-range: entry 5% cover 30%;
+    animation-range: entry 0% cover 38%;
   }
   .reveal-left { animation-name: reveal-left; }
   .reveal-right { animation-name: reveal-right; }
+
+  #how-it-works .grid > div,
+  #what-you-get > div > div,
+  main > section:last-child {
+    animation-name: reveal-up;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 34%;
+  }
+
+  #how-it-works .grid > div:nth-child(2),
+  #what-you-get > div > div:nth-child(2) {
+    animation-range: entry 8% cover 42%;
+  }
+
+  #how-it-works .grid > div:nth-child(3) {
+    animation-range: entry 16% cover 50%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
