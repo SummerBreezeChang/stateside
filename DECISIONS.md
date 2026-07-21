@@ -41,3 +41,10 @@ Record meaningful product, engineering, and design choices. These notes will bec
 - Added a seven-school selector covering UC Berkeley, Stanford, San Francisco State, San José State, University of San Francisco, Golden Gate University, and Santa Clara University.
 - UC Berkeley remains the complete researched demo; the other schools are labeled directory previews and link first to official university resources.
 - School and marketplace links are framed as research starting points, not endorsements.
+# 2026-07-21 — Make the demo contract honest and finish the decision flow
+
+- The setup now presents a dated, researched Berkeley sample instead of implying that arbitrary pasted links or edited priorities trigger new analysis.
+- Students may select one, two, or three prepared listings; the comparison and detail navigation respect that shortlist.
+- The comparison leads with photos and concise conclusions, while the wide evidence table is collapsed behind “View full comparison.”
+- Detail pages show complete next actions immediately after the headline recommendation and provide accessible, named controls.
+- Custom profiles, live link retrieval, and GPT-5.6 analysis of new listings remain the next product phase rather than simulated demo behavior.

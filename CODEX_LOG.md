@@ -38,3 +38,10 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 
 - Researched official housing resources for seven Bay Area schools.
 - Added an accessible school selector, campus-specific official starting points, and honest full-demo versus directory-preview states.
+# 2026-07-21 — Demo-readiness UX remediation
+
+- Replaced editable-but-disconnected listing and priority controls with an explicit researched-sample journey.
+- Added one-to-three listing selection with add/remove controls and filtered comparison results.
+- Added named decision-plan buttons, a clear conclusion state, a collapsed full comparison, and complete urgent actions near the top of each detail page.
+- Hid the third-party map embed from assistive technology and retained an accessible external map action.
+- Updated regression coverage for the new honesty, navigation, comparison, and accessibility contract.

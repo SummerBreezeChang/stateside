@@ -105,12 +105,18 @@ test("required states and disclaimer are present", async () => {
   assert.match(source, /UC Berkeley Master of Engineering/);
   assert.match(source, /Question \{question \+ 1\} of 3/);
   assert.match(source, /How long do you need housing/);
-  assert.match(source, /What matters most to you/);
-  assert.match(source, /Which places are you considering/);
-  assert.match(source, /Listing link/);
-  assert.match(source, /Need places to compare/);
-  assert.match(source, /Judge demo:/);
-  assert.match(source, /Compare these three places/);
+  assert.match(source, /Priorities used in this comparison/);
+  assert.match(source, /Select one to three researched places/);
+  assert.match(source, /Add this place/);
+  assert.match(source, /Remove/);
+  assert.match(source, /Researched Berkeley sample:/);
+  assert.match(source, /View the researched comparison/);
+  assert.match(source, /Pasting arbitrary links is not enabled in this demo/);
+  assert.match(source, /View full comparison/);
+  assert.match(source, /Best current fit to verify/);
+  assert.match(source, /Open \$\{place\.nickname\} decision plan/);
+  assert.match(source, /aria-hidden="true" tabIndex=\{-1\}/);
+  assert.doesNotMatch(source, /action\.split/);
   assert.doesNotMatch(source, /Show my comparison/);
 });
 
