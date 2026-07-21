@@ -10,7 +10,7 @@ const plex = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stateside-student-housing.summerchang.chatgpt.site"),
-  title: { default: "Stateside — Understand a U.S. rental before you commit", template: "%s · Stateside" },
+  title: { default: "Stateside — Compare rentals before you pay", template: "%s · Stateside" },
   description: "Compare U.S. rentals by qualification, true cost, lease fit, rest, location, and missing evidence—built for international students.",
   applicationName: "Stateside",
   keywords: ["international student housing", "rental comparison", "student housing USA", "UC Berkeley housing", "lease review", "rental qualification"],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   openGraph: {
-    title: "Stateside — Understand before you commit",
+    title: "Stateside — Compare rentals before you pay",
     description: "A research-backed rental comparison for international students—with qualification first and unknowns kept visible.",
     url: "/",
     siteName: "Stateside",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: "/og.png", width: 1733, height: 907, alt: "Stateside housing comparison preview" }],
   },
-  twitter: { card: "summary_large_image", title: "Stateside — Understand before you commit", description: "Compare U.S. rentals with qualification first and unknowns kept visible.", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", title: "Stateside — Compare rentals before you pay", description: "Compare U.S. rentals with qualification first and unknowns kept visible.", images: ["/og.png"] },
 };
 
 export const viewport: Viewport = { themeColor: "#134e4a", colorScheme: "light" };

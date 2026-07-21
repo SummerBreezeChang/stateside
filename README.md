@@ -10,7 +10,7 @@ Stateside helps an international student compare three U.S. rentals they already
 2. **Compare:** See the same ten questions for every place, with qualification first and every answer labeled Confirmed, Inferred, or Unknown.
 3. **Decision plan:** Open a place-specific plan with five review sections, one action lane, three next actions, documents, landlord questions, and a copyable inquiry email.
 
-The landing page makes the promise understandable before setup, and the first three seconds of comparison prioritize qualification, true cost, commitment, then unknowns. Guests can save favorites locally on their device without creating an account.
+The landing page names the outcome, explains the mechanism, and shows the workflow in three visual steps before setup. The first three seconds of comparison prioritize qualification, true cost, commitment, then unknowns. Guests can save favorites locally on their device without creating an account.
 
 No account, live inventory, payment, safety score, or personal documents are required. Public listing imagery is used as evidence: photo coverage and reused images are visible, exact routes remain labeled as estimates, and every gallery warns that photos do not replace a live tour.
 

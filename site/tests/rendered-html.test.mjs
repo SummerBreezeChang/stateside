@@ -15,12 +15,16 @@ test("server-renders a clear no-account landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Understand a U\.S\. rental before you commit/);
-  assert.match(html, /Explore the Berkeley comparison/);
-  assert.match(html, /No account or payment required/);
+  assert.match(html, /Compare three rentals\. Know what to verify before you pay/);
+  assert.match(html, /Stateside is an AI housing decision companion/);
+  assert.match(html, /Try the Berkeley demo/);
+  assert.match(html, /No account, payment, or personal documents required/);
+  assert.match(html, /How to use Stateside/);
+  assert.match(html, /Add your shortlist/);
+  assert.match(html, /Add your situation/);
+  assert.match(html, /Compare and verify/);
   assert.match(html, /Can I qualify/);
   assert.match(html, /What will I really pay/);
-  assert.match(html, /Continue without an account/);
   assert.match(html, /Research-backed demo/);
 });
 
@@ -83,15 +87,20 @@ test("visual hierarchy, favorites, and research context remain evidence-bound", 
   assert.ok(media.places.flatMap((place) => place.images).every((image) => image.startsWith("/listings/") && !image.includes("craigslist.org")));
 });
 
-test("public metadata identifies Stateside consistently", async () => {
-  const [layout, favicon, manifest] = await Promise.all([
+test("public metadata and visual identity identify Stateside consistently", async () => {
+  const [layout, page, favicon, hero, manifest] = await Promise.all([
     readFile(new URL("app/layout.tsx", root), "utf8"),
+    readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("public/favicon.svg", root), "utf8"),
+    readFile(new URL("public/stateside-flow-v2.jpg", root)),
     readFile(new URL("public/site.webmanifest", root), "utf8").then(JSON.parse),
   ]);
   assert.match(layout, /metadataBase: new URL\("https:\/\/stateside-student-housing\.summerchang\.chatgpt\.site"\)/);
   assert.match(layout, /international student housing/);
   assert.match(layout, /summary_large_image/);
+  assert.match(page, /Three scattered listings → one clear decision plan/);
+  assert.match(page, /\[font-family:Georgia,serif\]/);
   assert.match(favicon, /#134E4A/);
+  assert.ok(hero.byteLength > 100_000);
   assert.equal(manifest.short_name, "Stateside");
 });
