@@ -15,17 +15,18 @@ test("server-renders a clear no-account landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Compare three rentals\. Know what to verify before you pay/);
-  assert.match(html, /Stateside is an AI housing decision companion/);
-  assert.match(html, /Try the Berkeley demo/);
+  assert.match(html, /Compare rentals before you apply or pay/);
+  assert.match(html, /Bring rent, application requirements/);
+  assert.match(html, /Start the Berkeley demo/);
   assert.match(html, /No account, payment, or personal documents required/);
-  assert.match(html, /How to use Stateside/);
-  assert.match(html, /Add your shortlist/);
-  assert.match(html, /Add your situation/);
-  assert.match(html, /Compare and verify/);
-  assert.match(html, /Can I qualify/);
-  assert.match(html, /What will I really pay/);
-  assert.match(html, /Research-backed demo/);
+  assert.match(html, /How it works/);
+  assert.match(html, /Tell us what you need/);
+  assert.match(html, /Add up to three places/);
+  assert.match(html, /Review and verify/);
+  assert.match(html, /Can I apply/);
+  assert.match(html, /What will it cost/);
+  assert.match(html, /Berkeley demo/);
+  assert.doesNotMatch(html, /AI housing decision companion/i);
 });
 
 test("fixture preserves the GPT-5.6 analysis contract", async () => {
@@ -61,10 +62,10 @@ test("comparison source keeps the required fixed row order", async () => {
 
 test("required states and disclaimer are present", async () => {
   const source = await readFile(new URL("app/page.tsx", root), "utf8");
-  assert.match(source, /Normalizing the three places/);
-  assert.match(source, /We couldn’t compare the places/);
-  assert.match(source, /The analysis was incomplete/);
-  assert.match(source, /Stateside does not determine whether a home or neighborhood is safe/);
+  assert.match(source, /Preparing your comparison/);
+  assert.match(source, /The comparison didn’t load/);
+  assert.match(source, /We couldn’t finish this comparison/);
+  assert.match(source, /Stateside does not rate safety or guarantee approval/);
   assert.match(source, /Pause — do not pay yet/);
 });
 
@@ -74,11 +75,11 @@ test("visual hierarchy, favorites, and research context remain evidence-bound", 
     readFile(new URL("fixtures/markets.json", root), "utf8").then(JSON.parse),
     readFile(new URL("fixtures/media.json", root), "utf8").then(JSON.parse),
   ]);
-  assert.match(source, /Three-second decision order/);
-  assert.match(source, /The gallery is evidence, not decoration/);
+  assert.match(source, /Review in this order/);
+  assert.match(source, /See how much each listing actually shows/);
   assert.match(source, /Image unavailable/);
   assert.match(source, /stateside:favorites/);
-  assert.match(source, /straight-line estimate, not a routed or confirmed trip/);
+  assert.match(source, /straight-line estimate, not a confirmed route/);
   assert.equal(markets.collectedAt, "2026-07-21");
   assert.equal(markets.markets.length, 4);
   assert.equal(markets.markets.find((market) => market.id === "sfstate").observedRange, null);
@@ -98,10 +99,11 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(layout, /metadataBase: new URL\("https:\/\/stateside-student-housing\.summerchang\.chatgpt\.site"\)/);
   assert.match(layout, /international student housing/);
   assert.match(layout, /summary_large_image/);
-  assert.match(page, /Three scattered listings → one clear decision plan/);
+  assert.match(page, /stateside-flow-v3\.jpg/);
   assert.match(layout, /Unbounded/);
   assert.match(page, /\[font-family:var\(--font-unbounded\)\]/);
   assert.doesNotMatch(page, /Understand before you commit/);
+  assert.doesNotMatch(page, /AI housing decision companion|normalizing the three places|analysis service|generated inquiry email|visual research layer/i);
   assert.match(favicon, /#134E4A/);
   assert.ok(hero.byteLength > 100_000);
   assert.equal(manifest.short_name, "Stateside");

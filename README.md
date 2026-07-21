@@ -6,11 +6,11 @@ Stateside helps an international student compare three U.S. rentals they already
 
 ## The judge flow
 
-1. **Setup:** Begin with a labeled UC Berkeley sample student and three editable rental excerpts.
-2. **Compare:** See the same ten questions for every place, with qualification first and every answer labeled Confirmed, Inferred, or Unknown.
-3. **Decision plan:** Open a place-specific plan with five review sections, one action lane, three next actions, documents, landlord questions, and a copyable inquiry email.
+1. **Your needs:** Begin with a labeled UC Berkeley sample student, set four priorities, and review three editable rental excerpts.
+2. **Compare places:** Review application requirements and cost first, then lease fit, rest/privacy, transportation, photos, and missing details.
+3. **Next steps:** Open one place to verify photos and location, review tradeoffs, prepare documents and questions, and copy a landlord inquiry.
 
-The landing page names the outcome, explains the mechanism, and shows the workflow in three visual steps before setup. The first three seconds of comparison prioritize qualification, true cost, commitment, then unknowns. Guests can save favorites locally on their device without creating an account.
+The landing page uses a full-background photographic hero, names the outcome, and shows the workflow in three visual steps before setup. Plain-language section links make the long comparison and decision pages easier to present. Guests can save favorites locally on their device without creating an account.
 
 No account, live inventory, payment, safety score, or personal documents are required. Public listing imagery is used as evidence: photo coverage and reused images are visible, exact routes remain labeled as estimates, and every gallery warns that photos do not replace a live tour.
 
