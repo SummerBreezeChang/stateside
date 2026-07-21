@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "updated": "2026-07-21",
+    "honesty": "Stateside is not affiliated with any site listed. No paid placement."
+  },
+  "campuses": [
+    {
+      "id": "uc-berkeley",
+      "name": "UC Berkeley",
+      "start_here": {
+        "name": "UC Berkeley Off-Campus Housing",
+        "url": "https://och.berkeley.edu/",
+        "why": "The university's own off-campus service combines rental listings with Berkeley-specific housing guidance.",
+        "watch_for": "Listings and availability still need independent verification. University affiliation does not guarantee that every listing will fit your dates, budget, or qualification situation."
+      },
+      "also_try": [
+        {
+          "name": "Berkeley Student Cooperative",
+          "url": "https://bsc.coop/housing/",
+          "why": "Student cooperative housing can offer community-oriented options and a different cost structure from private studios.",
+          "watch_for": "Eligibility, room type, shared responsibilities, meal arrangements, and application timelines vary by property."
+        },
+        {
+          "name": "Craigslist — East Bay apartments",
+          "url": "https://sfbay.craigslist.org/search/eby/apa",
+          "why": "Useful for finding independent landlords and smaller properties that may not appear on larger rental platforms.",
+          "watch_for": "Posts are not university-vetted. Confirm the exact unit, landlord authority, fees, and lease before sharing documents or paying."
+        },
+        {
+          "name": "Zillow — Berkeley rentals",
+          "url": "https://www.zillow.com/berkeley-ca/rentals/",
+          "why": "Useful for scanning professionally managed and independently listed rentals with map and price filters.",
+          "watch_for": "Availability, fees, qualification rules, and total move-in costs may be incomplete or change outside the listing page."
+        },
+        {
+          "name": "Apartments.com — Berkeley",
+          "url": "https://www.apartments.com/berkeley-ca/",
+          "why": "Useful for comparing larger apartment buildings and seeing common amenities in one place.",
+          "watch_for": "Advertised prices may reflect selected units, lease lengths, or promotions. Ask for the complete written cost for your exact dates."
+        }
+      ],
+      "for_international_students": {
+        "heading": "International-student housing resources",
+        "note": "Start with campus guidance, then ask each landlord which qualification route they will accept before paying an application fee.",
+        "resources": [
+          {
+            "name": "Berkeley International Office — Finding Housing",
+            "what": "Campus guidance for international students and scholars looking for housing and avoiding common problems.",
+            "url": "https://internationaloffice.berkeley.edu/living/housing"
+          },
+          {
+            "name": "UC Berkeley Off-Campus Housing guidance",
+            "what": "University information about off-campus rental services and resources for living around Berkeley.",
+            "url": "https://housing.berkeley.edu/explore-housing-options/off-campus-housing/"
+          },
+          {
+            "name": "International House Berkeley",
+            "what": "A campus-adjacent residential community with its own application process and policies.",
+            "url": "https://ihouse.berkeley.edu/admissions"
+          }
+        ],
+        "documents_to_prepare": [
+          "Passport or other identification, shared only through a verified application process",
+          "UC Berkeley admission or enrollment documentation",
+          "Proof of available funds, such as bank statements",
+          "Sponsor letter if housing will be parent-funded",
+          "Written questions about credit, SSN, guarantor, and alternative qualification requirements"
+        ]
+      }
+    }
+  ]
+}

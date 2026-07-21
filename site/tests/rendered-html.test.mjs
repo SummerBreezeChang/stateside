@@ -100,10 +100,11 @@ test("required states and disclaimer are present", async () => {
 });
 
 test("visual hierarchy, favorites, and research context remain evidence-bound", async () => {
-  const [source, markets, media] = await Promise.all([
+  const [source, markets, media, searchDirectory] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("fixtures/markets.json", root), "utf8").then(JSON.parse),
     readFile(new URL("fixtures/media.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("fixtures/where-to-search.json", root), "utf8").then(JSON.parse),
   ]);
   assert.match(source, /Review in this order/);
   assert.match(source, /See how much each listing actually shows/);
@@ -118,6 +119,15 @@ test("visual hierarchy, favorites, and research context remain evidence-bound", 
   assert.deepEqual(media.places.map((place) => place.photoCount), [12, 12, 4]);
   assert.deepEqual(media.places.map((place) => place.shared.length), [3, 3, 0]);
   assert.ok(media.places.flatMap((place) => place.images).every((image) => image.startsWith("/listings/") && !image.includes("craigslist.org")));
+  assert.equal(searchDirectory.campuses[0].id, "uc-berkeley");
+  assert.equal(searchDirectory._meta.honesty, "Stateside is not affiliated with any site listed. No paid placement.");
+  assert.ok(searchDirectory.campuses[0].start_here.why && searchDirectory.campuses[0].start_here.watch_for);
+  assert.ok(searchDirectory.campuses[0].also_try.every((item) => item.url.startsWith("https://") && item.why && item.watch_for));
+  assert.ok(searchDirectory.campuses[0].for_international_students.resources.every((item) => item.url.startsWith("https://") && item.what));
+  assert.match(source, /Where to start looking/);
+  assert.match(source, /Common routes, not endorsements/);
+  assert.match(source, /rel="noopener noreferrer"/);
+  assert.doesNotMatch(source, /Search rentals|type="search"/);
 });
 
 test("public metadata and visual identity identify Stateside consistently", async () => {

@@ -6,7 +6,7 @@ Stateside helps an international student compare three U.S. rentals they already
 
 ## The judge flow
 
-1. **Your needs:** Begin with a labeled UC Berkeley sample student, set four priorities, and review three editable rental excerpts.
+1. **Your needs:** Begin with a labeled UC Berkeley sample student, set four priorities, review a curated campus-specific directory, and bring back three rental excerpts.
 2. **Compare places:** Review application requirements and cost first, then lease fit, rest/privacy, transportation, photos, and missing details.
 3. **Next steps:** Open one place to verify photos and location, review tradeoffs, prepare documents and questions, and copy a landlord inquiry.
 
@@ -74,6 +74,7 @@ Automated checks cover the server-rendered landing page, aligned listing/media/m
 - `site/data/sample-input.json` — generated model input with a fictional student and dated public listing records
 - `site/fixtures/analysis.json` — saved real GPT-5.6 structured output
 - `site/fixtures/listings.json` — single source of truth for the three dated public listings and cross-listing findings
+- `site/fixtures/where-to-search.json` — curated campus directory with equally visible source benefits and cautions
 - `site/fixtures/markets.json` — dated Bay Area market observations
 - `site/fixtures/media.json` — local gallery paths, coordinates, map links, and reused-image evidence
 - `site/public/listings/` — 28 self-hosted public listing images used by the visual evidence layer

@@ -6,6 +6,7 @@ import fixture from "../fixtures/analysis.json";
 import listingFixture from "../fixtures/listings.json";
 import marketFixture from "../fixtures/markets.json";
 import mediaFixture from "../fixtures/media.json";
+import searchFixture from "../fixtures/where-to-search.json";
 import sample from "../data/sample-input.json";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
@@ -92,6 +93,23 @@ function StepVisual({ step }: { step: string }) {
   return <div className="aspect-[16/10] bg-stone-100 p-5"><div className="h-full rounded-lg border border-stone-200 bg-white p-4 shadow-sm"><p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Same questions · every place</p><div className="mt-4 space-y-3">{[["Can I qualify?", "Confirmed", "bg-emerald-100 text-emerald-800"], ["True monthly cost", "Inferred", "bg-amber-100 text-amber-900"], ["Evening return", "Unknown", "bg-slate-100 text-slate-700"]].map(([label, status, tone]) => <div className="flex items-center justify-between gap-3 border-t border-stone-100 pt-3 first:border-0 first:pt-0" key={label}><span className="text-sm font-medium">{label}</span><span className={`rounded px-2 py-1 text-[10px] font-semibold ${tone}`}>{status}</span></div>)}</div></div></div>;
 }
 
+function WhereToSearch() {
+  const campus = searchFixture.campuses.find((item) => item.id === "uc-berkeley")!;
+  const international = campus.for_international_students;
+  return <section id="where-to-search" className="scroll-mt-24" aria-labelledby="where-to-search-heading">
+    <Card className="overflow-hidden border-teal-200">
+      <div className="border-b border-teal-100 bg-teal-50 p-6 sm:p-8"><div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><p className="text-sm font-semibold text-teal-900">Selected campus · {campus.name}</p><h2 id="where-to-search-heading" className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">Where to start looking</h2><p className="mt-3 max-w-3xl leading-7 text-stone-600">Start with the university board, then widen your search. Find listings on these sites and bring the details back to Stateside to compare.</p></div><Badge tone="confirmed">Curated directory</Badge></div></div>
+      <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[1.05fr_.95fr]">
+        <div><div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5"><div className="flex flex-wrap items-center justify-between gap-3"><div><Badge tone="confirmed">University board</Badge><h3 className="mt-3 text-xl font-semibold">{campus.start_here.name}</h3></div><a href={campus.start_here.url} target="_blank" rel="noopener noreferrer" className="rounded-md bg-teal-900 px-4 py-2 text-sm font-semibold text-white">Open site ↗</a></div><div className="mt-5 grid gap-4 sm:grid-cols-2"><div><p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">Why start here</p><p className="mt-2 text-sm leading-6 text-stone-700">{campus.start_here.why}</p></div><div><p className="text-xs font-semibold uppercase tracking-wide text-amber-800">What to watch for</p><p className="mt-2 text-sm leading-6 text-stone-700">{campus.start_here.watch_for}</p></div></div></div>
+          <div className="mt-5"><p className="text-sm font-semibold text-stone-500">Also try</p><div className="mt-3 divide-y divide-stone-200 rounded-xl border border-stone-200">{campus.also_try.map((source) => <div className="grid gap-4 p-4 sm:grid-cols-[.7fr_1fr_1fr] sm:items-start" key={source.name}><div><a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-900 underline decoration-teal-300 underline-offset-4">{source.name} ↗</a></div><div><p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Good for</p><p className="mt-1 text-sm leading-6 text-stone-700">{source.why}</p></div><div><p className="text-xs font-semibold uppercase tracking-wide text-amber-800">Watch for</p><p className="mt-1 text-sm leading-6 text-stone-700">{source.watch_for}</p></div></div>)}</div></div>
+        </div>
+        <aside className="rounded-xl bg-teal-950 p-6 text-white" aria-labelledby="international-resources-heading"><Badge tone="sample">Common routes, not endorsements</Badge><h3 id="international-resources-heading" className="mt-4 text-2xl font-semibold">{international.heading}</h3><p className="mt-3 text-sm leading-6 text-teal-100">{international.note}</p><p className="mt-3 text-sm font-semibold text-amber-200">Requirements vary by landlord.</p><div className="mt-6 space-y-4">{international.resources.map((resource) => <div className="border-t border-white/15 pt-4 first:border-0 first:pt-0" key={resource.name}><a href={resource.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-white underline decoration-teal-400 underline-offset-4">{resource.name} ↗</a><p className="mt-2 text-sm leading-6 text-teal-100">{resource.what}</p></div>)}</div><div className="mt-7 border-t border-white/15 pt-5"><p className="text-sm font-semibold">Documents to prepare</p><ul className="mt-3 space-y-3">{international.documents_to_prepare.map((document) => <li className="flex gap-3 text-sm leading-6 text-teal-50" key={document}><span aria-hidden="true" className="text-teal-300">□</span>{document}</li>)}</ul></div></aside>
+      </div>
+      <p className="border-t border-stone-200 bg-stone-50 px-6 py-4 text-xs leading-5 text-stone-500 sm:px-8">{searchFixture._meta.honesty}</p>
+    </Card>
+  </section>;
+}
+
 function LandingScreen({ onStart, savedCount }: { onStart: () => void; savedCount: number }) {
   return <><AppHeader screen="landing" /><main>
     <section className="m-3 overflow-hidden rounded-[1.75rem] bg-cover bg-center text-white sm:m-5" style={{ backgroundImage: "linear-gradient(90deg, rgba(5,47,46,.96) 0%, rgba(5,47,46,.88) 38%, rgba(5,47,46,.28) 72%, rgba(15,23,42,.12) 100%), url('/stateside-flow-v3.jpg')" }}>
@@ -145,7 +163,7 @@ function SetupScreen({ onCompare }: { onCompare: () => void }) {
           <p className="mt-5 text-lg leading-8 text-stone-600">Start with your situation and priorities. Then review the three places you want to compare.</p>
         </div>
 
-        <nav className="sticky top-2 z-30 mb-6 flex items-center gap-2 overflow-x-auto rounded-lg border border-stone-200 bg-white/95 p-2 text-sm font-semibold text-stone-600 shadow-sm backdrop-blur" aria-label="Setup sections"><span className="px-2 text-xs uppercase tracking-wide text-stone-400">On this page</span><a href="#your-situation" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">1. Your situation</a><a href="#places-to-compare" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">2. Places to compare</a></nav>
+        <nav className="sticky top-2 z-30 mb-6 flex items-center gap-2 overflow-x-auto rounded-lg border border-stone-200 bg-white/95 p-2 text-sm font-semibold text-stone-600 shadow-sm backdrop-blur" aria-label="Setup sections"><span className="px-2 text-xs uppercase tracking-wide text-stone-400">On this page</span><a href="#your-situation" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">1. Your situation</a><a href="#where-to-search" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">2. Where to look</a><a href="#places-to-compare" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">3. Places to compare</a></nav>
 
         <Card id="your-situation" className="scroll-mt-24 mb-8 p-6 sm:p-8">
           <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
@@ -167,8 +185,10 @@ function SetupScreen({ onCompare }: { onCompare: () => void }) {
           </div>
         </Card>
 
-        <div id="places-to-compare" className="scroll-mt-24 mb-5 flex items-end justify-between gap-4">
-          <div><p className="text-sm font-semibold text-teal-900">2. Places to compare</p><h2 className="mt-1 text-2xl font-semibold">Review the listing details</h2></div>
+        <WhereToSearch />
+
+        <div id="places-to-compare" className="mt-8 scroll-mt-24 mb-5 flex items-end justify-between gap-4">
+          <div><p className="text-sm font-semibold text-teal-900">3. Places to compare</p><h2 className="mt-1 text-2xl font-semibold">Review the listing details</h2></div>
           <p className="hidden text-sm text-stone-500 sm:block">You can edit any detail</p>
         </div>
         <div className="grid gap-5 lg:grid-cols-3">
