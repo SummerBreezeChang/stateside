@@ -53,3 +53,7 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 
 - Added viewport-aware reveal behavior for primary sections and card groups across every screen.
 - Added restrained hover feedback for pointer devices and a reduced-motion fallback that keeps all content immediately visible.
+# 2026-07-21 — Wordmark scale correction
+
+- Added a dedicated responsive Stateside wordmark style after the previous navigation sizing remained visually understated.
+- Increased desktop scale to a display-level maximum while preserving a safe mobile layout.

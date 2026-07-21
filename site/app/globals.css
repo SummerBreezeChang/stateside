@@ -27,6 +27,18 @@ button, textarea { font: inherit; }
 button { cursor: pointer; }
 ::selection { background: #cfe4e7; }
 
+.stateside-wordmark {
+  font-size: clamp(2rem, 3.75vw, 3.25rem);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.06em;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .stateside-wordmark { font-size: 1.75rem; }
+}
+
 @keyframes hero-arrive {
   from { opacity: 0; transform: translateX(-24px); }
   to { opacity: 1; transform: translateX(0); }

@@ -130,7 +130,7 @@ function AppHeader({ screen, onStart }: { screen: Screen; onStart?: () => void }
   if (screen === "landing") {
     return <header className="bg-white"><div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 py-5 sm:px-8">
       <span aria-hidden="true" />
-      <button type="button" onClick={() => { window.location.href = "/"; }} className="justify-self-center text-3xl font-black tracking-[-0.055em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-4xl" aria-label="Return to Stateside home">STATESIDE</button>
+      <button type="button" onClick={() => { window.location.href = "/"; }} className="stateside-wordmark justify-self-center text-teal-950 [font-family:var(--font-unbounded)]" aria-label="Return to Stateside home">STATESIDE</button>
       <Button onClick={onStart} className="justify-self-end whitespace-nowrap px-3 text-xs sm:px-4 sm:text-sm">Start comparing</Button>
     </div></header>;
   }
@@ -153,7 +153,7 @@ function AppHeader({ screen, onStart }: { screen: Screen; onStart?: () => void }
             </div>
           ))}
         </div>
-        <button type="button" onClick={() => { window.location.href = "/"; }} className="justify-self-center text-3xl font-black tracking-[-0.055em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-4xl" aria-label="Return to Stateside home">STATESIDE</button>
+        <button type="button" onClick={() => { window.location.href = "/"; }} className="stateside-wordmark justify-self-center text-teal-950 [font-family:var(--font-unbounded)]" aria-label="Return to Stateside home">STATESIDE</button>
         <span className="justify-self-end"><Badge tone="sample">Berkeley demo</Badge></span>
       </div>
       {screen !== "landing" && screen !== "setup" ? <div className="border-t border-teal-100 bg-teal-50"><div className="mx-auto flex max-w-[1440px] flex-col gap-1 px-5 py-3 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8"><p><span className="font-semibold text-teal-950">You are here: Step {step} of 3 · {stepLabels[step - 1]}</span><span className="text-stone-600"> — {stepInstructions[step - 1]}</span></p><span className="hidden shrink-0 font-semibold text-teal-900 lg:block">{step < 3 ? `Next: ${stepLabels[step]} →` : "Use the recommendation and next actions below"}</span></div></div> : null}

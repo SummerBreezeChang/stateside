@@ -58,3 +58,8 @@ Record meaningful product, engineering, and design choices. These notes will bec
 - Added a shared scroll-reveal system across landing, setup, comparison, and detail screens instead of one-off section animations.
 - Sections and repeated cards alternate subtle left/right movement with small staggered delays, light blur, and a soft ease-out.
 - Motion runs once as content enters the viewport and is fully disabled when the visitor prefers reduced motion.
+# 2026-07-21 — Treat STATESIDE as a display wordmark, not nav text
+
+- Replaced utility-sized logo text with a dedicated responsive wordmark rule that scales up to 52px on wide screens.
+- Locked the brand to 900 weight, compact line height, and tighter tracking so it visibly outweighs the adjacent action button.
+- Retained a smaller, still-prominent mobile size to prevent overlap with navigation controls.

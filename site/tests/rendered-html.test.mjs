@@ -178,8 +178,9 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(styles, /prefers-reduced-motion/);
   assert.match(layout, /Unbounded/);
   assert.match(layout, /"900"/);
-  assert.match(page, /font-black/);
-  assert.match(page, /sm:text-3xl/);
+  assert.match(page, /stateside-wordmark/);
+  assert.match(styles, /font-size: clamp\(2rem, 3\.75vw, 3\.25rem\)/);
+  assert.match(styles, /font-weight: 900/);
   assert.match(page, /grid-cols-\[1fr_auto_1fr\]/);
   assert.match(page, /\[font-family:var\(--font-unbounded\)\]/);
   assert.doesNotMatch(page, /Understand before you commit/);
