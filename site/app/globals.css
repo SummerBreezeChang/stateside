@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --border: #e7e5e4;
+  --ink: #1c1917;
+  --ink-secondary: #57534e;
+  --ink-muted: #78716c;
+  --primary: #1e4d57;
+  --primary-hover: #163a42;
+  --primary-soft: #ecf4f5;
+  --confirmed: #15803d;
+  --confirmed-bg: #f0fdf4;
+  --inferred: #b45309;
+  --inferred-bg: #fffbeb;
+  --unknown: #475569;
+  --unknown-bg: #f1f5f9;
+  --stop: #b91c1c;
+  --stop-bg: #fef2f2;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-plex), "IBM Plex Sans", Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.6; }
+button, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #cfe4e7; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

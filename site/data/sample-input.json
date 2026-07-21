@@ -1,0 +1,40 @@
+{
+  "student": {
+    "school": "UC Berkeley",
+    "program": "Graduate program",
+    "programStart": "2026-08-20",
+    "programEnd": "2027-05-20",
+    "arrivalDate": "2026-08-12",
+    "transportation": "No car",
+    "usCredit": false,
+    "ssn": false,
+    "usGuarantor": false,
+    "funding": "Parent-funded with bank statements and sponsor letter",
+    "priorities": {
+      "restAndPrivacy": "essential",
+      "affordability": "important",
+      "simpleCampusTrip": "essential",
+      "programAlignedLease": "important"
+    }
+  },
+  "places": [
+    {
+      "id": "shattuck",
+      "nickname": "Shattuck studio",
+      "listingText": "Furnished private studio near Downtown Berkeley. Rent $1,850/month. Water and trash $60/month; tenant pays electricity estimated at $70/month. $45 application fee and $1,850 security deposit. Twelve-month lease from August 15, 2026 through August 14, 2027. Direct AC Transit bus to campus, approximately 18 minutes according to the listing.",
+      "landlordMessages": "International students are welcome to apply. Standard screening applies. We have not confirmed whether an SSN is required or whether parent bank statements can replace U.S. credit. Recorded video available; live video tour has not been confirmed."
+    },
+    {
+      "id": "fulton",
+      "nickname": "Fulton private room",
+      "listingText": "Furnished private bedroom in a shared three-bedroom apartment. $1,350/month, utilities included. Nine-month lease August 15, 2026 through May 14, 2027. $35 application fee, $250 holding fee credited toward a $1,350 deposit. One direct bus to campus, about 15 minutes according to the listing.",
+      "landlordMessages": "A parent sponsor letter and recent bank statement are accepted instead of U.S. income. No U.S. guarantor required on this route. Current roommates have not yet shared their quiet-hours, guest, or cleaning expectations. Lease excerpt: Electricity is billed separately based on actual household use. Each tenant is jointly responsible for unpaid rent and utility balances owed by any co-tenant."
+    },
+    {
+      "id": "albany",
+      "nickname": "Albany studio",
+      "listingText": "Private unfurnished studio in Albany. $1,550/month. Water and trash included; electricity estimated at $90/month. $50 application fee, $300 service fee, and $1,550 deposit. Nine-month lease August 15, 2026 through May 14, 2027. Listing estimates 42 minutes to campus with one transfer. In-person and live video tours available.",
+      "landlordMessages": "All applicants without established U.S. credit must provide a U.S.-based guarantor. No alternative has been stated. The listing does not describe the trip home after evening classes. Furniture and setup costs are not provided."
+    }
+  ]
+}

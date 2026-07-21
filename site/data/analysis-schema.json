@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StatesideAnalysis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["places"],
+  "properties": {
+    "places": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "nickname", "headline", "qualification", "financials", "lease", "restPrivacy", "campusEvening", "biggestQuestion", "sections", "actionLane", "nextActions", "documents", "landlordQuestions", "draftEmail"],
+        "properties": {
+          "id": { "type": "string" },
+          "nickname": { "type": "string" },
+          "headline": { "$ref": "#/$defs/claim" },
+          "qualification": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["summary", "route", "missingEvidence"],
+            "properties": {
+              "summary": { "$ref": "#/$defs/claim" },
+              "route": { "type": "string" },
+              "missingEvidence": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "financials": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["monthlyRent", "recurring", "fees", "deposit"],
+            "properties": {
+              "monthlyRent": { "$ref": "#/$defs/moneyFact" },
+              "recurring": { "type": "array", "items": { "$ref": "#/$defs/costItem" } },
+              "fees": { "type": "array", "items": { "$ref": "#/$defs/costItem" } },
+              "deposit": { "$ref": "#/$defs/moneyFact" }
+            }
+          },
+          "lease": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["start", "end", "summary"],
+            "properties": {
+              "start": { "type": ["string", "null"] },
+              "end": { "type": ["string", "null"] },
+              "summary": { "$ref": "#/$defs/claim" }
+            }
+          },
+          "restPrivacy": { "$ref": "#/$defs/claim" },
+          "campusEvening": { "$ref": "#/$defs/claim" },
+          "biggestQuestion": { "$ref": "#/$defs/claim" },
+          "sections": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["restPrivacy", "dailyLife", "totalCommitment", "rentalReadiness", "trustVerification"],
+            "properties": {
+              "restPrivacy": { "type": "array", "items": { "$ref": "#/$defs/claim" } },
+              "dailyLife": { "type": "array", "items": { "$ref": "#/$defs/claim" } },
+              "totalCommitment": { "type": "array", "items": { "$ref": "#/$defs/claim" } },
+              "rentalReadiness": { "type": "array", "items": { "$ref": "#/$defs/claim" } },
+              "trustVerification": { "type": "array", "items": { "$ref": "#/$defs/claim" } }
+            }
+          },
+          "actionLane": { "type": "string", "enum": ["Ready to contact", "Verify before applying", "Pause — do not pay yet", "Set aside"] },
+          "nextActions": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
+          "documents": { "type": "array", "items": { "type": "string" } },
+          "landlordQuestions": { "type": "array", "items": { "type": "string" } },
+          "draftEmail": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["subject", "body"],
+            "properties": {
+              "subject": { "type": "string" },
+              "body": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "evidence", "whyItMatters"],
+      "properties": {
+        "value": { "type": "string" },
+        "evidence": { "type": "string", "enum": ["confirmed", "inferred", "unknown"] },
+        "whyItMatters": { "type": "string" }
+      }
+    },
+    "moneyFact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "evidence", "note"],
+      "properties": {
+        "amount": { "type": ["number", "null"] },
+        "evidence": { "type": "string", "enum": ["confirmed", "inferred", "unknown"] },
+        "note": { "type": "string" }
+      }
+    },
+    "costItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "amount", "frequency", "evidence", "note"],
+      "properties": {
+        "label": { "type": "string" },
+        "amount": { "type": ["number", "null"] },
+        "frequency": { "type": "string", "enum": ["monthly", "one_time", "unknown"] },
+        "evidence": { "type": "string", "enum": ["confirmed", "inferred", "unknown"] },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
