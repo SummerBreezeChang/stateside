@@ -122,7 +122,9 @@ test("visual hierarchy, favorites, and research context remain evidence-bound", 
     readFile(new URL("fixtures/where-to-search.json", root), "utf8").then(JSON.parse),
   ]);
   assert.match(source, /Review in this order/);
-  assert.match(source, /See how much each listing actually shows/);
+  assert.match(source, /Start with the rooms/);
+  assert.match(source, /See what each listing actually shows/);
+  assert.ok(source.indexOf('id="photos"') < source.indexOf('id="summary"'));
   assert.match(source, /Image unavailable/);
   assert.match(source, /Source: Craigslist post/);
   assert.match(source, /original URL unavailable/);

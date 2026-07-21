@@ -30,3 +30,7 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 ## Main build task
 
 - **Codex Session ID from `/feedback`:** Add after the core build session
+# 2026-07-21 — Visual-first comparison ordering
+
+- Reordered the comparison experience so students see the three rooms before cost, qualification, and lease analysis.
+- Updated comparison navigation and photo framing to match the new reading order.

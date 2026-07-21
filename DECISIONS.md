@@ -31,3 +31,8 @@ Record meaningful product, engineering, and design choices. These notes will bec
 | 2026-07-21 | Give the landing page one navigation destination and one repeated action | Keep decorative anchor links, a duplicate demo badge, and different section endings | Every visible route should advance the student into discovery or comparison | The header now opens the campus source directory, every section ends with “Start comparing,” and the hero and wordmark use a cleaner visual frame |
 | 2026-07-21 | Center the landing wordmark and keep only one header action | Retain section links or the Berkeley demo label in the landing header | A quiet header makes the brand and the next action immediately legible | The borderless landing header now centers a larger 900-weight STATESIDE mark and places “Start comparing” at the right |
 | 2026-07-21 | Turn setup into a three-question guided flow | Show profile, priorities, source directory, and three long listing forms on one page | Students need to understand one task at a time and see how outside listings enter Stateside | Setup now moves through stay dates, priorities, and listing links/details, while the judge-safe sample remains clearly labeled |
+# 2026-07-21 — Lead comparison results with listing photos
+
+- The comparison page now shows all three listing-photo galleries immediately after its heading.
+- Decision guidance and the full evidence table follow the visual overview.
+- Photo-source dates and the live-tour warning remain visible so imagery is treated as evidence, not proof.
