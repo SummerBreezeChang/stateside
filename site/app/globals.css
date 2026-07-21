@@ -35,8 +35,19 @@ button { cursor: pointer; }
   white-space: nowrap;
 }
 
+.landing-hero-shell {
+  background-color: #052f2e;
+  background-position: center 4rem;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
 @media (max-width: 640px) {
   .stateside-wordmark { font-size: 1.75rem; }
+  .landing-hero-shell {
+    background-position: center 4rem;
+    background-size: cover;
+  }
 }
 
 @keyframes hero-arrive {

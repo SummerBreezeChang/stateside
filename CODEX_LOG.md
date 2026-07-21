@@ -67,3 +67,7 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 - Kept the Stateside wordmark on the left and the primary comparison action on the right at phone widths.
 - Moved the no-account reassurance below the hero action on mobile while preserving the established desktop order.
 - Kept the approved single hero image and excluded the unused carousel concepts to protect the recording-ready scope.
+# 2026-07-21 — Blended landing navigation
+
+- Extended the hero treatment behind the landing navigation and switched the wordmark and top action to high-contrast white treatments.
+- Preserved more of the original photograph, lowered its framing to expose the computer screen, and replaced hard navigation outlines with a soft teal fade.
