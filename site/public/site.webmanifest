@@ -1,0 +1,10 @@
+{
+  "name": "Stateside — International Student Housing Decisions",
+  "short_name": "Stateside",
+  "description": "Compare U.S. rentals by qualification, true cost, lease fit, and missing evidence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#134e4a",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

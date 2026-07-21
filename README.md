@@ -10,7 +10,9 @@ Stateside helps an international student compare three U.S. rentals they already
 2. **Compare:** See the same ten questions for every place, with qualification first and every answer labeled Confirmed, Inferred, or Unknown.
 3. **Decision plan:** Open a place-specific plan with five review sections, one action lane, three next actions, documents, landlord questions, and a copyable inquiry email.
 
-No account, live inventory, payment, safety score, or personal documents are required.
+The landing page makes the promise understandable before setup, and the first three seconds of comparison prioritize qualification, true cost, commitment, then unknowns. Guests can save favorites locally on their device without creating an account.
+
+No account, live inventory, payment, safety score, or personal documents are required. Public listing imagery is used as evidence: photo coverage and reused images are visible, exact routes remain labeled as estimates, and every gallery warns that photos do not replace a live tour.
 
 ## Why it is different
 
@@ -69,6 +71,10 @@ Automated checks cover the server-rendered one-click setup, structured fixture c
 - `site/data/analysis-schema.json` — strict model output contract
 - `site/data/sample-input.json` — safe three-place Berkeley scenario
 - `site/fixtures/analysis.json` — saved real GPT-5.6 structured output
+- `site/fixtures/markets.json` — dated Bay Area market observations
+- `site/fixtures/media.json` — local gallery paths, coordinates, map links, and reused-image evidence
+- `site/public/listings/` — 28 self-hosted public listing images used by the visual evidence layer
+- `site/app/layout.tsx`, `robots.ts`, and `sitemap.ts` — public title, search, sharing, and indexing metadata
 - `site/lib/analysis.ts` — deterministic calculations and validation
 - `site/app/page.tsx` — three-screen fixture-driven experience
 - `site/scripts/generate-fixture.mjs` — reproducible one-call fixture generator
@@ -83,7 +89,7 @@ Material product choices are recorded in [DECISIONS.md](./DECISIONS.md); concret
 
 - Track: **Education**
 - Repository: <https://github.com/SummerBreezeChang/stateside>
-- Demo URL: add after deployment
+- Demo URL: <https://stateside-student-housing.summerchang.chatgpt.site/>
 - Demo video: add after recording
 - Main `/feedback` session ID: add after the core build task
 

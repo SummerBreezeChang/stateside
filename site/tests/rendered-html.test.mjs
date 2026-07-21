@@ -11,19 +11,17 @@ async function render(path = "/") {
   return worker.fetch(new Request(`http://localhost${path}`, { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("server-renders the one-click sample setup", async () => {
+test("server-renders a clear no-account landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Stateside — Compare your U\.S\. housing shortlist/);
-  assert.match(html, /Compare my places/);
-  assert.match(html, /Incoming UC Berkeley graduate student/);
-  assert.match(html, /No U\.S\. credit/);
-  assert.match(html, /Shattuck studio/);
-  assert.match(html, /Fulton private room/);
-  assert.match(html, /Albany studio/);
-  assert.match(html, /Sample data/);
-  assert.match(html, /<textarea/);
+  assert.match(html, /Understand a U\.S\. rental before you commit/);
+  assert.match(html, /Explore the Berkeley comparison/);
+  assert.match(html, /No account or payment required/);
+  assert.match(html, /Can I qualify/);
+  assert.match(html, /What will I really pay/);
+  assert.match(html, /Continue without an account/);
+  assert.match(html, /Research-backed demo/);
 });
 
 test("fixture preserves the GPT-5.6 analysis contract", async () => {
@@ -64,4 +62,36 @@ test("required states and disclaimer are present", async () => {
   assert.match(source, /The analysis was incomplete/);
   assert.match(source, /Stateside does not determine whether a home or neighborhood is safe/);
   assert.match(source, /Pause — do not pay yet/);
+});
+
+test("visual hierarchy, favorites, and research context remain evidence-bound", async () => {
+  const [source, markets, media] = await Promise.all([
+    readFile(new URL("app/page.tsx", root), "utf8"),
+    readFile(new URL("fixtures/markets.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("fixtures/media.json", root), "utf8").then(JSON.parse),
+  ]);
+  assert.match(source, /Three-second decision order/);
+  assert.match(source, /The gallery is evidence, not decoration/);
+  assert.match(source, /Image unavailable/);
+  assert.match(source, /stateside:favorites/);
+  assert.match(source, /straight-line estimate, not a routed or confirmed trip/);
+  assert.equal(markets.collectedAt, "2026-07-21");
+  assert.equal(markets.markets.length, 4);
+  assert.equal(markets.markets.find((market) => market.id === "sfstate").observedRange, null);
+  assert.deepEqual(media.places.map((place) => place.photoCount), [12, 12, 4]);
+  assert.deepEqual(media.places.map((place) => place.shared.length), [3, 3, 0]);
+  assert.ok(media.places.flatMap((place) => place.images).every((image) => image.startsWith("/listings/") && !image.includes("craigslist.org")));
+});
+
+test("public metadata identifies Stateside consistently", async () => {
+  const [layout, favicon, manifest] = await Promise.all([
+    readFile(new URL("app/layout.tsx", root), "utf8"),
+    readFile(new URL("public/favicon.svg", root), "utf8"),
+    readFile(new URL("public/site.webmanifest", root), "utf8").then(JSON.parse),
+  ]);
+  assert.match(layout, /metadataBase: new URL\("https:\/\/stateside-student-housing\.summerchang\.chatgpt\.site"\)/);
+  assert.match(layout, /international student housing/);
+  assert.match(layout, /summary_large_image/);
+  assert.match(favicon, /#134E4A/);
+  assert.equal(manifest.short_name, "Stateside");
 });

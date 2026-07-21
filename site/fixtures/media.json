@@ -1,0 +1,76 @@
+{
+  "collectedAt": "2026-07-21",
+  "alwaysAppend": "Photos show what the landlord chose to show. None of this replaces a live tour.",
+  "places": [
+    {
+      "id": "shattuck",
+      "sourceId": "haste-15",
+      "nickname": "Haste St #15",
+      "photoCount": 12,
+      "walk": { "minutes": 10, "distance": "0.50 mi", "evidence": "inferred" },
+      "mapLink": "https://www.google.com/maps/search/37.865164,-122.261932",
+      "streetViewLink": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=37.865164,-122.261932",
+      "osmEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=-122.2665,37.8622,-122.2574,37.8681&layer=mapnik&marker=37.865164,-122.261932",
+      "images": [
+        "/listings/haste-15/00A0A_5eOxlF5tKxf_0CI0t2.jpg",
+        "/listings/haste-15/00j0j_iQk1op4yLJJ_0CI0t2.jpg",
+        "/listings/haste-15/00F0F_lCDjUZZrHfW_0CI0t2.jpg",
+        "/listings/haste-15/00B0B_8EWhioKmvLU_0CI0t2.jpg",
+        "/listings/haste-15/00y0y_3qvszsL41pV_0CI0t2.jpg",
+        "/listings/haste-15/01010_dLGrm5vKEwr_0CI0t2.jpg",
+        "/listings/haste-15/00404_ioWQyO6SsjP_0t20CI.jpg",
+        "/listings/haste-15/00w0w_93xj30ZV1Ol_0t20CI.jpg",
+        "/listings/haste-15/00w0w_2rCsmFfxbTU_0aP087.jpg",
+        "/listings/haste-15/01414_gytNYhjP5lK_0bi08t.jpg",
+        "/listings/haste-15/00E0E_k6i1kmZtYKM_0t20CI.jpg",
+        "/listings/haste-15/00A0A_gQXzlCZKwq2_0jm0bz.jpg"
+      ],
+      "shared": [8, 9, 11],
+      "sharedWith": "Haste St #27"
+    },
+    {
+      "id": "fulton",
+      "sourceId": "haste-27",
+      "nickname": "Haste St #27",
+      "photoCount": 12,
+      "walk": { "minutes": 10, "distance": "0.50 mi", "evidence": "inferred" },
+      "mapLink": "https://www.google.com/maps/search/37.865198,-122.262104",
+      "streetViewLink": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=37.865198,-122.262104",
+      "osmEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=-122.2666,37.8622,-122.2576,37.8682&layer=mapnik&marker=37.865198,-122.262104",
+      "images": [
+        "/listings/haste-27/00C0C_gnz92VU2g1y_0CI0t2.jpg",
+        "/listings/haste-27/00J0J_11AX0dKcjV_0CI0t2.jpg",
+        "/listings/haste-27/00t0t_adPfcE3utBb_0CI0t2.jpg",
+        "/listings/haste-27/00k0k_eYAmzfqiJar_0CI0t2.jpg",
+        "/listings/haste-27/00N0N_lXt9ExIjENj_0t20CI.jpg",
+        "/listings/haste-27/00L0L_8Dye8S3qaUp_0CI0t2.jpg",
+        "/listings/haste-27/00q0q_3sFqErD7job_0CI0t2.jpg",
+        "/listings/haste-27/00W0W_2BAYKNfAVkI_0CI0t2.jpg",
+        "/listings/haste-27/00v0v_aC1fPwocwbo_0t20CI.jpg",
+        "/listings/haste-27/00w0w_2rCsmFfxbTU_0aP087.jpg",
+        "/listings/haste-27/01414_gytNYhjP5lK_0bi08t.jpg",
+        "/listings/haste-27/00A0A_gQXzlCZKwq2_0jm0bz.jpg"
+      ],
+      "shared": [9, 10, 11],
+      "sharedWith": "Haste St #15"
+    },
+    {
+      "id": "albany",
+      "sourceId": "oxford-2150",
+      "nickname": "Oxford St studio",
+      "photoCount": 4,
+      "walk": { "minutes": 8, "distance": "0.44 mi", "evidence": "inferred" },
+      "mapLink": "https://www.google.com/maps/search/37.870125,-122.266180",
+      "streetViewLink": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=37.870125,-122.266180",
+      "osmEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=-122.2707,37.8672,-122.2617,37.8731&layer=mapnik&marker=37.870125,-122.266180",
+      "images": [
+        "/listings/oxford-2150/00V0V_9V9PdFz4X0d_0t20CI.jpg",
+        "/listings/oxford-2150/00B0B_cFf1OUetxtb_0t20CI.jpg",
+        "/listings/oxford-2150/01515_jVNQI8IocEL_0t20CI.jpg",
+        "/listings/oxford-2150/00q0q_61uX8XyruDS_0t20CI.jpg"
+      ],
+      "shared": [],
+      "sharedWith": null
+    }
+  ]
+}

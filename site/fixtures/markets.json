@@ -1,0 +1,67 @@
+{
+  "collectedAt": "2026-07-21",
+  "markets": [
+    {
+      "id": "berkeley",
+      "school": "UC Berkeley",
+      "area": "Berkeley",
+      "status": "Full demo",
+      "observedRange": "$1,750–$1,900",
+      "summary": "Three public listings reviewed in depth. Two adjacent Haste Street units publish similar prices but different finishes; one unit’s move-in block references a different studio number.",
+      "source": "Public listing pages and UC Berkeley Off-Campus Housing"
+    },
+    {
+      "id": "sjsu",
+      "school": "San José State",
+      "area": "San Jose",
+      "status": "Market data only",
+      "observedRange": "$1,275–$2,397",
+      "summary": "The richest distortion sample: duplicate clusters, one property at two prices, four title/listed-price mismatches, and a stale sold listing.",
+      "source": "Public Craigslist listing pages"
+    },
+    {
+      "id": "stanford",
+      "school": "Stanford",
+      "area": "Palo Alto / Peninsula",
+      "status": "Market data only",
+      "observedRange": "$1,950–$2,550",
+      "summary": "Five studio results appeared in a $1,200–$3,000 Peninsula search; three of four priced examples were in East Palo Alto rather than Palo Alto.",
+      "source": "Public Craigslist listing pages"
+    },
+    {
+      "id": "sfstate",
+      "school": "SF State",
+      "area": "San Francisco",
+      "status": "Not yet collected",
+      "observedRange": null,
+      "summary": "The initial query was too restrictive to support a finding. No market conclusion is shown until the search is rerun.",
+      "source": "Public Craigslist listing pages"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "duplicates",
+      "label": "Duplicate listing clusters",
+      "finding": "Berkeley: ~10 posts at $2,845 · San Jose: ~10 at $2,397",
+      "tone": "info"
+    },
+    {
+      "id": "two-prices",
+      "label": "Same property, two prices",
+      "finding": "San Jose: Miranda Villa at $1,706 and $1,399",
+      "tone": "info"
+    },
+    {
+      "id": "price-mismatch",
+      "label": "Headline price differs",
+      "finding": "San Jose: 4 posts showed $1,850 or $2,115, then listed $2,088",
+      "tone": "warning"
+    },
+    {
+      "id": "stale",
+      "label": "Stale listing left published",
+      "finding": "San Jose: a post marked “[SOLD]” remained live at $1,990",
+      "tone": "info"
+    }
+  ]
+}
