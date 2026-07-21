@@ -49,3 +49,7 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 
 - Enlarged and centered the Stateside wordmark across navigation states.
 - Reworked the in-product header grid so the brand remains centered independently of surrounding controls.
+# 2026-07-21 — Consistent scroll motion
+
+- Added viewport-aware reveal behavior for primary sections and card groups across every screen.
+- Added restrained hover feedback for pointer devices and a reduced-motion fallback that keeps all content immediately visible.

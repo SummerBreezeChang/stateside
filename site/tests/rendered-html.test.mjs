@@ -172,9 +172,9 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(page, /window\.location\.href = "\/"/);
   assert.match(page, /You are here: Step/);
   assert.match(page, /On this page/);
-  assert.match(styles, /animation-timeline: view\(\)/);
-  assert.match(styles, /@keyframes reveal-up/);
-  assert.match(styles, /translateY\(72px\)/);
+  assert.match(styles, /\.motion-ready \.motion-reveal/);
+  assert.match(styles, /translate3d\(-20px, 16px, 0\)/);
+  assert.match(page, /IntersectionObserver/);
   assert.match(styles, /prefers-reduced-motion/);
   assert.match(layout, /Unbounded/);
   assert.match(layout, /"900"/);
@@ -187,4 +187,17 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(favicon, /#134E4A/);
   assert.ok(hero.byteLength > 100_000);
   assert.equal(manifest.short_name, "Stateside");
+});
+
+test("motion system is consistent and respects reduced-motion preferences", async () => {
+  const [source, styles] = await Promise.all([
+    readFile(new URL("app/page.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
+  ]);
+  assert.match(source, /IntersectionObserver/);
+  assert.match(source, /motion-reveal/);
+  assert.match(source, /\[screen\]/);
+  assert.match(styles, /\.motion-ready \.motion-reveal/);
+  assert.match(styles, /prefers-reduced-motion: reduce/);
+  assert.match(styles, /opacity: 1 !important; transform: none !important/);
 });

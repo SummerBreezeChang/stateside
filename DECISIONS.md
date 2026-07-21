@@ -53,3 +53,8 @@ Record meaningful product, engineering, and design choices. These notes will bec
 - Centered the Stateside wordmark geometrically in both landing and in-product navigation.
 - Increased the wordmark size, tightened its tracking, and retained the 900-weight Unbounded face for a more obvious brand signature.
 - Rebalanced the surrounding controls so progress and demo context do not shift the logo away from center.
+# 2026-07-21 — Use one restrained motion language throughout Stateside
+
+- Added a shared scroll-reveal system across landing, setup, comparison, and detail screens instead of one-off section animations.
+- Sections and repeated cards alternate subtle left/right movement with small staggered delays, light blur, and a soft ease-out.
+- Motion runs once as content enters the viewport and is fully disabled when the visitor prefers reduced motion.

@@ -49,36 +49,34 @@ button { cursor: pointer; }
 
 .hero-arrive { animation: hero-arrive .7s cubic-bezier(.22, 1, .36, 1) both; }
 
-@supports (animation-timeline: view()) {
-  .reveal-left, .reveal-right {
-    animation-duration: 1ms;
-    animation-fill-mode: both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 38%;
-  }
-  .reveal-left { animation-name: reveal-left; }
-  .reveal-right { animation-name: reveal-right; }
+/* A quiet, shared entrance system for every product screen. JavaScript adds
+   motion-ready only when observation is available, so content never disappears
+   when scripting is unavailable. */
+.motion-ready .motion-reveal {
+  opacity: 0;
+  transition:
+    opacity .62s cubic-bezier(.22, 1, .36, 1) var(--motion-delay, 0ms),
+    transform .72s cubic-bezier(.22, 1, .36, 1) var(--motion-delay, 0ms),
+    filter .62s ease var(--motion-delay, 0ms);
+  filter: blur(2px);
+  will-change: opacity, transform;
+}
 
-  #how-it-works .grid > div,
-  #what-you-get > div > div,
-  main > section:last-child {
-    animation-name: reveal-up;
-    animation-duration: 1ms;
-    animation-fill-mode: both;
-    animation-timeline: view();
-    animation-range: entry 0% cover 34%;
-  }
+.motion-ready .motion-reveal.motion-left { transform: translate3d(-20px, 16px, 0); }
+.motion-ready .motion-reveal.motion-right { transform: translate3d(20px, 16px, 0); }
+.motion-ready .motion-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
 
-  #how-it-works .grid > div:nth-child(2),
-  #what-you-get > div > div:nth-child(2) {
-    animation-range: entry 8% cover 42%;
-  }
-
-  #how-it-works .grid > div:nth-child(3) {
-    animation-range: entry 16% cover 50%;
-  }
+@media (hover: hover) and (pointer: fine) {
+  main a, main button { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease; }
+  main a:hover, main button:hover { transform: translateY(-1px); }
+  main a:active, main button:active { transform: translateY(0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition-duration: 0.01ms !important; }
+  .motion-ready .motion-reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
 }

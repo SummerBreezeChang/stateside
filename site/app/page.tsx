@@ -318,6 +318,25 @@ export default function Home() {
     return () => window.clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.classList.add("motion-ready");
+    const selector = "main > section:not(:has(.hero-arrive)), main > div, main > details, main > nav, main > section > .grid > *, main > div.grid > *";
+    const nodes = [...document.querySelectorAll<HTMLElement>(selector)];
+    nodes.forEach((node, index) => {
+      node.classList.add("motion-reveal", index % 2 ? "motion-right" : "motion-left");
+      node.style.setProperty("--motion-delay", `${Math.min(index % 4, 3) * 55}ms`);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    nodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, [screen]);
+
   const toggleFavorite = (placeId: string) => setFavorites((current) => {
     const next = current.includes(placeId) ? current.filter((id) => id !== placeId) : [...current, placeId];
     window.localStorage.setItem("stateside:favorites", JSON.stringify(next));
