@@ -7,7 +7,7 @@
 - **Track:** Education
 - **Initial audience:** International students moving to the United States for university
 - **Demo market:** UC Berkeley
-- **Promise:** Stateside helps international students understand whether a potential first home fits their life, what they can verify, and what to do next before contacting a landlord, paying, or signing.
+- **Promise:** Stateside helps international students compare the places they are considering, understand how each fits their stay and daily life, see what remains unverified, and know what to do next before applying, paying, or signing.
 
 Stateside is a personalized housing decision and preparation layer—not a rental marketplace and not a guarantee of safety or approval.
 
@@ -45,20 +45,20 @@ Collect only inputs needed for the recommendation:
 - U.S. credit, SSN, income, sponsor/scholarship, and guarantor status
 - Willingness to use a commercial guarantor
 
-### 2. Supply one housing option
+### 2. Build a shortlist
 
-The user can paste:
+The user can add up to three places and provide:
 
 - Listing text
 - Landlord messages
 - Address
 - Lease terms or excerpt
 
-The MVP includes a preloaded Berkeley sample so judges can test immediately without personal data. Screenshot/document upload is a stretch goal.
+The MVP includes a preloaded three-place Berkeley shortlist so judges can test immediately without personal data. Screenshot/document upload is a stretch goal.
 
 ### 3. Analyze with GPT-5.6
 
-One structured model call converts the student profile and unstructured housing information into five explainable areas:
+One structured model call converts the student profile and unstructured housing information into a cross-option comparison and five explainable areas per place:
 
 1. **Daily-life fit:** budget, privacy, furnishing, dates, lease length, commute
 2. **Access:** campus travel, evening transit, essentials, car dependency, terrain
@@ -68,13 +68,13 @@ One structured model call converts the student profile and unstructured housing 
 
 Every material statement is labeled **Confirmed**, **Inferred**, or **Unverified**.
 
-### 4. Explain rather than score
+### 4. Compare and explain rather than score
 
 Do not show a mysterious “safety score.” Lead with a plain-language result such as:
 
 > Promising, with two items to verify.
 
-Each section shows compatible facts, cautions, unknowns, and why each caution matters.
+The comparison shows how each place aligns with the student's essential preferences. Each place then shows compatible facts, cautions, unknowns, and why each caution matters.
 
 ### 5. Prepare next actions
 
@@ -92,16 +92,16 @@ Generate:
 
 ## Golden-path demo scenario
 
-An incoming UC Berkeley graduate student:
+An incoming UC Berkeley graduate student compares three intentionally imperfect places. The student:
 
 - Wants a furnished private studio
 - Has no car, U.S. credit, SSN, U.S. income, or U.S. guarantor
 - Has parent-provided funding
 - Prioritizes privacy, transit, practical access, and avoiding steep walking routes
 - Has a nine-month program
-- Is evaluating a twelve-month listing with incomplete screening information
+- Is evaluating a private studio with a twelve-month lease, a lower-cost private room with unknown roommate habits, and a farther unfurnished studio with a guarantor requirement
 
-The key reveal is that the listing can look promising while still requiring action: confirm no-SSN screening, resolve the lease/program mismatch, obtain a live tour, and verify payment and management details.
+The key reveal is that there is no universal winner. The strongest option depends on the student's essentials and which uncertainties can be resolved. Stateside makes those tradeoffs and next actions visible.
 
 ## Model contract
 
@@ -176,9 +176,10 @@ Result hierarchy:
 ### Must ship
 
 - Renter-profile form
-- Preloaded Berkeley sample
-- Listing/message/lease text input
+- Preloaded three-place Berkeley shortlist
+- Up-to-three-place listing/message/lease input
 - One GPT-5.6 structured analysis call
+- Cross-option comparison
 - Five explainable result sections
 - Confirmed/inferred/unverified labels
 - Preparation checklist and landlord email
@@ -211,9 +212,9 @@ Target: 2:40–2:55.
 
 1. Explain the remote housing decision problem.
 2. Load the Berkeley student profile and adjust priorities.
-3. Load the sample listing and landlord messages.
+3. Load the three-place sample shortlist and landlord messages.
 4. Run the GPT-5.6 analysis.
-5. Show the five evidence-based result areas.
+5. Show the comparison, then open one place's five evidence-based result areas.
 6. Show the checklist and generated inquiry email.
 7. Explain GPT-5.6 structured reasoning and Codex's role in implementation, safeguards, interface, tests, and deployment.
 8. Close with the product promise.
