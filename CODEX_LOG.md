@@ -45,3 +45,7 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 - Added named decision-plan buttons, a clear conclusion state, a collapsed full comparison, and complete urgent actions near the top of each detail page.
 - Hid the third-party map embed from assistive technology and retained an accessible external map action.
 - Updated regression coverage for the new honesty, navigation, comparison, and accessibility contract.
+# 2026-07-21 — Stronger centered wordmark
+
+- Enlarged and centered the Stateside wordmark across navigation states.
+- Reworked the in-product header grid so the brand remains centered independently of surrounding controls.

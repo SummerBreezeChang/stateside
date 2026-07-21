@@ -48,3 +48,8 @@ Record meaningful product, engineering, and design choices. These notes will bec
 - The comparison leads with photos and concise conclusions, while the wide evidence table is collapsed behind “View full comparison.”
 - Detail pages show complete next actions immediately after the headline recommendation and provide accessible, named controls.
 - Custom profiles, live link retrieval, and GPT-5.6 analysis of new listings remain the next product phase rather than simulated demo behavior.
+# 2026-07-21 — Make the Stateside wordmark the navigation anchor
+
+- Centered the Stateside wordmark geometrically in both landing and in-product navigation.
+- Increased the wordmark size, tightened its tracking, and retained the 900-weight Unbounded face for a more obvious brand signature.
+- Rebalanced the surrounding controls so progress and demo context do not shift the logo away from center.

@@ -128,9 +128,9 @@ function LandingScreen({ onStart, savedCount }: { onStart: () => void; savedCoun
 
 function AppHeader({ screen, onStart }: { screen: Screen; onStart?: () => void }) {
   if (screen === "landing") {
-    return <header className="bg-white"><div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 py-4 sm:px-8">
+    return <header className="bg-white"><div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 py-5 sm:px-8">
       <span aria-hidden="true" />
-      <button type="button" onClick={() => { window.location.href = "/"; }} className="justify-self-center text-2xl font-black tracking-[-0.04em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-3xl" aria-label="Return to Stateside home">STATESIDE</button>
+      <button type="button" onClick={() => { window.location.href = "/"; }} className="justify-self-center text-3xl font-black tracking-[-0.055em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-4xl" aria-label="Return to Stateside home">STATESIDE</button>
       <Button onClick={onStart} className="justify-self-end whitespace-nowrap px-3 text-xs sm:px-4 sm:text-sm">Start comparing</Button>
     </div></header>;
   }
@@ -143,9 +143,8 @@ function AppHeader({ screen, onStart }: { screen: Screen; onStart?: () => void }
   ];
   return (
     <header className="border-b border-stone-200 bg-white">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-4 sm:px-8">
-        <button type="button" onClick={() => { window.location.href = "/"; }} className="text-xl font-black tracking-[-0.03em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-2xl" aria-label="Return to Stateside home">STATESIDE</button>
-        <div className="hidden items-center gap-2 text-sm sm:flex" aria-label={`Step ${step} of 3`}>
+      <div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center gap-3 px-5 py-5 sm:px-8">
+        <div className="hidden items-center gap-2 justify-self-start text-sm lg:flex" aria-label={`Step ${step} of 3`}>
           {["Your needs", "Compare places", "Next steps"].map((label, index) => (
             <div className="flex items-center gap-2" key={label}>
               <span className={`grid h-7 w-7 place-items-center rounded-full text-xs font-semibold ${step >= index + 1 ? "bg-teal-900 text-white" : "bg-stone-100 text-stone-500"}`}>{index + 1}</span>
@@ -154,7 +153,8 @@ function AppHeader({ screen, onStart }: { screen: Screen; onStart?: () => void }
             </div>
           ))}
         </div>
-        <Badge tone="sample">Berkeley demo</Badge>
+        <button type="button" onClick={() => { window.location.href = "/"; }} className="justify-self-center text-3xl font-black tracking-[-0.055em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-4xl" aria-label="Return to Stateside home">STATESIDE</button>
+        <span className="justify-self-end"><Badge tone="sample">Berkeley demo</Badge></span>
       </div>
       {screen !== "landing" && screen !== "setup" ? <div className="border-t border-teal-100 bg-teal-50"><div className="mx-auto flex max-w-[1440px] flex-col gap-1 px-5 py-3 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8"><p><span className="font-semibold text-teal-950">You are here: Step {step} of 3 · {stepLabels[step - 1]}</span><span className="text-stone-600"> — {stepInstructions[step - 1]}</span></p><span className="hidden shrink-0 font-semibold text-teal-900 lg:block">{step < 3 ? `Next: ${stepLabels[step]} →` : "Use the recommendation and next actions below"}</span></div></div> : null}
     </header>
