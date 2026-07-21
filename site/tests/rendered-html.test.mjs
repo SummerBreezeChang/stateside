@@ -17,7 +17,8 @@ test("server-renders a clear no-account landing page", async () => {
   const html = await response.text();
   assert.match(html, /Compare rentals before you apply or pay/);
   assert.match(html, /Bring rent, application requirements/);
-  assert.match(html, /Start the Berkeley demo/);
+  assert.match(html, /Start comparing/);
+  assert.doesNotMatch(html, /See the three steps|Start the Berkeley demo/);
   assert.match(html, /No account, payment, or personal documents required/);
   assert.match(html, /How it works/);
   assert.match(html, /Tell us what you need/);
