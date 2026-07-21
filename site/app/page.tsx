@@ -100,7 +100,7 @@ function WhereToSearch() {
     <Card className="overflow-hidden border-teal-200">
       <div className="border-b border-teal-100 bg-teal-50 p-6 sm:p-8"><div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><p className="text-sm font-semibold text-teal-900">Selected campus · {campus.name}</p><h2 id="where-to-search-heading" className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">Where to start looking</h2><p className="mt-3 max-w-3xl leading-7 text-stone-600">Start with the university board, then widen your search. Find listings on these sites and bring the details back to Stateside to compare.</p></div><Badge tone="confirmed">Curated directory</Badge></div></div>
       <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[1.05fr_.95fr]">
-        <div><div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5"><div className="flex flex-wrap items-center justify-between gap-3"><div><Badge tone="confirmed">University board</Badge><h3 className="mt-3 text-xl font-semibold">{campus.start_here.name}</h3></div><a href={campus.start_here.url} target="_blank" rel="noopener noreferrer" className="rounded-md bg-teal-900 px-4 py-2 text-sm font-semibold text-white">Open site ↗</a></div><div className="mt-5 grid gap-4 sm:grid-cols-2"><div><p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">Why start here</p><p className="mt-2 text-sm leading-6 text-stone-700">{campus.start_here.why}</p></div><div><p className="text-xs font-semibold uppercase tracking-wide text-amber-800">What to watch for</p><p className="mt-2 text-sm leading-6 text-stone-700">{campus.start_here.watch_for}</p></div></div></div>
+        <div><div className="rounded-xl border border-emerald-200 bg-emerald-50 p-5"><div className="flex flex-wrap items-center justify-between gap-3"><div><Badge tone="confirmed">University board</Badge><h3 className="mt-3 text-xl font-semibold">{campus.start_here.name}</h3></div><a href={campus.start_here.url} target="_blank" rel="noopener noreferrer" className="rounded-md border border-teal-800 bg-white px-4 py-2 text-sm font-semibold text-teal-900">Open site ↗</a></div><div className="mt-5 grid gap-4 sm:grid-cols-2"><div><p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">Why start here</p><p className="mt-2 text-sm leading-6 text-stone-700">{campus.start_here.why}</p></div><div><p className="text-xs font-semibold uppercase tracking-wide text-amber-800">What to watch for</p><p className="mt-2 text-sm leading-6 text-stone-700">{campus.start_here.watch_for}</p></div></div></div>
           <div className="mt-5"><p className="text-sm font-semibold text-stone-500">Also try</p><div className="mt-3 divide-y divide-stone-200 rounded-xl border border-stone-200">{campus.also_try.map((source) => <div className="grid gap-4 p-4 sm:grid-cols-[.7fr_1fr_1fr] sm:items-start" key={source.name}><div><a href={source.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-900 underline decoration-teal-300 underline-offset-4">{source.name} ↗</a></div><div><p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Good for</p><p className="mt-1 text-sm leading-6 text-stone-700">{source.why}</p></div><div><p className="text-xs font-semibold uppercase tracking-wide text-amber-800">Watch for</p><p className="mt-1 text-sm leading-6 text-stone-700">{source.watch_for}</p></div></div>)}</div></div>
         </div>
         <aside className="rounded-xl bg-teal-950 p-6 text-white" aria-labelledby="international-resources-heading"><Badge tone="sample">Common routes, not endorsements</Badge><h3 id="international-resources-heading" className="mt-4 text-2xl font-semibold">{international.heading}</h3><p className="mt-3 text-sm leading-6 text-teal-100">{international.note}</p><p className="mt-3 text-sm font-semibold text-amber-200">Requirements vary by landlord.</p><div className="mt-6 space-y-4">{international.resources.map((resource) => <div className="border-t border-white/15 pt-4 first:border-0 first:pt-0" key={resource.name}><a href={resource.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-white underline decoration-teal-400 underline-offset-4">{resource.name} ↗</a><p className="mt-2 text-sm leading-6 text-teal-100">{resource.what}</p></div>)}</div><div className="mt-7 border-t border-white/15 pt-5"><p className="text-sm font-semibold">Documents to prepare</p><ul className="mt-3 space-y-3">{international.documents_to_prepare.map((document) => <li className="flex gap-3 text-sm leading-6 text-teal-50" key={document}><span aria-hidden="true" className="text-teal-300">□</span>{document}</li>)}</ul></div></aside>
@@ -144,7 +144,7 @@ function AppHeader({ screen }: { screen: Screen }) {
         </div>}
         <Badge tone="sample">Berkeley demo</Badge>
       </div>
-      {screen !== "landing" ? <div className="border-t border-teal-100 bg-teal-50"><div className="mx-auto flex max-w-[1440px] flex-col gap-1 px-5 py-3 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8"><p><span className="font-semibold text-teal-950">You are here: Step {step} of 3 · {stepLabels[step - 1]}</span><span className="text-stone-600"> — {stepInstructions[step - 1]}</span></p><span className="hidden shrink-0 font-semibold text-teal-900 lg:block">Next: {step < 3 ? stepLabels[step] : "Make your decision"} →</span></div></div> : null}
+      {screen !== "landing" && screen !== "setup" ? <div className="border-t border-teal-100 bg-teal-50"><div className="mx-auto flex max-w-[1440px] flex-col gap-1 px-5 py-3 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8"><p><span className="font-semibold text-teal-950">You are here: Step {step} of 3 · {stepLabels[step - 1]}</span><span className="text-stone-600"> — {stepInstructions[step - 1]}</span></p><span className="hidden shrink-0 font-semibold text-teal-900 lg:block">Next: {step < 3 ? stepLabels[step] : "Make your decision"} →</span></div></div> : null}
     </header>
   );
 }
@@ -158,32 +158,27 @@ function SetupScreen({ onCompare }: { onCompare: () => void }) {
       <AppHeader screen="setup" />
       <main className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
         <div className="mb-10 max-w-3xl">
-          <p className="mb-3 text-sm font-semibold text-teal-900">Step 1 · Your needs</p>
           <h1 className="text-3xl font-semibold tracking-tight text-stone-950 sm:text-5xl">Set up your housing comparison.</h1>
           <p className="mt-5 text-lg leading-8 text-stone-600">Start with your situation and priorities. Then review the three places you want to compare.</p>
         </div>
 
-        <nav className="sticky top-2 z-30 mb-6 flex items-center gap-2 overflow-x-auto rounded-lg border border-stone-200 bg-white/95 p-2 text-sm font-semibold text-stone-600 shadow-sm backdrop-blur" aria-label="Setup sections"><span className="px-2 text-xs uppercase tracking-wide text-stone-400">On this page</span><a href="#your-situation" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">1. Your situation</a><a href="#where-to-search" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">2. Where to look</a><a href="#places-to-compare" className="whitespace-nowrap rounded-md px-3 py-2 hover:bg-teal-50 hover:text-teal-900">3. Places to compare</a></nav>
+        <div className="mb-8 rounded-lg border border-stone-200 bg-white px-5 py-4 text-sm font-medium leading-6 text-stone-700">Incoming UC Berkeley graduate student · 9-month program · Arrives Aug 12 · No car · No U.S. credit · No SSN · No U.S. guarantor · Parent-funded.</div>
 
-        <Card id="your-situation" className="scroll-mt-24 mb-8 p-6 sm:p-8">
-          <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
-            <div><p className="text-sm font-semibold text-teal-900">1. Your situation</p><h2 className="mt-1 text-xl font-semibold">Incoming UC Berkeley graduate student</h2></div>
-            <p className="max-w-2xl text-sm leading-6 text-stone-600">9-month program · Arrives Aug 12 · $2,000 monthly budget · $4,000 move-in maximum · No car · No U.S. credit, SSN, income, or guarantor · Parent-funded · Furnished on arrival is essential</p>
-          </div>
-          <p className="mb-4 font-semibold">What matters most?</p>
-          <div className="grid gap-4 md:grid-cols-2">
+        <section className="mb-10" aria-labelledby="priorities-heading">
+          <h2 id="priorities-heading" className="mb-4 text-lg font-semibold">What matters most?</h2>
+          <div className="grid gap-3 md:grid-cols-2">
             {priorities.map(([id, label]) => (
-              <div className="rounded-lg border border-stone-200 p-4" key={id}>
-                <p className="mb-3 font-medium">{label}</p>
-                <div className="grid grid-cols-3 gap-2" role="group" aria-label={`${label} priority`}>
+              <div className="rounded-lg border border-stone-200 bg-white p-3 sm:flex sm:items-center sm:justify-between sm:gap-3" key={id}>
+                <p className="mb-2 text-sm font-medium sm:mb-0">{label}</p>
+                <div className="grid grid-cols-3 gap-1.5" role="group" aria-label={`${label} priority`}>
                   {(["essential", "important", "flexible"] as Priority[]).map((level) => (
-                    <button key={level} type="button" onClick={() => setLevels((current) => ({ ...current, [id]: level }))} className={`rounded-md border px-2 py-2 text-xs font-semibold capitalize transition ${levels[id] === level ? "border-teal-900 bg-teal-50 text-teal-950" : "border-stone-200 bg-white text-stone-500 hover:border-stone-400"}`} aria-pressed={levels[id] === level}>{level}</button>
+                    <button key={level} type="button" onClick={() => setLevels((current) => ({ ...current, [id]: level }))} className={`rounded-md border px-2 py-1.5 text-[11px] font-semibold capitalize transition ${levels[id] === level ? "border-teal-900 bg-teal-50 text-teal-950" : "border-stone-200 bg-white text-stone-500 hover:border-stone-400"}`} aria-pressed={levels[id] === level}>{level}</button>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-        </Card>
+        </section>
 
         <WhereToSearch />
 
@@ -199,9 +194,9 @@ function SetupScreen({ onCompare }: { onCompare: () => void }) {
             </Card>
           ))}
         </div>
-        <div className="mt-8 flex flex-col items-end gap-3">
-          <Button onClick={onCompare} size="lg">Show my comparison <span aria-hidden="true">→</span></Button>
-          <p className="max-w-2xl text-right text-xs leading-5 text-stone-500">This demo uses a fictional student profile and public housing research. No application or payment is made.</p>
+        <div className="mt-10 space-y-3">
+          <Button className="w-full" onClick={onCompare} size="lg">Compare these three places <span aria-hidden="true">→</span></Button>
+          <p className="text-center text-xs leading-5 text-stone-500">This demo uses a fictional student profile and public housing research. No application or payment is made.</p>
         </div>
       </main>
     </>

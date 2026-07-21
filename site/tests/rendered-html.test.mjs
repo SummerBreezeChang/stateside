@@ -97,6 +97,12 @@ test("required states and disclaimer are present", async () => {
   assert.match(source, /We couldn’t finish this comparison/);
   assert.match(source, /Stateside does not rate safety or guarantee approval/);
   assert.match(source, /Pause — do not pay yet/);
+  assert.match(source, /screen !== "landing" && screen !== "setup"/);
+  assert.doesNotMatch(source, /Step 1 · Your needs/);
+  assert.doesNotMatch(source, /aria-label="Setup sections"/);
+  assert.match(source, /Incoming UC Berkeley graduate student · 9-month program · Arrives Aug 12 · No car · No U\.S\. credit · No SSN · No U\.S\. guarantor · Parent-funded\./);
+  assert.match(source, /Compare these three places/);
+  assert.doesNotMatch(source, /Show my comparison/);
 });
 
 test("visual hierarchy, favorites, and research context remain evidence-bound", async () => {
