@@ -9,7 +9,7 @@ export type PlaceAnalysis = {
   headline: Claim;
   qualification: { summary: Claim; route: string; missingEvidence: string[] };
   financials: { monthlyRent: MoneyFact; recurring: CostItem[]; fees: CostItem[]; deposit: MoneyFact; publishedMoveIn: MoneyFact };
-  lease: { start: string | null; end: string | null; summary: Claim };
+  lease: { start: string | null; end: string | null; termMonths: number | null; summary: Claim };
   restPrivacy: Claim;
   campusEvening: Claim;
   biggestQuestion: Claim;
@@ -35,7 +35,7 @@ export function evidenceForCosts(items: { amount: number | null; evidence: Evide
 }
 
 export function computeMonthlyTotal(place: PlaceAnalysis) {
-  const monthly = place.financials.recurring.filter((item) => item.frequency === "monthly");
+  const monthly = place.financials.recurring.filter((item) => item.frequency === "monthly" && !/optional/i.test(item.label));
   const known = [place.financials.monthlyRent, ...monthly].reduce((sum, item) => sum + (item.amount ?? 0), 0);
   const evidence = evidenceForCosts([place.financials.monthlyRent, ...monthly]);
   return { amount: known, evidence, label: evidence === "unknown" ? `${formatMoney(known)} + unknown costs` : `${formatMoney(known)} / month` };
@@ -52,7 +52,15 @@ function utcDate(value: string) {
   return Date.UTC(year, month - 1, day);
 }
 
-export function computeLeaseFit(start: string | null, end: string | null, programStart: string, programEnd: string) {
+export function computeLeaseFit(place: PlaceAnalysis, programMonths: number, programStart: string, programEnd: string) {
+  if (place.lease.termMonths !== null) {
+    const extraMonths = Math.max(0, place.lease.termMonths - programMonths);
+    if (extraMonths > 0) {
+      const extraRent = (place.financials.monthlyRent.amount ?? 0) * extraMonths;
+      return `${place.lease.termMonths}-month lease extends ${extraMonths} months beyond the ${programMonths}-month program (${formatMoney(extraRent)} in additional rent). Subletting and early termination are not published.`;
+    }
+  }
+  const { start, end } = place.lease;
   if (!start || !end) return "Lease dates are still unclear";
   const day = 86_400_000;
   const startGap = Math.round((utcDate(start) - utcDate(programStart)) / day);

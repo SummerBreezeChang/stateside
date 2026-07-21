@@ -42,10 +42,11 @@
           "lease": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["start", "end", "summary"],
+            "required": ["start", "end", "termMonths", "summary"],
             "properties": {
               "start": { "type": ["string", "null"] },
               "end": { "type": ["string", "null"] },
+              "termMonths": { "type": ["number", "null"] },
               "summary": { "$ref": "#/$defs/claim" }
             }
           },
@@ -66,8 +67,8 @@
           },
           "actionLane": { "type": "string", "enum": ["Ready to contact", "Verify before applying", "Pause — do not pay yet", "Set aside"] },
           "nextActions": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "type": "string" } },
-          "documents": { "type": "array", "items": { "type": "string" } },
-          "landlordQuestions": { "type": "array", "items": { "type": "string" } },
+          "documents": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "landlordQuestions": { "type": "array", "minItems": 1, "items": { "type": "string" } },
           "draftEmail": {
             "type": "object",
             "additionalProperties": false,

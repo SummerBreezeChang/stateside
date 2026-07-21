@@ -45,6 +45,7 @@ test("fixture preserves the GPT-5.6 analysis contract", async () => {
   assert.deepEqual(fixture.places.map((place) => place.nickname), ["Haste St #15", "Haste St #27", "Oxford St studio"]);
   assert.deepEqual(fixture.places.map((place) => place.financials.monthlyRent.amount), [1900, 1850, 1750]);
   assert.deepEqual(fixture.places.map((place) => place.financials.publishedMoveIn.amount), [3800, 3700, null]);
+  assert.deepEqual(fixture.places.map((place) => place.lease.termMonths), [12, 12, null]);
   for (const place of fixture.places) {
     assert.ok(["confirmed", "inferred", "unknown"].includes(place.headline.evidence));
     assert.ok(["confirmed", "inferred", "unknown"].includes(place.qualification.summary.evidence));
@@ -55,20 +56,22 @@ test("fixture preserves the GPT-5.6 analysis contract", async () => {
   }
   const [haste15, haste27, oxford] = fixture.places;
   assert.equal(haste27.actionLane, "Pause — do not pay yet");
-  assert.match(haste27.financials.publishedMoveIn.note, /studio #7 rather than unit #27/i);
+  assert.match(haste27.financials.publishedMoveIn.note, /studio #7.*unit #27/i);
   assert.match(oxford.financials.publishedMoveIn.note, /uncomputable/i);
   for (const haste of [haste15, haste27]) {
+    const qualificationText = `${haste.qualification.summary.value} ${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`;
     assert.match(haste.qualification.summary.value, /good credit/i);
-    assert.match(`${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`, /no U\.S\. credit/i);
-    assert.match(`${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`, /SSN/i);
-    assert.match(`${haste.qualification.summary.whyItMatters} ${haste.qualification.route}`, /U\.S\. guarantor/i);
+    assert.match(qualificationText, /no U\.S\. credit/i);
+    assert.match(qualificationText, /SSN/i);
+    assert.match(qualificationText, /U\.S\. guarantor/i);
+    assert.match(haste.qualification.summary.value, /critical(?: qualification)? mismatch/i);
   }
   assert.deepEqual(listings.cross_listing_findings.map((finding) => finding.id), ["wrong-unit-reference", "shared-photos", "missing-commitment-terms"]);
 });
 
 test("comparison source keeps the required fixed row order", async () => {
   const source = await readFile(new URL("app/page.tsx", root), "utf8");
-  const labels = ["Headline status", "Can I qualify?", "Monthly rent", "Utilities & recurring", "Fees", "Move-in cash total", "Lease vs program dates", "Rest & privacy", "Campus + evening return", "Cross-listing check", "Visual evidence", "Biggest unresolved question"];
+  const labels = ["Headline status", "Can I qualify?", "Monthly rent", "Utilities & recurring", "Fees", "Move-in cash total", "Lease vs program dates", "Rest & privacy", "Campus + evening return", "Visual evidence", "Listing checks", "Biggest unresolved question"];
   let previous = -1;
   for (const label of labels) {
     const index = source.indexOf(`label: "${label}"`);
@@ -77,10 +80,14 @@ test("comparison source keeps the required fixed row order", async () => {
   }
   assert.doesNotMatch(source, /winner badge|total score/i);
   assert.match(source, /computeMonthlyTotal/);
+  assert.match(await readFile(new URL("lib/analysis.ts", root), "utf8"), /!\/optional\/i\.test\(item\.label\)/);
   assert.match(source, /computeMoveInCash/);
   assert.match(source, /computeLeaseFit/);
   assert.match(source, /listingFixture\.cross_listing_findings/);
   assert.match(source, /Pause before payment/);
+  assert.match(source, /Critical · pause/);
+  assert.match(source, /computeLeaseFit\(place, sample\.student\.programMonths/);
+  assert.match(source, /Listing checks/);
 });
 
 test("required states and disclaimer are present", async () => {

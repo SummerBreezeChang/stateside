@@ -4,22 +4,24 @@
       "id": "haste-15",
       "nickname": "Haste St #15",
       "headline": {
-        "value": "The published good-credit requirement is a critical mismatch with the student's lack of U.S. credit, and reused photos make the exact unit unclear.",
+        "value": "The private studio is within the monthly rent budget, but it is unfurnished, requires good credit, and requires a 12-month lease—three important mismatches with the student's stated needs and profile. Three published photos are also byte-identical to photos for Haste St #27, so those images may not show this exact unit.",
         "evidence": "inferred",
-        "whyItMatters": "No alternative qualification route is published, and the student cannot tell which shared photos depict unit #15."
+        "whyItMatters": "The student needs furniture on arrival, has no U.S. credit, and prioritizes a program-aligned lease. Reused photos also make it harder to verify the unit's actual condition before applying."
       },
       "qualification": {
         "summary": {
-          "value": "A good credit rating and a credit check for every resident over 18 are required; no route is published for this student's circumstances.",
-          "evidence": "confirmed",
-          "whyItMatters": "The student has no U.S. credit, SSN, or U.S. guarantor, so qualification cannot be assumed."
+          "value": "Critical qualification mismatch: the listing requires good credit and a credit check for every resident over 18, while the student has no U.S. credit, SSN, U.S. income, or U.S. guarantor. No alternative qualification route is published.",
+          "evidence": "inferred",
+          "whyItMatters": "The listing's stated credit rule may prevent approval, and the supplied record gives no basis for assuming that parent funding, bank statements, or a sponsor letter will be accepted instead."
         },
-        "route": "Unknown. The listing does not state whether bank statements, a sponsor letter, or another international-student route is accepted.",
+        "route": "No alternative route is published; acceptance of parent funding, bank statements, or a sponsor letter must be confirmed directly before applying.",
         "missingEvidence": [
           "Whether an SSN is required for the credit check",
-          "Whether applicants without U.S. credit can qualify",
-          "Whether a U.S. guarantor is mandatory",
-          "Whether parent bank statements and a sponsor letter are accepted"
+          "Whether applicants without U.S. credit are considered",
+          "Whether parent funding, bank statements, or a sponsor letter are accepted",
+          "Whether a non-U.S. guarantor or another alternative is permitted",
+          "International-student qualification policy",
+          "Whether the $45 application fee is charged per person"
         ]
       },
       "financials": {
@@ -30,11 +32,46 @@
         },
         "recurring": [
           {
-            "label": "Utilities",
+            "label": "Water and garbage",
+            "amount": null,
+            "frequency": "monthly",
+            "evidence": "confirmed",
+            "note": "Included in rent; no separate amount is stated."
+          },
+          {
+            "label": "Electricity",
             "amount": null,
             "frequency": "unknown",
             "evidence": "unknown",
-            "note": "Recurring utility amounts and responsibility are not published."
+            "note": "The listing does not address responsibility or cost."
+          },
+          {
+            "label": "Gas",
+            "amount": null,
+            "frequency": "unknown",
+            "evidence": "unknown",
+            "note": "The listing does not address responsibility or cost."
+          },
+          {
+            "label": "Internet",
+            "amount": null,
+            "frequency": "unknown",
+            "evidence": "unknown",
+            "note": "The listing does not address responsibility or cost."
+          },
+          {
+            "label": "Renters' insurance",
+            "amount": null,
+            "frequency": "unknown",
+            "evidence": "confirmed",
+            "note": "Required, but no premium or payment frequency is published."
+          },
+          {
+            "label": "Optional parking",
+            "amount": 110,
+            "frequency": "monthly",
+            "evidence": "confirmed",
+            "note": "Optional; the student reports having no car."
           }
         ],
         "fees": [
@@ -43,167 +80,178 @@
             "amount": 45,
             "frequency": "one_time",
             "evidence": "confirmed",
-            "note": "Stated application fee."
+            "note": "The listing does not say whether this is charged per person."
           }
         ],
         "deposit": {
           "amount": 1900,
           "evidence": "confirmed",
-          "note": "Published refundable security deposit for unit #15."
+          "note": "Published security deposit for unit #15."
         },
         "publishedMoveIn": {
           "amount": 3800,
           "evidence": "confirmed",
-          "note": "Published move-in amount consisting of first month's rent and the stated deposit."
+          "note": "Published move-in total for unit #15."
         }
       },
       "lease": {
         "start": null,
         "end": null,
+        "termMonths": 12,
         "summary": {
-          "value": "The listing states a 12-month lease, but exact start and end dates are unpublished.",
+          "value": "A 12-month lease is required, but the exact start and end dates, subletting rules, early-termination terms, and renewal terms are not published. The stated term does not match the student's stated nine-month program length.",
           "evidence": "confirmed",
-          "whyItMatters": "The student cannot yet verify alignment with arrival and program dates."
+          "whyItMatters": "The student prioritizes a program-aligned commitment and needs the full dates and exit rules before deciding."
         }
       },
       "restPrivacy": {
-        "value": "The listing calls the unit a studio and mentions hardwood floors, but noise, window exposure, building access, exact layout, and unit-specific photo accuracy are unresolved.",
-        "evidence": "unknown",
-        "whyItMatters": "Rest and privacy are essential priorities, and three photos are identical to photos used for Haste St #27."
+        "value": "The studio format indicates a private sleeping space, but the listing provides no information about noise, sound insulation, window coverings, or other rest conditions.",
+        "evidence": "inferred",
+        "whyItMatters": "Private sleeping space and rest are essential priorities, and a studio layout alone does not establish quiet or privacy conditions."
       },
       "campusEvening": {
-        "value": "The collected record provides no verified walking, transit, lighting, or evening-return information.",
+        "value": "The supplied record gives no walking, transit, cycling, accessibility, or evening-trip information between this unit and UC Berkeley.",
         "evidence": "unknown",
-        "whyItMatters": "The student has no car and considers a simple campus trip essential; an evening route should be checked directly without treating the area as safe or unsafe."
+        "whyItMatters": "The student has no car and considers a simple campus trip essential, so the route and evening practicality require independent verification."
       },
       "biggestQuestion": {
-        "value": "Will the landlord accept this applicant without U.S. credit, an SSN, or a U.S. guarantor, and can the landlord provide unit-specific photos for #15?",
+        "value": "Will the landlord consider an applicant with no U.S. credit, SSN, U.S. income, or U.S. guarantor using parent funding and financial documents—and can the landlord provide unit-specific photos or a live tour because three photos are reused for Haste St #27?",
         "evidence": "unknown",
-        "whyItMatters": "The published screening rule may block qualification, while byte-identical photos across units #15 and #27 prevent confirmation of which unit is shown."
+        "whyItMatters": "Qualification is a critical mismatch, and the shared photos prevent reliable confirmation that all depicted features and conditions belong to unit #15."
       },
       "sections": {
         "restPrivacy": [
           {
-            "value": "The property is advertised as a studio.",
+            "value": "The listing identifies the home as a studio.",
             "evidence": "confirmed",
-            "whyItMatters": "A studio may support personal space, but the listing does not document the exact layout or all facilities."
+            "whyItMatters": "A studio generally provides sleeping space separate from unrelated housemates, supporting the private-space priority."
           },
           {
-            "value": "Three photos are byte-identical across Haste St #15 and Haste St #27.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student cannot tell which reused photos show the exact unit."
-          },
-          {
-            "value": "Noise, wall separation, window exposure, and building entry controls are not described.",
+            "value": "No noise, soundproofing, window-covering, or neighboring-unit information is published.",
             "evidence": "unknown",
-            "whyItMatters": "These missing details directly affect rest and privacy."
+            "whyItMatters": "The student's essential rest and privacy needs cannot be fully assessed from the studio label."
           }
         ],
         "dailyLife": [
           {
-            "value": "Hardwood floors are listed.",
+            "value": "The unit is explicitly unfurnished; appliances are listed, but no furniture is included.",
             "evidence": "confirmed",
-            "whyItMatters": "This is a documented unit feature, though the listing does not establish its condition."
+            "whyItMatters": "This conflicts with the student's essential need to be furnished on arrival."
           },
           {
-            "value": "Utilities and laundry arrangements are not published.",
-            "evidence": "unknown",
-            "whyItMatters": "Missing utility responsibility affects monthly budgeting, and missing laundry information affects routine convenience."
+            "value": "A gas range, over-the-range microwave, refrigerator, hardwood floors, and on-site coin laundry are listed.",
+            "evidence": "confirmed",
+            "whyItMatters": "These details describe basic daily-use features, although the coin-laundry price is not published."
           },
           {
-            "value": "No verified campus-trip or evening-return details are supplied.",
+            "value": "Water and garbage are included, while electric, gas, and internet are not addressed.",
+            "evidence": "confirmed",
+            "whyItMatters": "Unspecified utility responsibility makes monthly housing costs less predictable."
+          },
+          {
+            "value": "No campus-trip information is supplied.",
             "evidence": "unknown",
-            "whyItMatters": "A simple trip is essential for a student without a car."
+            "whyItMatters": "A no-car student cannot confirm whether the daily trip meets the essential simplicity requirement."
           }
         ],
         "totalCommitment": [
           {
-            "value": "Monthly rent is $1,900, the refundable deposit is $1,900, and the published move-in amount is $3,800.",
+            "value": "Monthly rent is published at $1,900.",
             "evidence": "confirmed",
-            "whyItMatters": "These are the stated housing amounts before any unpublished utility costs."
+            "whyItMatters": "The stated rent is within the student's $2,000 monthly rent budget, before any separately paid utilities or insurance."
           },
           {
-            "value": "A $45 nonrefundable application fee is stated.",
+            "value": "The listing publishes a $1,900 deposit, a $45 nonrefundable application fee, and a $3,800 move-in total.",
             "evidence": "confirmed",
-            "whyItMatters": "This money would not be refunded if the application is unsuccessful."
+            "whyItMatters": "These are the stated upfront figures, but separately paid utilities, insurance, and furnishing costs remain unpriced."
           },
           {
-            "value": "A 12-month lease is stated, but exact dates are missing.",
+            "value": "The required lease term is 12 months, with no exact dates or exit terms published.",
             "evidence": "confirmed",
-            "whyItMatters": "Program alignment cannot be checked until the proposed dates are provided."
+            "whyItMatters": "The commitment is not aligned with the stated nine-month program without a confirmed permitted exit or transfer route."
           }
         ],
         "rentalReadiness": [
           {
-            "value": "The listing requires good credit and a credit check for each resident over 18.",
+            "value": "Good credit and a credit check for every resident over 18 are required.",
             "evidence": "confirmed",
-            "whyItMatters": "This is a critical mismatch because the student has no U.S. credit."
+            "whyItMatters": "The student has no U.S. credit, creating a critical qualification mismatch."
           },
           {
-            "value": "No alternative route is published for an applicant without U.S. credit, an SSN, or a U.S. guarantor.",
+            "value": "No SSN rule, guarantor alternative, international-student process, or financial-document route is published.",
             "evidence": "unknown",
-            "whyItMatters": "Parent funding documents cannot be assumed to satisfy screening."
+            "whyItMatters": "The student should not assume that sponsor documents will replace the stated credit requirement."
+          },
+          {
+            "value": "Renters' insurance is required.",
+            "evidence": "confirmed",
+            "whyItMatters": "Proof may be needed before move-in, and the premium is an additional unpriced cost."
           }
         ],
         "trustVerification": [
           {
-            "value": "Three photos are byte-identical to photos used for Haste St #27.",
+            "value": "Three photos are byte-identical across Haste St #15 and Haste St #27: 00w0w_2rCsmFfxbTU_0aP087, 01414_gytNYhjP5lK_0bi08t, and 00A0A_gQXzlCZKwq2_0jm0bz.",
             "evidence": "confirmed",
-            "whyItMatters": "Unit condition and features should be verified with unit-specific evidence before applying or paying."
+            "whyItMatters": "The student cannot tell which reused images show the exact unit and should obtain unit-specific visual verification."
           },
           {
-            "value": "No supplied message confirms how an international student without U.S. credit would be screened.",
-            "evidence": "unknown",
-            "whyItMatters": "Written clarification is needed before risking the nonrefundable application fee."
+            "value": "The contact is identified only as Ken with a phone number.",
+            "evidence": "confirmed",
+            "whyItMatters": "The supplied record does not establish the contact's full identity or authority to lease the unit."
+          },
+          {
+            "value": "An open house is listed for Friday from 1:00–1:30pm or by appointment.",
+            "evidence": "confirmed",
+            "whyItMatters": "A live or recorded unit-specific tour could verify condition, furnishings, and whether reused photos represent unit #15."
           }
         ]
       },
-      "actionLane": "Verify before applying",
+      "actionLane": "Set aside",
       "nextActions": [
-        "Ask in writing whether an applicant with no U.S. credit, SSN, or U.S. guarantor can qualify.",
-        "Describe the available parent bank statements and sponsor letter, and ask whether they are accepted; do not assume acceptance.",
-        "Request current, unit-specific photos or a live video tour clearly identifying unit #15 because three photos are identical to unit #27's photos. Cross-check permanent features during the tour before applying or paying, because reused photos do not establish which unit is shown or its condition today, and do not send money until the landlord confirms the unit and terms in writing and independently verifies who is authorized to receive payment and how payment should be made safely without using irreversible payment methods or relying only on links or instructions sent by message or email. Also ask for a written itemization of every amount due before move-in and every recurring charge, including utilities, so the published total is not mistaken for the full ongoing commitment, and request the proposed lease start and end dates to compare them with the student's August 12, 2026 arrival and May 20, 2027 program end before signing anything or paying the nonrefundable application fee."
+        "Do not treat the parent-funding documents as an accepted alternative to good credit unless the landlord confirms that route in writing.",
+        "Ask for written qualification criteria for an applicant without U.S. credit, SSN, U.S. income, or a U.S. guarantor before paying the application fee.",
+        "Request a live video tour or new photos clearly identifying unit #15 because three photos are reused for Haste St #27; compare the appliances, flooring, windows, and condition with the listing description before reconsidering it."
       ],
       "documents": [
-        "Parent bank statements",
-        "Sponsor letter",
-        "Passport or other identification if requested through a verified process",
-        "UC Berkeley admission or enrollment documentation if requested",
-        "Draft lease with exact dates before signing"
+        "Prepare a passport or other identification copy, UC Berkeley admission or enrollment evidence, parent bank statements, and a sponsor letter, but submit financial documents only after the landlord confirms that this route is accepted."
       ],
       "landlordQuestions": [
-        "Can an applicant with no U.S. credit, SSN, or U.S. guarantor qualify?",
-        "Do you accept parent bank statements and a sponsor letter, and what exact documents are required?",
-        "Can you provide current photos or a live video tour that clearly identifies unit #15?",
-        "Which utilities are included, and what recurring charges would the tenant pay?",
-        "What exact lease start and end dates are available?",
-        "Is the $45 application fee charged before qualification documents are reviewed?"
+        "Do you consider applicants with no U.S. credit, SSN, U.S. income, or U.S. guarantor, and will you accept parent bank statements and a sponsor letter instead?",
+        "Is the $45 application fee charged per applicant, and is any part refundable if the credit requirement cannot be met?",
+        "Can you provide unit-specific photos or a live video tour of #15, given that three listing photos are identical to photos for #27?",
+        "What are the exact lease start and end dates, and what are the subletting, early-termination, and renewal rules?",
+        "Which utilities must the tenant arrange and pay, and what does the coin laundry cost?",
+        "Is any furniture available before the student's August 12, 2026 arrival?",
+        "What renters' insurance coverage is required?",
+        "What campus transportation options can you document or identify for a student without a car?"
       ],
       "draftEmail": {
-        "subject": "Questions about Haste St #15 screening and unit verification",
-        "body": "Hello, I am a UC Berkeley graduate student interested in Haste St #15. I do not have U.S. credit, an SSN, or a U.S. guarantor. My housing is parent-funded, and I can provide bank statements and a sponsor letter. Please confirm in writing whether I can qualify and which documents you accept. I also noticed that three listing photos are identical to photos used for unit #27. Could you provide current, unit-specific photos or a live video tour clearly identifying #15? Please also confirm utility responsibility, all recurring charges, and the exact lease start and end dates before I apply or pay the nonrefundable fee. Thank you."
+        "subject": "Questions before applying for 2322 Haste St. #15",
+        "body": "Hello Ken,\n\nI am an incoming UC Berkeley graduate student interested in studio #15. Before I apply, could you please confirm whether you consider applicants who have no U.S. credit, SSN, U.S. income, or U.S. guarantor? I am parent-funded and can provide bank statements, a sponsor letter, and enrollment evidence, but I do not want to assume those documents satisfy the good-credit requirement.\n\nPlease also confirm whether the $45 application fee is per applicant; the exact lease start and end dates; utility responsibilities; and the subletting, early-termination, and renewal rules. Because three photos appear identical to photos used for unit #27, could you provide new unit-specific photos or a live video tour clearly showing #15? I also need to know whether any furniture can be provided and what renters' insurance coverage is required.\n\nThank you."
       }
     },
     {
       "id": "haste-27",
       "nickname": "Haste St #27",
       "headline": {
-        "value": "Pause before any payment: the deposit and move-in block identifies studio #7 rather than unit #27, the good-credit rule is a critical qualification mismatch, and reused photos do not establish which unit is shown.",
-        "evidence": "inferred",
-        "whyItMatters": "The $1,850 deposit and $3,700 move-in total cannot be confirmed for #27, qualification cannot be assumed, and three photos are identical to those used for #15."
+        "value": "Pause before any payment: the listing advertises unit #27, but its deposit and move-in block says verbatim, 'Move-in Cost: (studio #7, Max. 2 people).' The unit also requires good credit, which is a critical mismatch for this student, and three photos are byte-identical to photos for Haste St #15.",
+        "evidence": "confirmed",
+        "whyItMatters": "The $1,850 deposit and $3,700 move-in total cannot be confirmed for unit #27. The student also cannot assume approval without U.S. credit or determine which reused photos show this exact unit."
       },
       "qualification": {
         "summary": {
-          "value": "A good credit rating and a credit check for every resident over 18 are required; no alternative route is published for this student.",
-          "evidence": "confirmed",
-          "whyItMatters": "The student has no U.S. credit, SSN, or U.S. guarantor, creating a critical qualification mismatch."
+          "value": "Critical qualification mismatch: the listing requires good credit and a credit check for every resident over 18, while the student has no U.S. credit, SSN, U.S. income, or U.S. guarantor. No alternative qualification route is published.",
+          "evidence": "inferred",
+          "whyItMatters": "The stated credit requirement may prevent approval, and there is no supplied evidence that parent funding or financial documents will be accepted as an alternative."
         },
-        "route": "Unknown. No route is stated for applicants without U.S. credit, an SSN, or a U.S. guarantor.",
+        "route": "No alternative route is published; acceptance of parent funding, bank statements, or a sponsor letter must be confirmed directly before applying.",
         "missingEvidence": [
           "Whether an SSN is required for the credit check",
-          "Whether applicants without U.S. credit can qualify",
-          "Whether a U.S. guarantor is mandatory",
-          "Whether parent bank statements and a sponsor letter are accepted"
+          "Whether applicants without U.S. credit are considered",
+          "Whether parent funding, bank statements, or a sponsor letter are accepted",
+          "Whether a non-U.S. guarantor or another alternative is permitted",
+          "International-student qualification policy",
+          "Whether the $45 application fee is charged per person"
         ]
       },
       "financials": {
@@ -214,25 +262,25 @@
         },
         "recurring": [
           {
-            "label": "Water",
+            "label": "Water and garbage",
             "amount": null,
             "frequency": "monthly",
             "evidence": "confirmed",
-            "note": "Listed as included; no separate charge is published."
-          },
-          {
-            "label": "Garbage",
-            "amount": null,
-            "frequency": "monthly",
-            "evidence": "confirmed",
-            "note": "Listed as included; no separate charge is published."
+            "note": "Included in rent; no separate amount is stated."
           },
           {
             "label": "Other utilities",
             "amount": null,
             "frequency": "unknown",
             "evidence": "unknown",
-            "note": "Responsibility and amounts for other utilities are not published."
+            "note": "The listing does not identify responsibility or cost for other utilities."
+          },
+          {
+            "label": "Renters' insurance",
+            "amount": null,
+            "frequency": "unknown",
+            "evidence": "confirmed",
+            "note": "Required, but no premium or payment frequency is published."
           }
         ],
         "fees": [
@@ -241,183 +289,186 @@
             "amount": 45,
             "frequency": "one_time",
             "evidence": "confirmed",
-            "note": "Stated application fee."
+            "note": "The listing does not say whether this is charged per person."
           }
         ],
         "deposit": {
           "amount": 1850,
           "evidence": "unknown",
-          "note": "The amount appears in a move-in block that names studio #7, so it is not confirmed for unit #27."
+          "note": "This amount appears in a move-in block naming studio #7, not advertised unit #27, so it is not confirmed for #27."
         },
         "publishedMoveIn": {
           "amount": 3700,
           "evidence": "unknown",
-          "note": "The published block states $3,700 but identifies studio #7 rather than unit #27."
+          "note": "The published block states this total but names studio #7 rather than advertised unit #27."
         }
       },
       "lease": {
         "start": null,
         "end": null,
+        "termMonths": 12,
         "summary": {
-          "value": "The listing states a one-year lease, but exact start and end dates are unpublished.",
+          "value": "A 12-month lease is required, but the exact start and end dates, subletting rules, early-termination terms, and renewal terms are not published. The stated term does not match the student's stated nine-month program length.",
           "evidence": "confirmed",
-          "whyItMatters": "The student cannot verify whether the dates align with arrival and the academic program."
+          "whyItMatters": "The student prioritizes a program-aligned commitment and needs the full dates and exit rules before deciding."
         }
       },
       "restPrivacy": {
-        "value": "The listing calls the unit a studio, but the wrong-unit move-in reference and shared photos leave unit-specific details unresolved.",
-        "evidence": "unknown",
-        "whyItMatters": "The student needs reliable evidence about the exact unit before evaluating essential rest and privacy needs."
+        "value": "The top-floor studio format indicates a private sleeping space, but there is no information about noise, sound insulation, window coverings, or other rest conditions.",
+        "evidence": "inferred",
+        "whyItMatters": "Private sleeping space and rest are essential, and neither a studio nor a top-floor location establishes quiet or privacy conditions."
       },
       "campusEvening": {
-        "value": "No verified walking, transit, lighting, or evening-return information is supplied.",
+        "value": "The supplied record gives no walking, transit, cycling, accessibility, or evening-trip information between this unit and UC Berkeley.",
         "evidence": "unknown",
-        "whyItMatters": "The student has no car and requires a simple campus trip; the route should be checked directly without declaring the area safe or unsafe."
+        "whyItMatters": "The student has no car and considers a simple campus trip essential, so the route and evening practicality require independent verification."
       },
       "biggestQuestion": {
-        "value": "Do the deposit, $3,700 move-in amount, photos, and rental terms actually belong to unit #27 rather than studio #7 or unit #15, and is there any qualification route without U.S. credit?",
+        "value": "Can the landlord issue corrected written cost terms specifically for unit #27, confirm whether an applicant without U.S. credit has any accepted route, and provide unit-specific images because three photos are reused for Haste St #15?",
         "evidence": "unknown",
-        "whyItMatters": "The wrong-unit block requires pausing before payment, shared photos prevent visual confirmation, and the published credit requirement conflicts with the student's profile."
+        "whyItMatters": "Payment figures currently point to studio #7, qualification is a critical mismatch, and reused photos prevent confirmation of the exact unit's condition."
       },
       "sections": {
         "restPrivacy": [
           {
-            "value": "The property is advertised as a studio.",
+            "value": "The listing identifies the home as a top-floor studio.",
             "evidence": "confirmed",
-            "whyItMatters": "This identifies the advertised unit type but does not document the exact layout or all facilities."
+            "whyItMatters": "The studio form supports a private sleeping-space interpretation, but the exact layout should still be verified."
           },
           {
-            "value": "Three photos are byte-identical across Haste St #27 and Haste St #15.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student cannot tell which reused photos show the exact unit."
-          },
-          {
-            "value": "Noise, window exposure, building access, and unit-specific condition are not documented.",
+            "value": "No noise, soundproofing, window-covering, or neighboring-unit information is published.",
             "evidence": "unknown",
-            "whyItMatters": "These details affect essential rest and privacy priorities."
+            "whyItMatters": "The essential rest and privacy priorities cannot be fully assessed from the listing."
           }
         ],
         "dailyLife": [
           {
-            "value": "Water and garbage are listed as included.",
+            "value": "A gas range, refrigerator, carpet, and on-site housing in a studio format are described; no microwave is listed.",
             "evidence": "confirmed",
-            "whyItMatters": "These services are not presented as separate tenant charges, but responsibility for other utilities remains unclear."
+            "whyItMatters": "The student should verify whether the listed features match the exact unit and whether any missing appliance is needed."
           },
           {
-            "value": "Laundry arrangements are not published.",
+            "value": "Furnished status is not stated.",
             "evidence": "unknown",
-            "whyItMatters": "Laundry access affects routine convenience."
+            "whyItMatters": "The student considers furnished-on-arrival essential and cannot assume furniture is included."
           },
           {
-            "value": "No verified campus-trip or evening-return details are supplied.",
+            "value": "Water and garbage are included, while other utilities are not addressed.",
+            "evidence": "confirmed",
+            "whyItMatters": "Unspecified utility responsibility makes monthly costs less predictable."
+          },
+          {
+            "value": "No campus-trip information is supplied.",
             "evidence": "unknown",
-            "whyItMatters": "A simple trip is essential for a student without a car."
+            "whyItMatters": "A no-car student cannot confirm whether the daily trip meets the essential simplicity requirement."
           }
         ],
         "totalCommitment": [
           {
-            "value": "Monthly rent is published as $1,850 for unit #27.",
+            "value": "Monthly rent is published at $1,850 for unit #27.",
             "evidence": "confirmed",
-            "whyItMatters": "This is the stated recurring rent before any unpublished charges."
+            "whyItMatters": "The stated rent is within the student's $2,000 monthly rent budget before separately paid utilities or insurance."
           },
           {
-            "value": "The move-in block states a $1,850 refundable deposit and $3,700 total but identifies studio #7.",
+            "value": "The $1,850 deposit and $3,700 move-in total are in a block naming studio #7 rather than unit #27.",
             "evidence": "confirmed",
-            "whyItMatters": "Those amounts cannot be treated as unit #27's terms, so payment should pause."
+            "whyItMatters": "Those figures cannot be relied on for unit #27, so payment should pause until corrected written terms are provided."
           },
           {
-            "value": "A $45 nonrefundable application fee and a one-year lease are stated, but exact lease dates are missing.",
+            "value": "The lease term is 12 months, with no exact dates or exit terms published.",
             "evidence": "confirmed",
-            "whyItMatters": "The fee could be lost after application, and program alignment cannot be checked without dates."
+            "whyItMatters": "The commitment is not aligned with the stated nine-month program without a confirmed permitted exit or transfer route."
           }
         ],
         "rentalReadiness": [
           {
-            "value": "A good credit rating and a credit check for each resident over 18 are required.",
+            "value": "Good credit and a credit check for every resident over 18 are required.",
             "evidence": "confirmed",
-            "whyItMatters": "This is a critical mismatch for a student with no U.S. credit."
+            "whyItMatters": "The student has no U.S. credit, creating a critical qualification mismatch."
           },
           {
-            "value": "No qualification alternative is published for applicants without U.S. credit, an SSN, or a U.S. guarantor.",
+            "value": "No SSN rule, guarantor alternative, international-student process, or financial-document route is published.",
             "evidence": "unknown",
-            "whyItMatters": "The student's parent funding documents cannot be assumed to satisfy screening."
+            "whyItMatters": "The student should not assume that sponsor documents replace the stated credit requirement."
+          },
+          {
+            "value": "Renters' insurance is required.",
+            "evidence": "confirmed",
+            "whyItMatters": "Proof may be needed before move-in, and the premium is an additional unpriced cost."
           }
         ],
         "trustVerification": [
           {
-            "value": "The move-in block for the unit #27 advertisement names studio #7.",
+            "value": "The listing is for Haste St #27, but the cost block says verbatim, 'Move-in Cost: (studio #7, Max. 2 people)'.",
             "evidence": "confirmed",
-            "whyItMatters": "The stated deposit and move-in total may belong to a different unit; pause before paying."
+            "whyItMatters": "The advertised deposit and move-in total cannot be confirmed for unit #27; no payment should be made until the discrepancy is corrected in writing."
           },
           {
-            "value": "Three photos are byte-identical to photos used for Haste St #15.",
+            "value": "Three photos are byte-identical across Haste St #27 and Haste St #15: 00w0w_2rCsmFfxbTU_0aP087, 01414_gytNYhjP5lK_0bi08t, and 00A0A_gQXzlCZKwq2_0jm0bz.",
             "evidence": "confirmed",
-            "whyItMatters": "The listing does not establish which exact unit the reused photos depict."
+            "whyItMatters": "The student cannot tell which reused images show unit #27 and should obtain unit-specific visual verification."
           },
           {
-            "value": "No supplied message confirms an international-student qualification route.",
-            "evidence": "unknown",
-            "whyItMatters": "Written clarification is needed before paying even the nonrefundable application fee."
+            "value": "Twelve photos are published, but the supplied record does not establish which images are exclusive to unit #27.",
+            "evidence": "confirmed",
+            "whyItMatters": "Photo quantity does not resolve the shared-photo or wrong-unit-reference problems."
           }
         ]
       },
       "actionLane": "Pause — do not pay yet",
       "nextActions": [
-        "Do not pay the application fee, deposit, rent, or move-in amount until the landlord corrects the studio #7 reference in writing and confirms every amount for unit #27.",
-        "Request a corrected, unit-specific move-in breakdown for #27 that separately identifies rent, deposit, and any actual fees.",
-        "Ask whether an applicant with no U.S. credit, SSN, or U.S. guarantor can qualify and whether parent bank statements and a sponsor letter are accepted; do not assume an alternative route exists. Request current photos or a live video tour clearly identifying unit #27 because three photos are identical to unit #15's photos, then compare permanent features so reused images are not mistaken for proof of #27's current condition; do not send money until the landlord provides the corrected unit number and terms in writing, verifies who is authorized to receive payment, and gives a payment method that can be independently checked without relying only on links or instructions sent by message or email or using irreversible transfers. Obtain exact lease dates and all recurring utility responsibilities in writing before considering an application, because a one-year label and included water and garbage do not establish the complete commitment."
+        "Do not pay the application fee, deposit, rent, or any holding amount while the move-in block names studio #7 instead of unit #27.",
+        "Request corrected written terms clearly identifying unit #27 and stating its deposit, move-in total, occupancy limit, and all required payments.",
+        "Ask for written qualification criteria for an applicant without U.S. credit, SSN, U.S. income, or a U.S. guarantor before applying; do not assume parent funding is an accepted alternative to good credit or that approval is possible without confirmation in writing from the landlord or property manager acting for unit #27, and do not send sensitive financial documents until identity and authority to lease the unit are verified through independent official contact details or an in-person or live unit-specific tour tied to the corrected unit documents and address, with payment instructions cross-checked against those same verified details."
       ],
       "documents": [
-        "Parent bank statements",
-        "Sponsor letter",
-        "Passport or other identification if requested through a verified process",
-        "UC Berkeley admission or enrollment documentation if requested",
-        "Corrected written terms naming unit #27",
-        "Draft lease naming unit #27 with exact dates before signing"
+        "Prepare identification, UC Berkeley admission or enrollment evidence, parent bank statements, and a sponsor letter, but do not submit sensitive documents or money until the unit-number discrepancy and the recipient's authority are verified."
       ],
       "landlordQuestions": [
-        "Why does the unit #27 move-in block identify studio #7?",
-        "Please confirm in writing the correct deposit and move-in amount specifically for unit #27.",
-        "Can an applicant with no U.S. credit, SSN, or U.S. guarantor qualify?",
-        "Do you accept parent bank statements and a sponsor letter, and what exact documents are required?",
-        "Can you provide current photos or a live video tour clearly identifying unit #27?",
-        "Which utilities beyond water and garbage would the tenant pay?",
-        "What exact lease start and end dates are available?"
+        "Why does the move-in block for advertised unit #27 name studio #7?",
+        "Please provide corrected written terms specifically for unit #27, including its deposit, move-in total, occupancy limit, and every required payment.",
+        "Do you consider applicants with no U.S. credit, SSN, U.S. income, or U.S. guarantor, and will you accept parent bank statements and a sponsor letter instead?",
+        "Is the $45 application fee charged per applicant, and is any part refundable if the credit requirement cannot be met?",
+        "Can you provide new photos or a live video tour clearly identifying unit #27, given that three photos are identical to photos for #15?",
+        "Is unit #27 furnished, and exactly what furniture or appliances are included?",
+        "What are the exact lease start and end dates, and what are the subletting, early-termination, and renewal rules?",
+        "Which utilities must the tenant arrange and pay, and what renters' insurance coverage is required?"
       ],
       "draftEmail": {
-        "subject": "Correction required before payment for Haste St #27",
-        "body": "Hello, I am interested in Haste St #27, but the published move-in block identifies studio #7. Before I apply or pay anything, please provide corrected written terms specifically naming unit #27 and confirm its deposit, move-in amount, fees, and exact lease dates. I also noticed that three photos are identical to photos used for unit #15, so please provide current, unit-specific photos or a live video tour clearly identifying #27. I do not have U.S. credit, an SSN, or a U.S. guarantor; my housing is parent-funded, with bank statements and a sponsor letter available. Please confirm whether I can qualify and which documents you accept. Thank you."
+        "subject": "Correction and verification required for 2322 Haste St. #27",
+        "body": "Hello,\n\nI am interested in 2322 Haste St. #27, but I will not make any payment while the listing's move-in block says, 'Move-in Cost: (studio #7, Max. 2 people).' Please provide corrected written terms specifically identifying unit #27 and stating its security deposit, move-in total, occupancy limit, and all required fees.\n\nI am an incoming UC Berkeley graduate student with no U.S. credit, SSN, U.S. income, or U.S. guarantor. I am parent-funded and can provide bank statements and a sponsor letter. Please confirm in writing whether that route is accepted under the good-credit requirement before I apply.\n\nThree photos also appear identical to photos used for unit #15. Please provide new unit-specific photos or a live video tour clearly identifying #27. I would also like confirmation of the furnished status, utility responsibilities, exact lease dates, exit rules, and renters' insurance requirement.\n\nThank you."
       }
     },
     {
       "id": "oxford-2150",
       "nickname": "Oxford St studio",
       "headline": {
-        "value": "The lower published rent and included utilities are clear, but the deposit, application fee, move-in total, lease term, dates, and qualification rules are all unpublished.",
+        "value": "The published rent is the lowest of the three listings, but Oxford St studio omits the deposit, application fee, move-in total, lease term, exact dates, furnished status, and qualification rules. Its move-in total is therefore uncomputable, and it appears cheaper only because comparable costs are absent.",
         "evidence": "inferred",
-        "whyItMatters": "The move-in total is uncomputable, the commitment length is unknown, and the student cannot assess qualification or program alignment."
+        "whyItMatters": "The student cannot evaluate upfront affordability, program alignment, furnished-on-arrival fit, or eligibility from the collected record."
       },
       "qualification": {
         "summary": {
-          "value": "No screening criteria, credit rule, SSN requirement, guarantor route, or international-student documentation route is published.",
+          "value": "Qualification fit is unknown because no credit, SSN, guarantor, income, international-student, or documentation rules are published.",
           "evidence": "unknown",
-          "whyItMatters": "Approval cannot be assumed, including on the basis of parent funding documents."
+          "whyItMatters": "The student has no U.S. credit, SSN, U.S. income, or U.S. guarantor and needs a confirmed route before applying or sharing financial documents."
         },
-        "route": "Unknown. No qualification route is published.",
+        "route": "Unknown; Oxford Hall Properties has not published an applicant route for this student profile in the supplied record.",
         "missingEvidence": [
-          "Screening criteria",
           "Credit requirement",
           "SSN requirement",
-          "Guarantor requirement or route",
-          "Whether parent bank statements and a sponsor letter are accepted",
-          "Required income or funding documentation"
+          "Income requirement",
+          "Guarantor policy",
+          "Whether parent funding, bank statements, or a sponsor letter are accepted",
+          "International-student documentation route",
+          "Application process and screening criteria"
         ]
       },
       "financials": {
         "monthlyRent": {
           "amount": 1750,
           "evidence": "confirmed",
-          "note": "Published monthly rent with utilities included."
+          "note": "Published monthly rent."
         },
         "recurring": [
           {
@@ -425,7 +476,7 @@
             "amount": null,
             "frequency": "monthly",
             "evidence": "confirmed",
-            "note": "Utilities are stated as included, but the listing does not specify which services are covered."
+            "note": "The listing says utilities are included but does not itemize which services are covered."
           }
         ],
         "fees": [],
@@ -437,138 +488,143 @@
         "publishedMoveIn": {
           "amount": null,
           "evidence": "unknown",
-          "note": "No move-in total is published; it is uncomputable because the deposit and any application fee are unknown."
+          "note": "No move-in total is published, and it is uncomputable from the supplied record because the deposit and any application fee are unknown."
         }
       },
       "lease": {
         "start": null,
         "end": null,
+        "termMonths": null,
         "summary": {
-          "value": "The listing describes a monthly rental period, but no lease term, start date, or end date is published.",
+          "value": "The lease length and exact start and end dates are not published. Subletting, early termination, and renewal terms are also unknown.",
           "evidence": "unknown",
-          "whyItMatters": "The length and conditions of the commitment cannot be compared with the student's program dates."
+          "whyItMatters": "The student considers a program-aligned lease essential but cannot determine the length or dates of the commitment."
         }
       },
       "restPrivacy": {
-        "value": "The property is advertised as a studio with no smoking, but noise, exact layout, window exposure, building access, and unit condition are not documented.",
-        "evidence": "unknown",
-        "whyItMatters": "Rest and privacy are essential and cannot be evaluated from the supplied information."
+        "value": "The studio description indicates a private sleeping space, but the layout, furnishings, noise conditions, sound insulation, and other privacy details are not published.",
+        "evidence": "inferred",
+        "whyItMatters": "The studio form may support private sleeping space, but the essential rest and privacy requirements cannot be fully assessed."
       },
       "campusEvening": {
-        "value": "No verified walking, transit, lighting, or evening-return information is supplied.",
+        "value": "The supplied record gives no walking, transit, cycling, accessibility, or evening-trip information between this unit and UC Berkeley.",
         "evidence": "unknown",
-        "whyItMatters": "The student has no car and requires a simple campus trip; the route should be checked directly without declaring the area safe or unsafe."
+        "whyItMatters": "The student has no car and considers a simple campus trip essential, so the route and evening practicality require independent verification."
       },
       "biggestQuestion": {
-        "value": "What are the complete commitment and screening terms, including the deposit, application fee, move-in total, lease term, exact dates, and qualification requirements?",
+        "value": "What are the complete upfront costs, lease term and dates, qualification route, and furnished status? None is published, so the move-in total is uncomputable and the apparent price advantage is not yet comparable.",
         "evidence": "unknown",
-        "whyItMatters": "These cross-listing omissions make the move-in total uncomputable and leave both commitment length and eligibility unresolved."
+        "whyItMatters": "These missing terms control whether the listing fits the student's cash limit, program dates, application profile, and essential furnished-on-arrival requirement."
       },
       "sections": {
         "restPrivacy": [
           {
-            "value": "The property is advertised as a studio and no smoking is stated.",
+            "value": "The listing identifies the property as a studio.",
             "evidence": "confirmed",
-            "whyItMatters": "These are relevant to personal space and smoke exposure, but they do not establish noise levels or exact layout."
+            "whyItMatters": "The studio form supports a private sleeping-space interpretation."
           },
           {
-            "value": "Noise, window exposure, building entry controls, and unit condition are not described.",
+            "value": "No layout, noise, soundproofing, window-covering, or neighboring-unit information is published.",
             "evidence": "unknown",
-            "whyItMatters": "These missing details directly affect rest and privacy."
+            "whyItMatters": "The student's essential rest and privacy needs cannot be confirmed."
           }
         ],
         "dailyLife": [
           {
-            "value": "Utilities are included, though the covered services are not itemized.",
-            "evidence": "confirmed",
-            "whyItMatters": "Included utilities may simplify billing, but the student needs to know exactly what is covered."
-          },
-          {
-            "value": "Laundry is available in the building.",
-            "evidence": "confirmed",
-            "whyItMatters": "This supports routine convenience, although cost, hours, and equipment details are unpublished."
-          },
-          {
-            "value": "Street parking is listed.",
-            "evidence": "confirmed",
-            "whyItMatters": "The student has no car, so this does not resolve the essential campus-trip requirement."
-          },
-          {
-            "value": "No campus-trip or evening-return details are verified.",
+            "value": "Furnished status is not published.",
             "evidence": "unknown",
-            "whyItMatters": "The student needs a simple non-car route."
+            "whyItMatters": "The student considers furniture on arrival essential and cannot assume it is included."
+          },
+          {
+            "value": "The listing says utilities are included but does not itemize them.",
+            "evidence": "confirmed",
+            "whyItMatters": "The student needs to know whether electricity, gas, water, garbage, and internet are all covered."
+          },
+          {
+            "value": "Only four photos are published, and no square footage is provided.",
+            "evidence": "confirmed",
+            "whyItMatters": "The available record gives limited information about layout, storage, condition, and daily usability."
+          },
+          {
+            "value": "No campus-trip information is supplied.",
+            "evidence": "unknown",
+            "whyItMatters": "A no-car student cannot confirm whether the daily trip meets the essential simplicity requirement."
           }
         ],
         "totalCommitment": [
           {
-            "value": "Published monthly rent is $1,750 with utilities included.",
+            "value": "Monthly rent is published at $1,750.",
             "evidence": "confirmed",
-            "whyItMatters": "This is the only stated housing amount."
+            "whyItMatters": "The stated rent is within the student's monthly rent budget, but it is not enough to establish total affordability."
           },
           {
             "value": "No deposit, application fee, or move-in total is published.",
             "evidence": "unknown",
-            "whyItMatters": "The move-in total is uncomputable until these terms are disclosed."
+            "whyItMatters": "The move-in total is uncomputable, and compliance with the student's move-in cash maximum cannot be assessed."
           },
           {
-            "value": "No lease term or exact dates are published.",
+            "value": "No lease term or exact lease dates are published.",
             "evidence": "unknown",
-            "whyItMatters": "The commitment length and program alignment cannot be assessed."
+            "whyItMatters": "The length and timing of the financial commitment cannot be compared with the student's program."
           }
         ],
         "rentalReadiness": [
           {
-            "value": "No screening criteria or qualification rules are published.",
+            "value": "No qualification requirements are published.",
             "evidence": "unknown",
-            "whyItMatters": "The student cannot know whether the lack of U.S. credit, SSN, and U.S. guarantor creates a barrier."
+            "whyItMatters": "There is no evidence that the student's no-credit and parent-funded profile is accepted."
           },
           {
-            "value": "Acceptance of parent bank statements and a sponsor letter is not published.",
+            "value": "The SSN, guarantor, credit, and international-student documentation rules are all unpublished.",
             "evidence": "unknown",
-            "whyItMatters": "Available funding evidence cannot be assumed to satisfy the landlord."
+            "whyItMatters": "The student needs a written application route before paying a fee or sharing sensitive documents."
+          },
+          {
+            "value": "Tour availability is not published.",
+            "evidence": "unknown",
+            "whyItMatters": "A tour or live video walkthrough is needed to verify the exact unit's condition and furnished status."
           }
         ],
         "trustVerification": [
           {
-            "value": "The Oxford listing omits the deposit, application fee, move-in total, and lease term.",
+            "value": "Oxford St studio publishes no deposit, application fee, move-in total, or lease term.",
             "evidence": "confirmed",
-            "whyItMatters": "These missing commitment terms must be obtained in writing before applying or paying."
+            "whyItMatters": "The move-in total is uncomputable and the length of the commitment is unknown; it appears cheapest only because comparable costs are absent."
           },
           {
-            "value": "The listing also omits exact dates and all qualification rules.",
+            "value": "Only four photos are published in the collected record.",
             "evidence": "confirmed",
-            "whyItMatters": "The student cannot verify program alignment or eligibility."
+            "whyItMatters": "The limited visual record does not establish the exact unit's full layout, condition, or furnishings."
+          },
+          {
+            "value": "No tour availability is published.",
+            "evidence": "unknown",
+            "whyItMatters": "The student needs a way to verify that the offered unit matches the listing before making a payment."
           }
         ]
       },
       "actionLane": "Verify before applying",
       "nextActions": [
-        "Request a written itemization of the security deposit, application fee, every amount due before move-in, and any recurring charges not covered by rent.",
-        "Ask for the lease term or full monthly-rental conditions and exact start and end dates; do not treat the phrase monthly rental period as a confirmed lease duration.",
-        "Request the complete screening criteria, including credit, SSN, guarantor, and funding-document requirements. Ask whether parent bank statements and a sponsor letter are accepted without assuming they qualify, and obtain a draft agreement before applying or paying so the unpublished deposit, fees, move-in obligations, termination rules, and dates can be reviewed in writing. Independently verify the exact unit, the person authorized to rent it, and a reliable payment process before sending money, avoiding irreversible payment methods and instructions that can only be confirmed through a message or email link. Also confirm exactly which utilities are included and inspect the non-car campus route and evening return conditions directly, since neither the listing nor landlord messages establish trip simplicity or safety."
+        "Request a written cost sheet listing the deposit, application fee, first required payments, and published move-in total, if any; the current move-in total is uncomputable.",
+        "Request the lease term and exact start and end dates in writing before comparing this listing with the student's program period.",
+        "Ask for the full qualification route for an applicant without U.S. credit, SSN, U.S. income, or a U.S. guarantor, including whether parent bank statements and a sponsor letter are accepted; also request a live or recorded tour of the exact studio and verify the furnished status because only four photos are published, and confirm independently that the person requesting documents or payment is authorized to lease this unit before sending sensitive records or money."
       ],
       "documents": [
-        "Parent bank statements",
-        "Sponsor letter",
-        "Passport or other identification if requested through a verified process",
-        "UC Berkeley admission or enrollment documentation if requested",
-        "Written fee and move-in itemization",
-        "Draft rental agreement with exact dates and commitment terms"
+        "Prepare identification, UC Berkeley admission or enrollment evidence, parent bank statements, and a sponsor letter for possible use after Oxford Hall Properties confirms its documentation rules and the authorized submission method."
       ],
       "landlordQuestions": [
-        "What security deposit is required?",
-        "Is there an application fee or any other fee paid in addition to rent or deposit?",
-        "What exact amounts would be due before move-in?",
-        "What lease term or monthly-rental conditions apply, including termination or notice terms?",
-        "What exact start and end dates are available?",
-        "What screening criteria apply regarding credit, SSN, and guarantors?",
-        "Do you accept parent bank statements and a sponsor letter for an applicant without U.S. credit?",
-        "Which utilities are included?",
-        "What are the laundry cost and access details?"
+        "What is the security deposit, application fee, and complete move-in total?",
+        "What is the lease length, and what are the exact start and end dates?",
+        "What are the subletting, early-termination, and renewal terms?",
+        "Do you accept an applicant with no U.S. credit, SSN, U.S. income, or U.S. guarantor using parent bank statements and a sponsor letter?",
+        "Is the studio furnished, and exactly what furniture and appliances are included?",
+        "Which specific utilities are included, including electricity, gas, water, garbage, and internet?",
+        "Can you provide the square footage, layout, additional unit-specific photos, and a live or recorded tour?",
+        "What proof identifies the person authorized to accept applications and payments for this unit?"
       ],
       "draftEmail": {
-        "subject": "Request for complete terms for Oxford St studio",
-        "body": "Hello, I am a UC Berkeley graduate student interested in the Oxford St studio. Before applying or paying, please provide the security deposit, any application or other fees, every amount due before move-in, the lease term or full monthly-rental conditions, and the exact available start and end dates. Please also provide the complete screening criteria. I do not have U.S. credit, an SSN, or a U.S. guarantor; my housing is parent-funded, and I can provide bank statements and a sponsor letter. Please confirm whether those documents are accepted. Finally, please identify which utilities are included and provide the laundry cost and access details. Thank you."
+        "subject": "Full terms requested for the studio at 2150 Oxford St.",
+        "body": "Hello Oxford Hall Properties,\n\nI am an incoming UC Berkeley graduate student interested in the advertised studio at 2150 Oxford St. Before applying, could you provide a written cost sheet showing the security deposit, application fee, all required move-in payments, and the complete move-in total?\n\nPlease also provide the lease length, exact start and end dates, and the subletting, early-termination, and renewal rules. I have no U.S. credit, SSN, U.S. income, or U.S. guarantor and am parent-funded. Do you accept parent bank statements and a sponsor letter, and what documents would be required?\n\nFinally, please confirm whether the studio is furnished, list the included furniture and appliances, itemize the included utilities, and provide the square footage plus a live or recorded tour of the exact unit.\n\nThank you."
       }
     }
   ]

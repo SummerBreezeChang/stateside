@@ -4,37 +4,43 @@
     "program": "Graduate program",
     "programStart": "2026-08-20",
     "programEnd": "2027-05-20",
+    "programMonths": 9,
     "arrivalDate": "2026-08-12",
+    "monthlyBudget": 2000,
+    "moveInCashMaximum": 4000,
     "transportation": "No car",
     "usCredit": false,
     "ssn": false,
+    "usIncome": false,
     "usGuarantor": false,
     "funding": "Parent-funded with bank statements and sponsor letter",
     "priorities": {
+      "privateSleepingSpace": "essential",
+      "furnishedOnArrival": "essential",
       "restAndPrivacy": "essential",
       "affordability": "important",
       "simpleCampusTrip": "essential",
-      "programAlignedLease": "important"
+      "programAlignedLease": "essential"
     }
   },
   "places": [
     {
       "id": "haste-15",
       "nickname": "Haste St #15",
-      "listingText": "Studio at 2322 Haste St. #15. Published rent is $1,900 per month. The listing states a $45 nonrefundable application fee, a 12-month lease, and a published move-in amount of $3,800 consisting of first month's rent and a $1,900 refundable security deposit. The unit is described with hardwood floors. A good credit rating is needed, and a credit check is performed for every resident over 18.",
-      "landlordMessages": "The listing is silent on SSN requirements, guarantors, alternatives for applicants without U.S. credit, and whether international-student financial documents are accepted. Recurring utility amounts and exact lease dates are not published in the collected record."
+      "listingText": "Studio at 2322 Haste St. #15, 430–450 sq ft, published at $1,900 per month. Water and garbage are included; electric, gas, and internet are not addressed. The unit is not furnished: appliances are listed but no furniture. Features include hardwood floors, a gas range, over-the-range microwave, refrigerator, and coin laundry on site. Optional parking is $110 per month. The listing states a $45 nonrefundable application fee, a $1,900 security deposit, a published move-in total of $3,800, and a required 12-month lease. Renters' insurance is required. A good credit rating is needed, and a credit check is performed for every resident over 18. Twelve photos are published. An open house is listed for Friday 1:00–1:30pm or by appointment, with contact identified only as Ken and a phone number.",
+      "landlordMessages": "The listing is silent on SSN requirements, guarantor policy or alternatives, international-student policy, subletting, early termination, renewal, whether the $45 fee is per person, and the exact lease end date."
     },
     {
       "id": "haste-27",
       "nickname": "Haste St #27",
-      "listingText": "Studio at 2322 Haste St. #27. Published rent is $1,850 per month. The listing states a $45 nonrefundable application fee and a one-year lease. Water and garbage are included. The published move-in block lists first month's rent of $1,850 and a refundable security deposit of $1,850, for $3,700 total, but that same block says 'studio #7, Max. 2 people' even though the advertisement is for unit #27. A good credit rating is needed, and a credit check is performed for every resident over 18.",
-      "landlordMessages": "The deposit and move-in figures cannot be treated as confirmed for unit #27 because the published block names a different unit. The listing is silent on SSN requirements, guarantors, alternatives for applicants without U.S. credit, and whether international-student financial documents are accepted."
+      "listingText": "Top-floor studio at 2322 Haste St. #27, 430–450 sq ft, published at $1,850 per month. Water and garbage are included; other utilities are not addressed. The unit has carpet, a gas range, and a refrigerator; no microwave is listed. The listing states a $45 nonrefundable application fee, a required 12-month lease, renters' insurance, good credit, and a credit check for every resident over 18. Twelve photos are published. The published move-in block lists first month's rent of $1,850 and a security deposit of $1,850 for $3,700 total, but reads verbatim: 'Move-in Cost: (studio #7, Max. 2 people)' even though the title and address advertise unit #27.",
+      "landlordMessages": "The deposit and move-in figures cannot be confirmed for unit #27 because the published block names a different unit. The listing is silent on SSN requirements, guarantor policy or alternatives, international-student policy, subletting, early termination, renewal, whether the $45 fee is per person, and the exact lease end date."
     },
     {
       "id": "oxford-2150",
       "nickname": "Oxford St studio",
-      "listingText": "Studio at 2150 Oxford St. Published rent is $1,750 per month with utilities included. The listing describes a monthly rental period, laundry in the building, street parking, and no smoking.",
-      "landlordMessages": "No application fee, security deposit, move-in total, lease term, exact lease dates, screening criteria, SSN requirement, guarantor route, credit requirement, or international-student documentation route is published in the collected record."
+      "listingText": "Oxford Hall Properties publishes a studio at 2150 Oxford St. for $1,750 per month with 'utilities included' but does not itemize them. Four photos are published.",
+      "landlordMessages": "No application fee, security deposit, move-in total, lease length, exact lease dates, furnished status, square footage, qualification requirements, tour availability, SSN requirement, guarantor route, credit requirement, or international-student documentation route is published in the collected record."
     }
   ],
   "crossListingFindings": [
@@ -43,7 +49,7 @@
       "placeIds": [
         "haste-27"
       ],
-      "finding": "Haste St #27's published move-in block references 'studio #7' while the listing is for unit #27.",
+      "finding": "The listing is for Haste St #27, but its cost block says verbatim: 'Move-in Cost: (studio #7, Max. 2 people)'.",
       "whyItMatters": "The $1,850 deposit and $3,700 move-in total cannot be confirmed for unit #27; pause before paying."
     },
     {
@@ -52,7 +58,7 @@
         "haste-15",
         "haste-27"
       ],
-      "finding": "Three photos are byte-identical across Haste St #15 and Haste St #27.",
+      "finding": "Three photos are byte-identical across Haste St #15 and Haste St #27: 00w0w_2rCsmFfxbTU_0aP087, 01414_gytNYhjP5lK_0bi08t, and 00A0A_gQXzlCZKwq2_0jm0bz.",
       "whyItMatters": "The student cannot tell which reused photos show the exact unit."
     },
     {
@@ -61,7 +67,7 @@
         "oxford-2150"
       ],
       "finding": "Oxford St studio publishes no deposit, application fee, move-in total, or lease term.",
-      "whyItMatters": "The move-in total is uncomputable and the length of the commitment is unknown."
+      "whyItMatters": "The move-in total is uncomputable and the length of the commitment is unknown; it appears cheapest only because comparable costs are absent."
     }
   ]
 }

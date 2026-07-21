@@ -36,8 +36,10 @@ Hard rules:
 - Haste St #27 must use the action lane "Pause — do not pay yet" because its deposit and move-in block names studio #7, not unit #27.
 - Treat both Haste listings' good-credit requirement as a critical qualification mismatch for this student, who has no U.S. credit, SSN, or U.S. guarantor. Do not invent an alternative route.
 - For Oxford St studio, keep the unpublished deposit, application fee, move-in total, lease term, dates, and qualification rules unknown. Its move-in total is uncomputable.
+- Extract the stated lease length into lease.termMonths: 12 for both Haste listings and null for Oxford. Do not calculate excess months or excess rent; application code performs that arithmetic.
 - Put the listing's stated move-in total in financials.publishedMoveIn: $3,800 confirmed for Haste #15, $3,700 unknown for Haste #27 because the block names studio #7, and null/unknown for Oxford.
 - financials.fees must contain only actual fees paid in addition to rent or deposit. Never put a published move-in total in the fees array.
+- Provide at least one preparation item in documents and one landlord question for every place, including when the listing publishes no requirements.
 - Do not calculate totals or lease durations. Extract stated numeric amounts and dates only; application code performs arithmetic and date math.
 - Use exactly one action lane per place.
 - Use the stop lane only when the supplied evidence supports pausing before any payment.`;
@@ -80,6 +82,7 @@ if (JSON.stringify(analysis.places.map((place) => place.id)) !== JSON.stringify(
 if (analysis.places[1].actionLane !== "Pause — do not pay yet") throw new Error("Haste St #27 must use the pause lane");
 if (analysis.places[0].financials.monthlyRent.amount !== 1900 || analysis.places[1].financials.monthlyRent.amount !== 1850 || analysis.places[2].financials.monthlyRent.amount !== 1750) throw new Error("GPT-5.6 returned unexpected rent amounts");
 if (analysis.places[0].financials.publishedMoveIn.amount !== 3800 || analysis.places[1].financials.publishedMoveIn.amount !== 3700 || analysis.places[2].financials.publishedMoveIn.amount !== null) throw new Error("GPT-5.6 returned unexpected move-in amounts");
+if (analysis.places[0].lease.termMonths !== 12 || analysis.places[1].lease.termMonths !== 12 || analysis.places[2].lease.termMonths !== null) throw new Error("GPT-5.6 returned unexpected lease terms");
 await mkdir(path.join(root, "fixtures"), { recursive: true });
 await writeFile(path.join(root, "data/sample-input.json"), `${JSON.stringify(sample, null, 2)}\n`);
 await writeFile(path.join(root, "fixtures/analysis.json"), `${JSON.stringify(analysis, null, 2)}\n`);
