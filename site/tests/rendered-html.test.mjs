@@ -17,12 +17,12 @@ test("server-renders a clear no-account landing page", async () => {
   const html = await response.text();
   assert.match(html, /Compare rentals before you apply or pay/);
   assert.match(html, /Bring rent, application requirements/);
-  assert.equal(html.match(/Start comparing/g)?.length, 5);
+  assert.equal(html.match(/Start comparing/g)?.length, 2);
   assert.doesNotMatch(html, /See the three steps|Start the Berkeley demo/);
   assert.match(html, /No account, payment, or personal documents required/);
   assert.match(html, /How it works/);
   assert.match(html, /Tell us what you need/);
-  assert.match(html, /Add up to three places/);
+  assert.match(html, /Choose places/);
   assert.match(html, /Review and verify/);
   assert.match(html, /Can I apply/);
   assert.match(html, /What will it cost/);
@@ -167,7 +167,10 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(layout, /summary_large_image/);
   assert.match(layout, /stateside-flow-v3\.jpg/);
   assert.match(page, /stateside-flow-v3\.jpg/);
-  assert.match(page, /Start with three places\. Leave with clear next steps/);
+  assert.match(page, /Start with one to three places\. Leave with clear next steps/);
+  assert.match(page, /Qualification is a question to verify/);
+  assert.match(page, /See this in the Berkeley sample/);
+  assert.match(styles, /interactive-collage:hover/);
   assert.match(page, /saved.*on this device/);
   assert.match(page, /window\.location\.href = "\/"/);
   assert.match(page, /You are here: Step/);

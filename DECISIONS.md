@@ -63,3 +63,9 @@ Record meaningful product, engineering, and design choices. These notes will bec
 - Replaced utility-sized logo text with a dedicated responsive wordmark rule that scales up to 52px on wide screens.
 - Locked the brand to 900 weight, compact line height, and tighter tracking so it visibly outweighs the adjacent action button.
 - Retained a smaller, still-prominent mobile size to prevent overlap with navigation controls.
+# 2026-07-21 — Replace repeated CTAs with exploratory navigation
+
+- Kept explicit “Start comparing” controls in the header and hero, then removed duplicate buttons from the explanatory sections.
+- Made process and benefit cards the click-through surfaces so the page reads as a guided product tour rather than repeated promotion.
+- Added a dedicated “Can I apply?” qualification guide explaining published requirements, acceptable alternatives, and questions to ask before paying.
+- Added gentle image zoom on intentional hover while avoiding autoplay or distracting image changes.

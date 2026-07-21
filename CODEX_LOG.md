@@ -57,3 +57,8 @@ Capture specific examples as they happen. Focus on acceleration and judgment, no
 
 - Added a dedicated responsive Stateside wordmark style after the previous navigation sizing remained visually understated.
 - Increased desktop scale to a display-level maximum while preserving a safe mobile layout.
+# 2026-07-21 — Interactive landing journey
+
+- Converted landing-page process and benefit cards into accessible navigation controls.
+- Added a qualification guidance screen and routed “Can I apply?” to it.
+- Removed redundant section CTAs and added subtle hover zoom for supporting imagery.
