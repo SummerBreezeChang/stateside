@@ -89,9 +89,10 @@ test("visual hierarchy, favorites, and research context remain evidence-bound", 
 });
 
 test("public metadata and visual identity identify Stateside consistently", async () => {
-  const [layout, page, favicon, hero, manifest] = await Promise.all([
+  const [layout, page, styles, favicon, hero, manifest] = await Promise.all([
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/page.tsx", root), "utf8"),
+    readFile(new URL("app/globals.css", root), "utf8"),
     readFile(new URL("public/favicon.svg", root), "utf8"),
     readFile(new URL("public/stateside-flow-v3.jpg", root)),
     readFile(new URL("public/site.webmanifest", root), "utf8").then(JSON.parse),
@@ -99,7 +100,15 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(layout, /metadataBase: new URL\("https:\/\/stateside-student-housing\.summerchang\.chatgpt\.site"\)/);
   assert.match(layout, /international student housing/);
   assert.match(layout, /summary_large_image/);
+  assert.match(layout, /stateside-flow-v3\.jpg/);
   assert.match(page, /stateside-flow-v3\.jpg/);
+  assert.match(page, /Start with three places\. Leave with clear next steps/);
+  assert.match(page, /saved.*on this device/);
+  assert.match(page, /window\.location\.href = "\/"/);
+  assert.match(page, /You are here: Step/);
+  assert.match(page, /On this page/);
+  assert.match(styles, /animation-timeline: view\(\)/);
+  assert.match(styles, /prefers-reduced-motion/);
   assert.match(layout, /Unbounded/);
   assert.match(page, /\[font-family:var\(--font-unbounded\)\]/);
   assert.doesNotMatch(page, /Understand before you commit/);

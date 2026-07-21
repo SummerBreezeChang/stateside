@@ -11,7 +11,7 @@ const plex = IBM_Plex_Sans({
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     siteName: "Stateside",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/og.png", width: 1733, height: 907, alt: "Stateside housing comparison preview" }],
+    images: [{ url: "/stateside-flow-v3.jpg", width: 1586, height: 992, alt: "Stateside rental comparison landing-page preview" }],
   },
-  twitter: { card: "summary_large_image", title: "Stateside — Compare rentals before you pay", description: "Compare up to three U.S. rentals before you apply or pay.", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", title: "Stateside — Compare rentals before you pay", description: "Compare up to three U.S. rentals before you apply or pay.", images: ["/stateside-flow-v3.jpg"] },
 };
 
 export const viewport: Viewport = { themeColor: "#134e4a", colorScheme: "light" };
