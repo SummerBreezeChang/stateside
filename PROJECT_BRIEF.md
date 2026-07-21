@@ -98,7 +98,7 @@ An incoming UC Berkeley graduate student compares three intentionally imperfect 
 - Has no car, U.S. credit, SSN, U.S. income, or U.S. guarantor
 - Has parent-provided funding
 - Prioritizes privacy, transit, practical access, and avoiding steep walking routes
-- Has a nine-month program
+- Is enrolled in UC Berkeley's full-time, one-academic-year Master of Engineering program
 - Is evaluating a private studio with a twelve-month lease, a lower-cost private room with unknown roommate habits, and a farther unfurnished studio with a guarantor requirement
 
 The key reveal is that there is no universal winner. The strongest option depends on the student's essentials and which uncertainties can be resolved. Stateside makes those tradeoffs and next actions visible.

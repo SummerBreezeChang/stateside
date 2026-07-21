@@ -110,8 +110,8 @@ function WhereToSearch() {
   </section>;
 }
 
-function LandingScreen({ onStart, onOpenSearch, savedCount }: { onStart: () => void; onOpenSearch: () => void; savedCount: number }) {
-  return <><AppHeader screen="landing" onOpenSearch={onOpenSearch} /><main>
+function LandingScreen({ onStart, savedCount }: { onStart: () => void; savedCount: number }) {
+  return <><AppHeader screen="landing" onStart={onStart} /><main>
     <section className="overflow-hidden bg-cover bg-center text-white" style={{ backgroundImage: "linear-gradient(90deg, rgba(5,47,46,.96) 0%, rgba(5,47,46,.88) 38%, rgba(5,47,46,.28) 72%, rgba(15,23,42,.12) 100%), url('/stateside-flow-v3.jpg')" }}>
       <div className="mx-auto flex min-h-[78vh] max-w-6xl items-center px-5 py-16 sm:px-8 sm:py-24"><div className="hero-arrive max-w-3xl"><Badge tone="sample">For international students renting in the U.S.</Badge><h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-6xl">Compare rentals before you apply or pay.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-teal-50">Bring rent, application requirements, lease dates, location, photos, and missing details into one view—so you can see what fits and what to ask next.</p><p className="mt-5 text-sm text-teal-100">No account, payment, or personal documents required</p><div className="mt-8"><Button variant="secondary" size="lg" onClick={onStart}>Start comparing <span aria-hidden="true">→</span></Button></div></div></div>
     </section>
@@ -121,7 +121,14 @@ function LandingScreen({ onStart, onOpenSearch, savedCount }: { onStart: () => v
   </main></>;
 }
 
-function AppHeader({ screen, onOpenSearch }: { screen: Screen; onOpenSearch?: () => void }) {
+function AppHeader({ screen, onStart }: { screen: Screen; onStart?: () => void }) {
+  if (screen === "landing") {
+    return <header className="bg-white"><div className="mx-auto grid max-w-[1440px] grid-cols-[1fr_auto_1fr] items-center gap-2 px-3 py-4 sm:px-8">
+      <span aria-hidden="true" />
+      <button type="button" onClick={() => { window.location.href = "/"; }} className="justify-self-center text-2xl font-black tracking-[-0.04em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-3xl" aria-label="Return to Stateside home">STATESIDE</button>
+      <Button onClick={onStart} className="justify-self-end whitespace-nowrap px-3 text-xs sm:px-4 sm:text-sm">Start comparing</Button>
+    </div></header>;
+  }
   const step = screen === "landing" || screen === "setup" ? 1 : screen === "compare" || screen === "loading" ? 2 : 3;
   const stepLabels = ["Your needs", "Compare places", "Next steps"];
   const stepInstructions = [
@@ -133,7 +140,7 @@ function AppHeader({ screen, onOpenSearch }: { screen: Screen; onOpenSearch?: ()
     <header className="border-b border-stone-200 bg-white">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <button type="button" onClick={() => { window.location.href = "/"; }} className="text-xl font-black tracking-[-0.03em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-2xl" aria-label="Return to Stateside home">STATESIDE</button>
-        {screen === "landing" ? <nav className="flex items-center text-sm font-semibold text-stone-600" aria-label="Landing page"><a href="#where-to-search" onClick={(event) => { event.preventDefault(); onOpenSearch?.(); }} className="hover:text-teal-900">Where to search</a></nav> : <div className="hidden items-center gap-2 text-sm sm:flex" aria-label={`Step ${step} of 3`}>
+        <div className="hidden items-center gap-2 text-sm sm:flex" aria-label={`Step ${step} of 3`}>
           {["Your needs", "Compare places", "Next steps"].map((label, index) => (
             <div className="flex items-center gap-2" key={label}>
               <span className={`grid h-7 w-7 place-items-center rounded-full text-xs font-semibold ${step >= index + 1 ? "bg-teal-900 text-white" : "bg-stone-100 text-stone-500"}`}>{index + 1}</span>
@@ -141,8 +148,8 @@ function AppHeader({ screen, onOpenSearch }: { screen: Screen; onOpenSearch?: ()
               {index < 2 ? <span className="mx-1 text-stone-300">/</span> : null}
             </div>
           ))}
-        </div>}
-        {screen !== "landing" ? <Badge tone="sample">Berkeley demo</Badge> : null}
+        </div>
+        <Badge tone="sample">Berkeley demo</Badge>
       </div>
       {screen !== "landing" && screen !== "setup" ? <div className="border-t border-teal-100 bg-teal-50"><div className="mx-auto flex max-w-[1440px] flex-col gap-1 px-5 py-3 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8"><p><span className="font-semibold text-teal-950">You are here: Step {step} of 3 · {stepLabels[step - 1]}</span><span className="text-stone-600"> — {stepInstructions[step - 1]}</span></p><span className="hidden shrink-0 font-semibold text-teal-900 lg:block">Next: {step < 3 ? stepLabels[step] : "Make your decision"} →</span></div></div> : null}
     </header>
@@ -150,54 +157,52 @@ function AppHeader({ screen, onOpenSearch }: { screen: Screen; onOpenSearch?: ()
 }
 
 function SetupScreen({ onCompare }: { onCompare: () => void }) {
+  const [question, setQuestion] = useState(0);
   const [levels, setLevels] = useState<Record<string, Priority>>(sample.student.priorities as Record<string, Priority>);
   const [listingText, setListingText] = useState(sample.places.map((place) => `${place.listingText}\n\nLandlord message / lease excerpt:\n${place.landlordMessages}`));
+  const [listingUrls, setListingUrls] = useState(sample.places.map((place) => listingFixture.places.find((listing) => listing.id === place.id)?.sourceUrl ?? ""));
+  const questions = ["Your stay", "What matters", "Your places"];
 
   return (
     <>
       <AppHeader screen="setup" />
-      <main className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
-        <div className="mb-10 max-w-3xl">
-          <h1 className="text-3xl font-semibold tracking-tight text-stone-950 sm:text-5xl">Set up your housing comparison.</h1>
-          <p className="mt-5 text-lg leading-8 text-stone-600">Start with your situation and priorities. Then review the three places you want to compare.</p>
+      <main className="mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-12">
+        <div className="mb-8">
+          <div className="flex items-center justify-between text-sm"><p className="font-semibold text-teal-900">Question {question + 1} of 3</p><p className="text-stone-500">About 2 minutes</p></div>
+          <div className="mt-3 grid grid-cols-3 gap-2" aria-label="Setup progress">{questions.map((label, index) => <div key={label}><div className={`h-1.5 rounded-full ${index <= question ? "bg-teal-800" : "bg-stone-200"}`} /><p className={`mt-2 hidden text-xs sm:block ${index === question ? "font-semibold text-teal-900" : "text-stone-400"}`}>{label}</p></div>)}</div>
         </div>
 
-        <div className="mb-8 rounded-lg border border-stone-200 bg-white px-5 py-4 text-sm font-medium leading-6 text-stone-700">Incoming UC Berkeley graduate student · 9-month program · Arrives Aug 12 · No car · No U.S. credit · No SSN · No U.S. guarantor · Parent-funded.</div>
+        {question === 0 ? <section aria-labelledby="stay-heading" className="mx-auto max-w-2xl py-4 sm:py-10">
+          <p className="text-sm font-semibold text-teal-900">Let’s start with your situation</p>
+          <h1 id="stay-heading" className="mt-2 text-3xl font-semibold tracking-tight text-stone-950 sm:text-5xl">How long do you need housing?</h1>
+          <p className="mt-4 text-lg leading-8 text-stone-600">School dates help us spot leases that could leave you paying for months you do not need.</p>
+          <Card className="mt-8 border-teal-300 bg-teal-50 p-6">
+            <Badge tone="sample">Berkeley sample</Badge>
+            <h2 className="mt-4 text-xl font-semibold">UC Berkeley Master of Engineering</h2>
+            <p className="mt-2 leading-7 text-stone-700">Full-time, one-academic-year program · Arrives August 12, 2026 · Needs housing through May 16, 2027</p>
+            <p className="mt-3 text-sm leading-6 text-stone-600">International student · No car · No U.S. credit, SSN, income, or guarantor · Parent-funded</p>
+          </Card>
+          <Button className="mt-8 w-full" size="lg" onClick={() => setQuestion(1)}>Use this sample profile <span aria-hidden="true">→</span></Button>
+        </section> : null}
 
-        <section className="mb-10" aria-labelledby="priorities-heading">
-          <h2 id="priorities-heading" className="mb-4 text-lg font-semibold">What matters most?</h2>
-          <div className="grid gap-3 md:grid-cols-2">
-            {priorities.map(([id, label]) => (
-              <div className="rounded-lg border border-stone-200 bg-white p-3 sm:flex sm:items-center sm:justify-between sm:gap-3" key={id}>
-                <p className="mb-2 text-sm font-medium sm:mb-0">{label}</p>
-                <div className="grid grid-cols-3 gap-1.5" role="group" aria-label={`${label} priority`}>
-                  {(["essential", "important", "flexible"] as Priority[]).map((level) => (
-                    <button key={level} type="button" onClick={() => setLevels((current) => ({ ...current, [id]: level }))} className={`rounded-md border px-2 py-1.5 text-[11px] font-semibold capitalize transition ${levels[id] === level ? "border-teal-900 bg-teal-50 text-teal-950" : "border-stone-200 bg-white text-stone-500 hover:border-stone-400"}`} aria-pressed={levels[id] === level}>{level}</button>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+        {question === 1 ? <section aria-labelledby="priorities-heading" className="mx-auto max-w-2xl py-4 sm:py-10">
+          <p className="text-sm font-semibold text-teal-900">Make the comparison personal</p>
+          <h1 id="priorities-heading" className="mt-2 text-3xl font-semibold tracking-tight text-stone-950 sm:text-5xl">What matters most to you?</h1>
+          <p className="mt-4 text-lg leading-8 text-stone-600">Choose how strongly each need should shape the comparison. There is no perfect answer.</p>
+          <div className="mt-8 space-y-3">{priorities.map(([id, label]) => <Card className="p-4 sm:flex sm:items-center sm:justify-between sm:gap-5" key={id}><p className="mb-3 font-semibold sm:mb-0">{label}</p><div className="grid grid-cols-3 gap-2" role="group" aria-label={`${label} priority`}>{(["essential", "important", "flexible"] as Priority[]).map((level) => <button key={level} type="button" onClick={() => setLevels((current) => ({ ...current, [id]: level }))} className={`rounded-md border px-3 py-2 text-xs font-semibold capitalize transition ${levels[id] === level ? "border-teal-900 bg-teal-50 text-teal-950" : "border-stone-200 bg-white text-stone-500 hover:border-stone-400"}`} aria-pressed={levels[id] === level}>{level}</button>)}</div></Card>)}</div>
+          <div className="mt-8 flex gap-3"><Button variant="secondary" onClick={() => setQuestion(0)}>Back</Button><Button className="flex-1" size="lg" onClick={() => setQuestion(2)}>Add places to compare <span aria-hidden="true">→</span></Button></div>
+        </section> : null}
 
-        <WhereToSearch />
-
-        <div id="places-to-compare" className="mt-8 scroll-mt-24 mb-5 flex items-end justify-between gap-4">
-          <div><p className="text-sm font-semibold text-teal-900">3. Places to compare</p><h2 className="mt-1 text-2xl font-semibold">Review the listing details</h2></div>
-          <p className="hidden text-sm text-stone-500 sm:block">You can edit any detail</p>
-        </div>
-        <div className="grid gap-5 lg:grid-cols-3">
-          {sample.places.map((place, index) => (
-            <Card className="flex flex-col p-5" key={place.id}>
-              <div className="mb-4 flex items-center gap-3"><span className="grid h-7 w-7 place-items-center rounded-md bg-teal-50 text-sm font-semibold text-teal-900">{String.fromCharCode(65 + index)}</span><h3 className="font-semibold">{place.nickname}</h3></div>
-              <Textarea value={listingText[index]} onChange={(event) => setListingText((current) => current.map((text, textIndex) => textIndex === index ? event.target.value : text))} aria-label={`${place.nickname} listing and messages`} className="min-h-80 flex-1" />
-            </Card>
-          ))}
-        </div>
-        <div className="mt-10 space-y-3">
-          <Button className="w-full" onClick={onCompare} size="lg">Compare these three places <span aria-hidden="true">→</span></Button>
-          <p className="text-center text-xs leading-5 text-stone-500">This demo uses a fictional student profile and public housing research. No application or payment is made.</p>
-        </div>
+        {question === 2 ? <section aria-labelledby="places-heading" className="py-4">
+          <p className="text-sm font-semibold text-teal-900">Bring your shortlist</p>
+          <h1 id="places-heading" className="mt-2 text-3xl font-semibold tracking-tight text-stone-950 sm:text-5xl">Which places are you considering?</h1>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-stone-600">Find up to three rentals on a university board or rental site. Then paste each listing link and any details, messages, or lease terms you received.</p>
+          <details className="mt-6 rounded-lg border border-stone-200 bg-white p-5"><summary className="cursor-pointer font-semibold text-teal-900">Need places to compare? See trusted starting points</summary><div className="mt-5"><WhereToSearch /></div></details>
+          <div className="mt-6 space-y-4">{sample.places.map((place, index) => <Card className="p-5" key={place.id}><div className="flex items-center gap-3"><span className="grid h-8 w-8 place-items-center rounded-full bg-teal-900 text-sm font-semibold text-white">{index + 1}</span><div><p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Place {index + 1}</p><h2 className="font-semibold">{place.nickname}</h2></div></div><label className="mt-5 block text-sm font-semibold" htmlFor={`listing-url-${index}`}>Listing link</label><input id={`listing-url-${index}`} type="url" value={listingUrls[index]} onChange={(event) => setListingUrls((current) => current.map((url, urlIndex) => urlIndex === index ? event.target.value : url))} placeholder="https://…" className="mt-2 w-full rounded-md border border-stone-300 bg-white px-3 py-3 text-sm outline-none focus:border-teal-800 focus:ring-2 focus:ring-teal-100" /><label className="mt-4 block text-sm font-semibold" htmlFor={`listing-details-${index}`}>Listing details, landlord messages, or lease terms</label><Textarea id={`listing-details-${index}`} value={listingText[index]} onChange={(event) => setListingText((current) => current.map((text, textIndex) => textIndex === index ? event.target.value : text))} className="mt-2 min-h-36" /></Card>)}</div>
+          <div className="mt-8 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950"><span className="font-semibold">Judge demo:</span> These three researched Berkeley listings are preloaded so the comparison works without an account, API key, or live network request.</div>
+          <div className="mt-6 flex gap-3"><Button variant="secondary" onClick={() => setQuestion(1)}>Back</Button><Button className="flex-1" onClick={onCompare} size="lg">Compare these three places <span aria-hidden="true">→</span></Button></div>
+          <p className="mt-3 text-center text-xs leading-5 text-stone-500">No application or payment is made. Review every detail with the original source.</p>
+        </section> : null}
       </main>
     </>
   );
@@ -319,14 +324,9 @@ export default function Home() {
     }, 700);
   };
 
-  const openWhereToSearch = () => {
-    setScreen("setup");
-    window.setTimeout(() => document.getElementById("where-to-search")?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
-  };
-
   if (screen === "loading") return <LoadingScreen />;
   if (screen === "error" || screen === "malformed") return <StateScreen malformed={screen === "malformed"} onReset={() => setScreen("setup")} />;
-  if (screen === "landing") return <LandingScreen onStart={() => setScreen("setup")} onOpenSearch={openWhereToSearch} savedCount={favorites.length} />;
+  if (screen === "landing") return <LandingScreen onStart={() => setScreen("setup")} savedCount={favorites.length} />;
   if (screen === "compare") return <CompareScreen onBack={() => setScreen("setup")} onOpen={(index) => { setSelected(index); setScreen("detail"); }} favorites={favorites} onToggleFavorite={toggleFavorite} />;
   if (screen === "detail") return <DetailScreen selected={selected} onSelect={setSelected} onBack={() => setScreen("compare")} favorites={favorites} onToggleFavorite={toggleFavorite} />;
   return <SetupScreen onCompare={compare} />;

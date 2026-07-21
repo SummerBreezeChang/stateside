@@ -1,9 +1,9 @@
 {
   "student": {
     "school": "UC Berkeley",
-    "program": "Graduate program",
-    "programStart": "2026-08-20",
-    "programEnd": "2027-05-20",
+    "program": "Master of Engineering (MEng)",
+    "programStart": "2026-08-19",
+    "programEnd": "2027-05-16",
     "programMonths": 9,
     "arrivalDate": "2026-08-12",
     "monthlyBudget": 2000,

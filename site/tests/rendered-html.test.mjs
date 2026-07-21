@@ -17,7 +17,7 @@ test("server-renders a clear no-account landing page", async () => {
   const html = await response.text();
   assert.match(html, /Compare rentals before you apply or pay/);
   assert.match(html, /Bring rent, application requirements/);
-  assert.equal(html.match(/Start comparing/g)?.length, 4);
+  assert.equal(html.match(/Start comparing/g)?.length, 5);
   assert.doesNotMatch(html, /See the three steps|Start the Berkeley demo/);
   assert.match(html, /No account, payment, or personal documents required/);
   assert.match(html, /How it works/);
@@ -27,7 +27,7 @@ test("server-renders a clear no-account landing page", async () => {
   assert.match(html, /Can I apply/);
   assert.match(html, /What will it cost/);
   assert.doesNotMatch(html, /Berkeley demo/);
-  assert.match(html, /Where to search/);
+  assert.doesNotMatch(html, /Where to search/);
   assert.doesNotMatch(html, /href="#how-it-works"|href="#what-you-get"/);
   assert.doesNotMatch(html, /AI housing decision companion/i);
 });
@@ -102,7 +102,14 @@ test("required states and disclaimer are present", async () => {
   assert.match(source, /screen !== "landing" && screen !== "setup"/);
   assert.doesNotMatch(source, /Step 1 · Your needs/);
   assert.doesNotMatch(source, /aria-label="Setup sections"/);
-  assert.match(source, /Incoming UC Berkeley graduate student · 9-month program · Arrives Aug 12 · No car · No U\.S\. credit · No SSN · No U\.S\. guarantor · Parent-funded\./);
+  assert.match(source, /UC Berkeley Master of Engineering/);
+  assert.match(source, /Question \{question \+ 1\} of 3/);
+  assert.match(source, /How long do you need housing/);
+  assert.match(source, /What matters most to you/);
+  assert.match(source, /Which places are you considering/);
+  assert.match(source, /Listing link/);
+  assert.match(source, /Need places to compare/);
+  assert.match(source, /Judge demo:/);
   assert.match(source, /Compare these three places/);
   assert.doesNotMatch(source, /Show my comparison/);
 });
@@ -164,6 +171,8 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(layout, /Unbounded/);
   assert.match(layout, /"900"/);
   assert.match(page, /font-black/);
+  assert.match(page, /sm:text-3xl/);
+  assert.match(page, /grid-cols-\[1fr_auto_1fr\]/);
   assert.match(page, /\[font-family:var\(--font-unbounded\)\]/);
   assert.doesNotMatch(page, /Understand before you commit/);
   assert.doesNotMatch(page, /AI housing decision companion|normalizing the three places|analysis service|generated inquiry email|visual research layer/i);
