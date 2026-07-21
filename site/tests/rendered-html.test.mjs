@@ -92,14 +92,16 @@ test("public metadata and visual identity identify Stateside consistently", asyn
     readFile(new URL("app/layout.tsx", root), "utf8"),
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("public/favicon.svg", root), "utf8"),
-    readFile(new URL("public/stateside-flow-v2.jpg", root)),
+    readFile(new URL("public/stateside-flow-v3.jpg", root)),
     readFile(new URL("public/site.webmanifest", root), "utf8").then(JSON.parse),
   ]);
   assert.match(layout, /metadataBase: new URL\("https:\/\/stateside-student-housing\.summerchang\.chatgpt\.site"\)/);
   assert.match(layout, /international student housing/);
   assert.match(layout, /summary_large_image/);
   assert.match(page, /Three scattered listings → one clear decision plan/);
-  assert.match(page, /\[font-family:Georgia,serif\]/);
+  assert.match(layout, /Unbounded/);
+  assert.match(page, /\[font-family:var\(--font-unbounded\)\]/);
+  assert.doesNotMatch(page, /Understand before you commit/);
   assert.match(favicon, /#134E4A/);
   assert.ok(hero.byteLength > 100_000);
   assert.equal(manifest.short_name, "Stateside");

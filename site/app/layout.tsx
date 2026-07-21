@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+import { IBM_Plex_Sans, Unbounded } from "next/font/google";
 import "./globals.css";
 
 const plex = IBM_Plex_Sans({
   variable: "--font-plex",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+  weight: ["500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -35,5 +41,5 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: "#134e4a", colorScheme: "light" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={plex.variable}>{children}</body></html>;
+  return <html lang="en"><body className={`${plex.variable} ${unbounded.variable}`}>{children}</body></html>;
 }
