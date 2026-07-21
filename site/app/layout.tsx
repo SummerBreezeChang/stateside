@@ -11,7 +11,7 @@ const plex = IBM_Plex_Sans({
 const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {

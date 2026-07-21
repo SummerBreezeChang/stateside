@@ -110,7 +110,7 @@ function AppHeader({ screen }: { screen: Screen }) {
   return (
     <header className="border-b border-stone-200 bg-white">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-5 py-4 sm:px-8">
-        <button type="button" onClick={() => { window.location.href = "/"; }} className="text-lg font-bold tracking-[0.04em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-xl" aria-label="Return to Stateside home">STATESIDE</button>
+        <button type="button" onClick={() => { window.location.href = "/"; }} className="text-xl font-black tracking-[0.035em] text-teal-950 [font-family:var(--font-unbounded)] sm:text-2xl" aria-label="Return to Stateside home">STATESIDE</button>
         {screen === "landing" ? <nav className="hidden items-center gap-5 text-sm font-medium text-stone-600 md:flex" aria-label="Landing page"><a href="#how-it-works" className="hover:text-teal-900">How it works</a><a href="#what-you-get" className="hover:text-teal-900">What you get</a></nav> : <div className="hidden items-center gap-2 text-sm sm:flex" aria-label={`Step ${step} of 3`}>
           {["Your needs", "Compare places", "Next steps"].map((label, index) => (
             <div className="flex items-center gap-2" key={label}>

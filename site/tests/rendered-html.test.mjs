@@ -110,6 +110,8 @@ test("public metadata and visual identity identify Stateside consistently", asyn
   assert.match(styles, /animation-timeline: view\(\)/);
   assert.match(styles, /prefers-reduced-motion/);
   assert.match(layout, /Unbounded/);
+  assert.match(layout, /"900"/);
+  assert.match(page, /font-black/);
   assert.match(page, /\[font-family:var\(--font-unbounded\)\]/);
   assert.doesNotMatch(page, /Understand before you commit/);
   assert.doesNotMatch(page, /AI housing decision companion|normalizing the three places|analysis service|generated inquiry email|visual research layer/i);
